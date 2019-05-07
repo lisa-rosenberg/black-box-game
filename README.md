@@ -15,13 +15,11 @@ One of the available games was Black Box.
 
 An overview can be found [here](https://en.wikipedia.org/wiki/Black_Box_\(game\)).
 
-#### Implementation Ideas
+### Implementation Ideas
 This board game will be implemented by using C++ and presumably OpenCV.
 
 At first I will implement the basic game with the basic rule set.
 That is 3-5 atoms in a two-dimensional grid (8x8).
-
-
 
 ## Game
 
