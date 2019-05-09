@@ -11,7 +11,7 @@ I coincidentally learnt about it on the 35C3 event in Leipzig.
 There were some people with a self-made electronic table for various board games, which worked with light receptors and LEDs.
 One of the available games was Black Box.
 
-![Black Box](resources/blackbox.jpg "Black Box")
+![Black Box](resources/img/blackbox.jpg "Black Box")
 
 An overview can be found [here](https://en.wikipedia.org/wiki/Black_Box_\(game\)).
 
@@ -41,20 +41,20 @@ The player can fire a ray by pressing on one of the i/o positions at the edges o
 The score will be increased by doing this.
 
 #### Hit
-![Hit](resources/hit-01.png "Hit")
-![Hit](resources/hit-02.png "Hit")
+![Hit](resources/img/hit-01.png "Hit")
+![Hit](resources/img/hit-02.png "Hit")
 
 #### Deflection
-![Deflection](resources/deflection-01.png "Deflection")
-![Deflection](resources/deflection-02.png "Deflection")
-![Deflection](resources/deflection-03.png "Deflection")
-![Deflection](resources/deflection-04.png "Deflection")
+![Deflection](resources/img/deflection-01.png "Deflection")
+![Deflection](resources/img/deflection-02.png "Deflection")
+![Deflection](resources/img/deflection-03.png "Deflection")
+![Deflection](resources/img/deflection-04.png "Deflection")
 
 #### Reflection
-![Reflection](resources/reflection-01.png "Reflection")
-![Reflection](resources/reflection-02.png "Reflection")
+![Reflection](resources/img/reflection-01.png "Reflection")
+![Reflection](resources/img/reflection-02.png "Reflection")
 
 #### Miss
-![Miss](resources/miss.png "Miss")
+![Miss](resources/img/miss.png "Miss")
 
 
