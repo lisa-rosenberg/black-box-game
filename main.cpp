@@ -5,9 +5,9 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
-#include <logic/Board.h>
-#include <logic/Cell.h>
-#include <logic/Rules.h>
+#include "logic/Board.h"
+#include "logic/Cell.h"
+#include "logic/Rules.h"
 
 int main(int argc, char *argv[]) {
 
@@ -15,10 +15,8 @@ int main(int argc, char *argv[]) {
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
 
-    //qmlRegisterType<Board>("Board", 1, 0, "Board");
+    engine.load(QUrl("qrc:view/main.qml"));
 
-    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
-
-    return app.exec();
+    return QGuiApplication::exec();
 }
 
