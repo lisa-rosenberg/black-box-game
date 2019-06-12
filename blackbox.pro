@@ -13,4 +13,4 @@ HEADERS     +=  logic/Cell.h \
                 logic/Board.h \
                 logic/Rules.h
 
-RESOURCES   +=  view/
+RESOURCES   +=  view/main.qml
