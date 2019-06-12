@@ -1,4 +1,4 @@
-TARGET      =   Black Box
+TARGET      =   BlackBox
 TEMPLATE    =   app
 
 CONFIG      +=  static
