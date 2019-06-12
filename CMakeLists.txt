@@ -19,7 +19,7 @@ find_package(Qt5OpenGL REQUIRED)
 
 # Project Sources
 set(SOURCE_MAIN main.cpp)
+set(SOURCE_MAIN logic/BlackBoxModel.cpp)
 
 add_executable(SoSe19_Padi02 ${SOURCE_MAIN})
-
 qt5_use_modules(SoSe19_Padi02 Core Quick Gui)

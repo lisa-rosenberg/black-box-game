@@ -4,6 +4,7 @@
 ### CMake ###
 cmake-build-debug
 
-### Qt ###
+### Qt Creator ###
 *.pro.user
 *.qml.autosave
+*.cpp.autosave

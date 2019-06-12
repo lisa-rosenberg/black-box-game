@@ -70,6 +70,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -80,6 +84,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -90,6 +98,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -100,6 +112,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -110,6 +126,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -120,6 +140,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -130,6 +154,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -140,6 +168,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -182,6 +214,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -272,6 +308,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -282,6 +322,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -372,6 +416,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -382,6 +430,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -472,6 +524,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -482,6 +538,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -572,6 +632,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -582,6 +646,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -672,6 +740,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -682,6 +754,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -772,6 +848,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -782,6 +862,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -872,6 +956,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -882,6 +970,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -972,6 +1064,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -1002,6 +1098,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -1012,6 +1112,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -1022,6 +1126,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -1032,6 +1140,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -1042,6 +1154,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -1052,6 +1168,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -1062,6 +1182,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
@@ -1072,6 +1196,10 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            MouseArea {
+                onClicked: BlackBoxModel.emitRay()
+            }
         }
 
         Rectangle {
