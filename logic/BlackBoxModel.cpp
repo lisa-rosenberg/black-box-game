@@ -3,17 +3,17 @@
 //
 
 #include <QtCore/QStringRef>
-#include "BlackBoxModel.h"
+#include <iostream>
 
-using namespace std;
+#include "BlackBoxModel.h"
 
 void BlackBoxModel::emitRay(const QString &id) {
 
     // Get cell coordinates
     QPoint cell = getCellCoordinates(id);
+    std::cout << cell.x() << cell.y() << std::endl;
 
     // Emit ray
-
 
 }
 

@@ -72,7 +72,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -86,7 +87,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -100,7 +102,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -114,7 +117,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -128,7 +132,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -142,7 +147,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -156,7 +162,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -170,7 +177,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -216,7 +224,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -310,7 +319,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -324,7 +334,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -418,7 +429,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -432,7 +444,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -526,7 +539,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -540,7 +554,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -634,7 +649,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -648,7 +664,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -742,7 +759,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -756,7 +774,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -850,7 +869,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -864,7 +884,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -958,7 +979,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -972,7 +994,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -1066,7 +1089,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -1100,7 +1124,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -1114,7 +1139,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -1128,7 +1154,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -1142,7 +1169,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -1156,7 +1184,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -1170,7 +1199,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -1184,7 +1214,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
@@ -1198,7 +1229,8 @@ ApplicationWindow {
             border.color: "#09102b"
 
             MouseArea {
-                onClicked: BlackBoxModel.emitRay()
+                anchors.fill: parent
+				onClicked: view/BlackBoxModel.emitRay(id)
             }
         }
 
