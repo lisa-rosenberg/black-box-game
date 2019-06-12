@@ -1,1 +1,8 @@
-# Created by .ignore support plugin (hsz.mobi)
+### IntelliJ ###
+.idea
+
+### CMake ###
+cmake-build-debug
+
+### Qt ###
+*.pro.user
