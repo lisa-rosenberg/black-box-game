@@ -1,12 +1,11 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.0
 
-ApplicationWindow
-{
+ApplicationWindow {
+    title: qsTr("BLACK BOX")
     visible: true
-    width: 640
-    height: 480
-    title: qsTr("Minimal Qml")
+    width: 800
+    height: 800
 
     TextEdit {
         id: textEdit

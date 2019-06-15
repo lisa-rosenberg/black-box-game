@@ -8,3 +8,4 @@ cmake-build-debug
 *.pro.user
 *.qml.autosave
 *.cpp.autosave
+*.txt.user
