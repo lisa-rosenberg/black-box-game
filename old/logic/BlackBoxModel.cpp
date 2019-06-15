@@ -7,6 +7,10 @@
 
 #include "BlackBoxModel.h"
 
+BlackBoxModel::BlackBoxModel(QObject *parent) : QAbstractItemModel(parent) {
+
+}
+
 void BlackBoxModel::emitRay(const QString &id) {
 
     // Get cell coordinates

@@ -6,28 +6,23 @@ import QtQuick.Layouts 1.3
 ApplicationWindow {
     id: root
     visible: true
-    width: 750
-    height: 750
-    minimumWidth: 475
-    minimumHeight: 300
+    width: 800
+    height: 800
+    minimumWidth: 800
+    minimumHeight: 800
 
     color: "#09102B"
     title: qsTr("BLACK BOX")
 
-    Grid {
-        id: grid
-        y: 50
-        height: 750
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        antialiasing: true
+    TableView {
+        id: tableView
         visible: true
-        anchors.rightMargin: 0
-        anchors.bottomMargin: 0
-        anchors.leftMargin: 0
-        spacing: 0
-        rows: 100
+        width: 800
+        height: 800
+        anchors.fill: parent
+        rowSpacing: 0
+        columnSpacing: 0
+        rows: 10
         columns: 10
 
         Rectangle {
@@ -73,7 +68,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -88,7 +83,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -103,7 +98,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -118,7 +113,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -133,7 +128,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -148,7 +143,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -163,7 +158,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -178,7 +173,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -225,7 +220,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -320,7 +315,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -335,7 +330,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -430,7 +425,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -445,7 +440,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -540,7 +535,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -555,7 +550,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -650,7 +645,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -665,7 +660,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -760,7 +755,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -775,7 +770,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -870,7 +865,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -885,7 +880,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -980,7 +975,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -995,7 +990,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -1090,7 +1085,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -1125,7 +1120,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -1140,7 +1135,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -1155,7 +1150,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -1170,7 +1165,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -1185,7 +1180,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -1200,7 +1195,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -1215,7 +1210,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -1230,7 +1225,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-				onClicked: BlackBoxModel.emitRay(id)
+                onClicked: blackBoxModel.emitRay(id)
             }
         }
 
@@ -1254,13 +1249,4 @@ ApplicationWindow {
             }
         }
     }
-
 }
-
-
-
-
-
-
-
-
