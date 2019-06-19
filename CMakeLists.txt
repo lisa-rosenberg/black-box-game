@@ -51,12 +51,12 @@ source_group("Source Files" FILES ${SOURCES})
 add_executable(${CMAKE_PROJECT_NAME} ${HEADERS} ${SOURCES} ${QT_RESOURCES})
 
 target_link_libraries(${CMAKE_PROJECT_NAME}
-        ${OpenCV_LIBS}
-        Qt5::Core
-        Qt5::Gui
-        Qt5::Widgets
-        Qt5::Test
-        Qt5::Concurrent
-        Qt5::OpenGL
-        Qt5::Qml
-        Qt5::Quick)
+                      ${OpenCV_LIBS}
+                      Qt5::Core
+                      Qt5::Gui
+                      Qt5::Widgets
+                      Qt5::Test
+                      Qt5::Concurrent
+                      Qt5::OpenGL
+                      Qt5::Qml
+                      Qt5::Quick)
