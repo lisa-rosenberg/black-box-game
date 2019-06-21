@@ -9,6 +9,7 @@ class BlackBoxModel : public QObject {
 
 public:
     QObject* cellObj;
+    Cell board[10][10];
 
 public slots:
     Q_INVOKABLE void newGame();
@@ -17,6 +18,7 @@ public slots:
     Q_INVOKABLE void enterGuess();
 
 private:
+    void initBoard();
     Cell getCellCoordinates(QObject *obj);
 };
 
