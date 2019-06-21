@@ -11,8 +11,19 @@ ApplicationWindow {
     color: "#09102B"
     title: qsTr("BLACK BOX")
 
+    function setObjectText(objectId, text) {
+        var object = objectId
+        object.text = text
+    }
+
+    function setObjectColor(objectId, color) {
+        var object = objectId
+        object.color = color
+    }
+
     Grid {
         id: board
+        objectName: "board"
         visible: true
         height: 800
         width: 800
@@ -33,6 +44,7 @@ ApplicationWindow {
 
             Text {
                 id: atomText
+                objectName: "atomText"
                 color: "#ffffff"
                 text: qsTr("ATOMS")
                 topPadding: 15
@@ -43,7 +55,8 @@ ApplicationWindow {
             }
 
             Text {
-                id: atomNumber
+                id: atomAmount
+                objectName: "atomAmount"
                 color: "#ffffff"
                 text: qsTr("0")
                 bottomPadding: 15
@@ -66,7 +79,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c01);
+                onClicked: blackBoxBackend.emitRay(c01);
             }
         }
 
@@ -82,7 +95,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c02)
+                onClicked: blackBoxBackend.emitRay(c02)
             }
         }
 
@@ -98,7 +111,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c03)
+                onClicked: blackBoxBackend.emitRay(c03)
             }
         }
 
@@ -114,7 +127,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c04)
+                onClicked: blackBoxBackend.emitRay(c04)
             }
         }
 
@@ -130,7 +143,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c05)
+                onClicked: blackBoxBackend.emitRay(c05)
             }
         }
 
@@ -146,7 +159,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c06)
+                onClicked: blackBoxBackend.emitRay(c06)
             }
         }
 
@@ -162,7 +175,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c07)
+                onClicked: blackBoxBackend.emitRay(c07)
             }
         }
 
@@ -178,7 +191,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c08)
+                onClicked: blackBoxBackend.emitRay(c08)
             }
         }
 
@@ -194,6 +207,7 @@ ApplicationWindow {
 
             Text {
                 id: scoreText
+                objectName: "scoreText"
                 color: "#ffffff"
                 text: qsTr("SCORE")
                 anchors.fill: parent
@@ -205,6 +219,7 @@ ApplicationWindow {
 
             Text {
                 id: scoreAmount
+                objectName: "scoreAmount"
                 color: "#ffffff"
                 text: qsTr("0")
                 anchors.fill: parent
@@ -227,7 +242,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c10)
+                onClicked: blackBoxBackend.emitRay(c10)
             }
         }
 
@@ -243,7 +258,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c11)
+                onClicked: blackBoxBackend.setAtom(c11)
             }
         }
 
@@ -259,7 +274,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c12)
+                onClicked: blackBoxBackend.setAtom(c12)
             }
         }
 
@@ -275,7 +290,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c13)
+                onClicked: blackBoxBackend.setAtom(c13)
             }
         }
 
@@ -291,7 +306,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c14)
+                onClicked: blackBoxBackend.setAtom(c14)
             }
         }
 
@@ -307,7 +322,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c15)
+                onClicked: blackBoxBackend.setAtom(c15)
             }
         }
 
@@ -323,7 +338,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c16)
+                onClicked: blackBoxBackend.setAtom(c16)
             }
         }
 
@@ -339,7 +354,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c17)
+                onClicked: blackBoxBackend.setAtom(c17)
             }
         }
 
@@ -355,7 +370,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c18)
+                onClicked: blackBoxBackend.setAtom(c18)
             }
         }
 
@@ -371,7 +386,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c19)
+                onClicked: blackBoxBackend.emitRay(c19)
             }
         }
 
@@ -387,7 +402,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c20)
+                onClicked: blackBoxBackend.emitRay(c20)
             }
         }
 
@@ -403,7 +418,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c21)
+                onClicked: blackBoxBackend.setAtom(c21)
             }
         }
 
@@ -419,7 +434,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c22)
+                onClicked: blackBoxBackend.setAtom(c22)
             }
         }
 
@@ -435,7 +450,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c23)
+                onClicked: blackBoxBackend.setAtom(c23)
             }
         }
 
@@ -451,7 +466,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c24)
+                onClicked: blackBoxBackend.setAtom(c24)
             }
         }
 
@@ -467,7 +482,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c25)
+                onClicked: blackBoxBackend.setAtom(c25)
             }
         }
 
@@ -483,7 +498,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c26)
+                onClicked: blackBoxBackend.setAtom(c26)
             }
         }
 
@@ -499,7 +514,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c27)
+                onClicked: blackBoxBackend.setAtom(c27)
             }
         }
 
@@ -515,7 +530,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c28)
+                onClicked: blackBoxBackend.setAtom(c28)
             }
         }
 
@@ -531,7 +546,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c29)
+                onClicked: blackBoxBackend.emitRay(c29)
             }
         }
 
@@ -547,7 +562,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c30)
+                onClicked: blackBoxBackend.emitRay(c30)
             }
         }
 
@@ -563,7 +578,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c31)
+                onClicked: blackBoxBackend.setAtom(c31)
             }
         }
 
@@ -579,7 +594,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c32)
+                onClicked: blackBoxBackend.setAtom(c32)
             }
         }
 
@@ -595,7 +610,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c33)
+                onClicked: blackBoxBackend.setAtom(c33)
             }
         }
 
@@ -611,7 +626,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c34)
+                onClicked: blackBoxBackend.setAtom(c34)
             }
         }
 
@@ -627,7 +642,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c35)
+                onClicked: blackBoxBackend.setAtom(c35)
             }
         }
 
@@ -643,7 +658,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c36)
+                onClicked: blackBoxBackend.setAtom(c36)
             }
         }
 
@@ -659,7 +674,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c37)
+                onClicked: blackBoxBackend.setAtom(c37)
             }
         }
 
@@ -675,7 +690,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c38)
+                onClicked: blackBoxBackend.setAtomGuess(c38)
             }
         }
 
@@ -691,7 +706,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c39)
+                onClicked: blackBoxBackend.emitRay(c39)
             }
         }
 
@@ -707,7 +722,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c40)
+                onClicked: blackBoxBackend.emitRay(c40)
             }
         }
 
@@ -723,7 +738,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c41)
+                onClicked: blackBoxBackend.setAtom(c41)
             }
         }
 
@@ -739,7 +754,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c42)
+                onClicked: blackBoxBackend.setAtom(c42)
             }
         }
 
@@ -755,7 +770,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c43)
+                onClicked: blackBoxBackend.setAtom(c43)
             }
         }
 
@@ -771,7 +786,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c44)
+                onClicked: blackBoxBackend.setAtom(c44)
             }
         }
 
@@ -787,7 +802,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c45)
+                onClicked: blackBoxBackend.setAtom(c45)
             }
         }
 
@@ -803,7 +818,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c46)
+                onClicked: blackBoxBackend.setAtom(c46)
             }
         }
 
@@ -819,7 +834,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c47)
+                onClicked: blackBoxBackend.setAtom(c47)
             }
         }
 
@@ -835,7 +850,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c48)
+                onClicked: blackBoxBackend.setAtom(c48)
             }
         }
 
@@ -851,7 +866,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c49)
+                onClicked: blackBoxBackend.emitRay(c49)
             }
         }
 
@@ -867,7 +882,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c50)
+                onClicked: blackBoxBackend.emitRay(c50)
             }
         }
 
@@ -883,7 +898,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c51)
+                onClicked: blackBoxBackend.setAtom(c51)
             }
         }
 
@@ -899,7 +914,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c52)
+                onClicked: blackBoxBackend.setAtom(c52)
             }
         }
 
@@ -915,7 +930,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c53)
+                onClicked: blackBoxBackend.setAtom(c53)
             }
         }
 
@@ -931,7 +946,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c54)
+                onClicked: blackBoxBackend.setAtom(c54)
             }
         }
 
@@ -947,7 +962,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c55)
+                onClicked: blackBoxBackend.setAtom(c55)
             }
         }
 
@@ -963,7 +978,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c56)
+                onClicked: blackBoxBackend.setAtom(c56)
             }
         }
 
@@ -979,7 +994,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c57)
+                onClicked: blackBoxBackend.setAtom(c57)
             }
         }
 
@@ -995,7 +1010,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c58)
+                onClicked: blackBoxBackend.setAtom(c58)
             }
         }
 
@@ -1011,7 +1026,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c59)
+                onClicked: blackBoxBackend.emitRay(c59)
             }
         }
 
@@ -1027,7 +1042,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c60)
+                onClicked: blackBoxBackend.emitRay(c60)
             }
         }
 
@@ -1043,7 +1058,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c61)
+                onClicked: blackBoxBackend.setAtom(c61)
             }
         }
 
@@ -1059,7 +1074,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c62)
+                onClicked: blackBoxBackend.setAtom(c62)
             }
         }
 
@@ -1075,7 +1090,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c63)
+                onClicked: blackBoxBackend.setAtom(c63)
             }
         }
 
@@ -1091,7 +1106,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c64)
+                onClicked: blackBoxBackend.setAtom(c64)
             }
         }
 
@@ -1107,7 +1122,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c65)
+                onClicked: blackBoxBackend.setAtom(c65)
             }
         }
 
@@ -1123,7 +1138,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c66)
+                onClicked: blackBoxBackend.setAtom(c66)
             }
         }
 
@@ -1139,7 +1154,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c67)
+                onClicked: blackBoxBackend.setAtom(c67)
             }
         }
 
@@ -1155,7 +1170,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c68)
+                onClicked: blackBoxBackend.setAtom(c68)
             }
         }
 
@@ -1171,7 +1186,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c69)
+                onClicked: blackBoxBackend.emitRay(c69)
             }
         }
 
@@ -1187,7 +1202,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c70)
+                onClicked: blackBoxBackend.emitRay(c70)
             }
         }
 
@@ -1203,7 +1218,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c71)
+                onClicked: blackBoxBackend.setAtom(c71)
             }
         }
 
@@ -1219,7 +1234,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c72)
+                onClicked: blackBoxBackend.setAtom(c72)
             }
         }
 
@@ -1235,7 +1250,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c73)
+                onClicked: blackBoxBackend.setAtom(c73)
             }
         }
 
@@ -1251,7 +1266,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c74)
+                onClicked: blackBoxBackend.setAtom(c74)
             }
         }
 
@@ -1267,7 +1282,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c75)
+                onClicked: blackBoxBackend.setAtom(c75)
             }
         }
 
@@ -1283,7 +1298,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c76)
+                onClicked: blackBoxBackend.setAtom(c76)
             }
         }
 
@@ -1299,7 +1314,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c77)
+                onClicked: blackBoxBackend.setAtom(c77)
             }
         }
 
@@ -1315,7 +1330,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c78)
+                onClicked: blackBoxBackend.setAtom(c78)
             }
         }
 
@@ -1331,7 +1346,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c79)
+                onClicked: blackBoxBackend.emitRay(c79)
             }
         }
 
@@ -1347,7 +1362,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c80)
+                onClicked: blackBoxBackend.emitRay(c80)
             }
         }
 
@@ -1363,7 +1378,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c81)
+                onClicked: blackBoxBackend.setAtom(c81)
             }
         }
 
@@ -1379,7 +1394,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c82)
+                onClicked: blackBoxBackend.setAtom(c82)
             }
         }
 
@@ -1395,7 +1410,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c83)
+                onClicked: blackBoxBackend.setAtom(c83)
             }
         }
 
@@ -1411,7 +1426,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c84)
+                onClicked: blackBoxBackend.setAtom(c84)
             }
         }
 
@@ -1427,7 +1442,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c85)
+                onClicked: blackBoxBackend.setAtom(c85)
             }
         }
 
@@ -1443,7 +1458,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c86)
+                onClicked: blackBoxBackend.setAtom(c86)
             }
         }
 
@@ -1459,7 +1474,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c87)
+                onClicked: blackBoxBackend.setAtom(c87)
             }
         }
 
@@ -1475,7 +1490,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.setAtom(c88)
+                onClicked: blackBoxBackend.setAtom(c88)
             }
         }
 
@@ -1491,7 +1506,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c89)
+                onClicked: blackBoxBackend.emitRay(c89)
             }
         }
 
@@ -1507,6 +1522,7 @@ ApplicationWindow {
 
             Text {
                 id: newButton
+                objectName: "newButton"
                 color: "#ffffff"
                 text: qsTr("NEW")
                 anchors.fill: parent
@@ -1517,7 +1533,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.newGame()
+                onClicked: blackBoxBackend.newGame()
             }
         }
 
@@ -1533,7 +1549,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c91)
+                onClicked: blackBoxBackend.emitRay(c91)
             }
         }
 
@@ -1549,7 +1565,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c92)
+                onClicked: blackBoxBackend.emitRay(c92)
             }
         }
 
@@ -1565,7 +1581,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c93)
+                onClicked: blackBoxBackend.emitRay(c93)
             }
         }
 
@@ -1581,7 +1597,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c94)
+                onClicked: blackBoxBackend.emitRay(c94)
             }
         }
 
@@ -1597,7 +1613,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c95)
+                onClicked: blackBoxBackend.emitRay(c95)
             }
         }
 
@@ -1613,7 +1629,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c96)
+                onClicked: blackBoxBackend.emitRay(c96)
             }
         }
 
@@ -1629,7 +1645,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c97)
+                onClicked: blackBoxBackend.emitRay(c97)
             }
         }
 
@@ -1645,7 +1661,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.emitRay(c98)
+                onClicked: blackBoxBackend.emitRay(c98)
             }
         }
 
@@ -1661,6 +1677,7 @@ ApplicationWindow {
 
             Text {
                 id: enterButton
+                objectName: "enterButton"
                 color: "#ffffff"
                 text: qsTr("ENTER")
                 anchors.fill: parent
@@ -1671,7 +1688,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.enterGuess()
+                onClicked: blackBoxBackend.enterGuess()
             }
         }
     }

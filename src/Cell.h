@@ -1,7 +1,3 @@
-//
-// Created by lisar on 19/06/21.
-//
-
 #ifndef SOSE19_PADI02_CELL_H
 #define SOSE19_PADI02_CELL_H
 
@@ -10,6 +6,8 @@
 class Cell {
 
 public:
+    Cell();
+
     enum Type {
         CORNER,
         EDGE,
@@ -17,12 +15,15 @@ public:
         ATOM
     };
 
-    Cell();
-
-    void setX(int x);
-    void setY(int y);
+    void setX(int xValue);
+    void setY(int yValue);
     void setColor(int r, int g, int b);
-    void setCellType(Type type);
+    void setCellType(Type cellType);
+
+    int getX();
+    int getY();
+    QColor getColor();
+    Cell::Type getCellType();
 
 private:
     int x = 0;

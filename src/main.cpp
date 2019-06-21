@@ -2,15 +2,15 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 
-#include "BlackBoxModel.h"
+#include "BlackBoxBackend.h"
 
 int main(int argc, char** argv) {
-    BlackBoxModel blackBoxModel;
+    BlackBoxBackend blackBoxBackend;
 
     QApplication app(argc, argv);
-
     QQmlApplicationEngine engine;
-    engine.rootContext()->setContextProperty("blackBoxModel", &blackBoxModel);
+
+    engine.rootContext()->setContextProperty("blackBoxBackend", &blackBoxBackend);
 
     engine.load(QUrl("qrc:/main.qml"));
     if (engine.rootObjects().isEmpty()) {
