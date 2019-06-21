@@ -12,11 +12,15 @@ ApplicationWindow {
     title: qsTr("BLACK BOX")
 
     function setObjectText(objectId, text) {
+        console.log("objectId: " + objectId)
+        console.log("text: " + text)
         var object = objectId
         object.text = text
     }
 
     function setObjectColor(objectId, color) {
+        console.log("objectId: " + objectId)
+        console.log("color: " + color)
         var object = objectId
         object.color = color
     }
@@ -258,7 +262,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c11)
+                onClicked: blackBoxBackend.setAtomGuess(c11)
             }
         }
 
@@ -274,7 +278,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c12)
+                onClicked: blackBoxBackend.setAtomGuess(c12)
             }
         }
 
@@ -290,7 +294,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c13)
+                onClicked: blackBoxBackend.setAtomGuess(c13)
             }
         }
 
@@ -306,7 +310,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c14)
+                onClicked: blackBoxBackend.setAtomGuess(c14)
             }
         }
 
@@ -322,7 +326,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c15)
+                onClicked: blackBoxBackend.setAtomGuess(c15)
             }
         }
 
@@ -338,7 +342,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c16)
+                onClicked: blackBoxBackend.setAtomGuess(c16)
             }
         }
 
@@ -354,7 +358,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c17)
+                onClicked: blackBoxBackend.setAtomGuess(c17)
             }
         }
 
@@ -370,7 +374,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c18)
+                onClicked: blackBoxBackend.setAtomGuess(c18)
             }
         }
 
@@ -418,7 +422,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c21)
+                onClicked: blackBoxBackend.setAtomGuess(c21)
             }
         }
 
@@ -434,7 +438,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c22)
+                onClicked: blackBoxBackend.setAtomGuess(c22)
             }
         }
 
@@ -450,7 +454,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c23)
+                onClicked: blackBoxBackend.setAtomGuess(c23)
             }
         }
 
@@ -466,7 +470,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c24)
+                onClicked: blackBoxBackend.setAtomGuess(c24)
             }
         }
 
@@ -482,7 +486,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c25)
+                onClicked: blackBoxBackend.setAtomGuess(c25)
             }
         }
 
@@ -498,7 +502,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c26)
+                onClicked: blackBoxBackend.setAtomGuess(c26)
             }
         }
 
@@ -514,7 +518,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c27)
+                onClicked: blackBoxBackend.setAtomGuess(c27)
             }
         }
 
@@ -530,7 +534,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c28)
+                onClicked: blackBoxBackend.setAtomGuess(c28)
             }
         }
 
@@ -578,7 +582,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c31)
+                onClicked: blackBoxBackend.setAtomGuess(c31)
             }
         }
 
@@ -594,7 +598,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c32)
+                onClicked: blackBoxBackend.setAtomGuess(c32)
             }
         }
 
@@ -610,7 +614,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c33)
+                onClicked: blackBoxBackend.setAtomGuess(c33)
             }
         }
 
@@ -626,7 +630,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c34)
+                onClicked: blackBoxBackend.setAtomGuess(c34)
             }
         }
 
@@ -642,7 +646,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c35)
+                onClicked: blackBoxBackend.setAtomGuess(c35)
             }
         }
 
@@ -658,7 +662,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c36)
+                onClicked: blackBoxBackend.setAtomGuess(c36)
             }
         }
 
@@ -674,7 +678,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c37)
+                onClicked: blackBoxBackend.setAtomGuess(c37)
             }
         }
 
@@ -690,7 +694,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtomGuess(c38)
+                onClicked: blackBoxBackend.setAtomGuessGuess(c38)
             }
         }
 
@@ -738,7 +742,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c41)
+                onClicked: blackBoxBackend.setAtomGuess(c41)
             }
         }
 
@@ -754,7 +758,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c42)
+                onClicked: blackBoxBackend.setAtomGuess(c42)
             }
         }
 
@@ -770,7 +774,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c43)
+                onClicked: blackBoxBackend.setAtomGuess(c43)
             }
         }
 
@@ -786,7 +790,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c44)
+                onClicked: blackBoxBackend.setAtomGuess(c44)
             }
         }
 
@@ -802,7 +806,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c45)
+                onClicked: blackBoxBackend.setAtomGuess(c45)
             }
         }
 
@@ -818,7 +822,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c46)
+                onClicked: blackBoxBackend.setAtomGuess(c46)
             }
         }
 
@@ -834,7 +838,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c47)
+                onClicked: blackBoxBackend.setAtomGuess(c47)
             }
         }
 
@@ -850,7 +854,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c48)
+                onClicked: blackBoxBackend.setAtomGuess(c48)
             }
         }
 
@@ -898,7 +902,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c51)
+                onClicked: blackBoxBackend.setAtomGuess(c51)
             }
         }
 
@@ -914,7 +918,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c52)
+                onClicked: blackBoxBackend.setAtomGuess(c52)
             }
         }
 
@@ -930,7 +934,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c53)
+                onClicked: blackBoxBackend.setAtomGuess(c53)
             }
         }
 
@@ -946,7 +950,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c54)
+                onClicked: blackBoxBackend.setAtomGuess(c54)
             }
         }
 
@@ -962,7 +966,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c55)
+                onClicked: blackBoxBackend.setAtomGuess(c55)
             }
         }
 
@@ -978,7 +982,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c56)
+                onClicked: blackBoxBackend.setAtomGuess(c56)
             }
         }
 
@@ -994,7 +998,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c57)
+                onClicked: blackBoxBackend.setAtomGuess(c57)
             }
         }
 
@@ -1010,7 +1014,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c58)
+                onClicked: blackBoxBackend.setAtomGuess(c58)
             }
         }
 
@@ -1058,7 +1062,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c61)
+                onClicked: blackBoxBackend.setAtomGuess(c61)
             }
         }
 
@@ -1074,7 +1078,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c62)
+                onClicked: blackBoxBackend.setAtomGuess(c62)
             }
         }
 
@@ -1090,7 +1094,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c63)
+                onClicked: blackBoxBackend.setAtomGuess(c63)
             }
         }
 
@@ -1106,7 +1110,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c64)
+                onClicked: blackBoxBackend.setAtomGuess(c64)
             }
         }
 
@@ -1122,7 +1126,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c65)
+                onClicked: blackBoxBackend.setAtomGuess(c65)
             }
         }
 
@@ -1138,7 +1142,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c66)
+                onClicked: blackBoxBackend.setAtomGuess(c66)
             }
         }
 
@@ -1154,7 +1158,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c67)
+                onClicked: blackBoxBackend.setAtomGuess(c67)
             }
         }
 
@@ -1170,7 +1174,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c68)
+                onClicked: blackBoxBackend.setAtomGuess(c68)
             }
         }
 
@@ -1218,7 +1222,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c71)
+                onClicked: blackBoxBackend.setAtomGuess(c71)
             }
         }
 
@@ -1234,7 +1238,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c72)
+                onClicked: blackBoxBackend.setAtomGuess(c72)
             }
         }
 
@@ -1250,7 +1254,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c73)
+                onClicked: blackBoxBackend.setAtomGuess(c73)
             }
         }
 
@@ -1266,7 +1270,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c74)
+                onClicked: blackBoxBackend.setAtomGuess(c74)
             }
         }
 
@@ -1282,7 +1286,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c75)
+                onClicked: blackBoxBackend.setAtomGuess(c75)
             }
         }
 
@@ -1298,7 +1302,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c76)
+                onClicked: blackBoxBackend.setAtomGuess(c76)
             }
         }
 
@@ -1314,7 +1318,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c77)
+                onClicked: blackBoxBackend.setAtomGuess(c77)
             }
         }
 
@@ -1330,7 +1334,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c78)
+                onClicked: blackBoxBackend.setAtomGuess(c78)
             }
         }
 
@@ -1378,7 +1382,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c81)
+                onClicked: blackBoxBackend.setAtomGuess(c81)
             }
         }
 
@@ -1394,7 +1398,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c82)
+                onClicked: blackBoxBackend.setAtomGuess(c82)
             }
         }
 
@@ -1410,7 +1414,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c83)
+                onClicked: blackBoxBackend.setAtomGuess(c83)
             }
         }
 
@@ -1426,7 +1430,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c84)
+                onClicked: blackBoxBackend.setAtomGuess(c84)
             }
         }
 
@@ -1442,7 +1446,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c85)
+                onClicked: blackBoxBackend.setAtomGuess(c85)
             }
         }
 
@@ -1458,7 +1462,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c86)
+                onClicked: blackBoxBackend.setAtomGuess(c86)
             }
         }
 
@@ -1474,7 +1478,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c87)
+                onClicked: blackBoxBackend.setAtomGuess(c87)
             }
         }
 
@@ -1490,7 +1494,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtom(c88)
+                onClicked: blackBoxBackend.setAtomGuess(c88)
             }
         }
 

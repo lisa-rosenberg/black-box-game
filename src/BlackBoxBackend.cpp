@@ -26,14 +26,12 @@ Q_INVOKABLE void BlackBoxBackend::enterGuess() {
 }
 
 Q_INVOKABLE void BlackBoxBackend::emitRay(QObject *obj) {
-    std::cout << qPrintable(obj->property("objectName").toString()) << std::endl;
-
     // Get x and y indices of clicked cell
-    //Cell cell = getCellCoordinates(obj);
+    Cell cell = getCellCoordinates(obj);
 
     // Emit ray
-
-
+    std::cout << qPrintable(obj->property("objectName").toString()) << std::endl;
+    std::cout << cell.getX() << cell.getY() << std::endl;
 }
 
 Q_INVOKABLE void BlackBoxBackend::setAtomGuess(QObject *obj) {
@@ -66,8 +64,6 @@ void BlackBoxBackend::initBoard() {
 
             // Set ui cell color
             emit setObjectColor(QString::fromStdString("c" + std::to_string(row) + std::to_string(col)), cell.getColor());
-//            QObject *currentCell = getQObjectById(QString::fromStdString(std::to_string(row) + std::to_string(col)));
-//            currentCell->setProperty("color", cell.getColor());
         }
     }
 
@@ -82,8 +78,6 @@ void BlackBoxBackend::setAtoms() {
 
     // Set ui atom amount label
     emit setObjectText(QString::fromStdString("atomAmount"), QString::fromStdString(std::to_string(atomAmount)));
-//    auto *atomLabel = getQObjectById("atomAmount");
-//    atomLabel->setProperty("text", QString::fromStdString(std::to_string(atomAmount)));
 
     // Set atoms on board
     dist = std::uniform_int_distribution<> (1, 9);
@@ -98,17 +92,9 @@ void BlackBoxBackend::setAtoms() {
 
             // For testing purpose
             emit setObjectColor(QString::fromStdString("c" + std::to_string(y) + std::to_string(x)), QColor(20, 20, 20));
-//            auto *currentCell = getQObjectById(QString::fromStdString(std::to_string(y) + std::to_string(x)));
-//            currentCell->setProperty("color", QColor(20, 20, 20));
         }
     }
 }
-
-//QObject* BlackBoxBackend::getQObjectById(const QString &id) {
-//    std::cout << qPrintable(id) << std::endl;
-//
-//    return cellObj->findChild<QObject*>(id);
-//}
 
 Cell BlackBoxBackend::getCellCoordinates(QObject *obj) {
     QString objName = obj->property("objectName").toString();
