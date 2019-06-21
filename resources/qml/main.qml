@@ -1671,7 +1671,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxModel.enterSolution()
+                onClicked: blackBoxModel.enterGuess()
             }
         }
     }
