@@ -7,9 +7,10 @@ class BlackBoxModel : public QObject {
     Q_OBJECT
 
 public:
+    QObject* myObject;
 
 public slots:
-    void test(int value);
+    Q_INVOKABLE void test(QObject* obj);
 
 private:
 
