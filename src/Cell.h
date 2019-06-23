@@ -22,6 +22,7 @@ public:
 
     int getX();
     int getY();
+
     QColor getColor();
     Cell::Type getCellType();
 

@@ -11,18 +11,18 @@ ApplicationWindow {
     color: "#09102B"
     title: qsTr("BLACK BOX")
 
-    function setObjectText(objectId, text) {
-        console.log("objectId: " + objectId)
-        console.log("text: " + text)
-        var object = objectId
-        object.text = text
-    }
+    Connections {
+        id:cppConnection
+        target:blackBoxBackend
+        ignoreUnknownSignals: true
 
-    function setObjectColor(objectId, color) {
-        console.log("objectId: " + objectId)
-        console.log("color: " + color)
-        var object = objectId
-        object.color = color
+        onSetObjectText: {
+            objectId.text = text
+        }
+
+        onSetObjectColor: {
+            objectId.color = color
+        }
     }
 
     Grid {

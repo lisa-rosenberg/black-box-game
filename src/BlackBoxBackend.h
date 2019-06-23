@@ -14,7 +14,7 @@ class BlackBoxBackend : public QObject {
 public:
     BlackBoxBackend();
 
-    QObject* cellObj;
+    QObject object;
     Cell board[10][10];
 
 public slots:
@@ -24,8 +24,8 @@ public slots:
     Q_INVOKABLE void enterGuess();
 
 signals:
-    void setObjectText(QVariant objectName, QVariant text);
-    void setObjectColor(QVariant objectName, QVariant color);
+    void setObjectText(const QVariant &objectId, const QVariant &text);
+    void setObjectColor(const QVariant &objectId, const QVariant &color);
 
 private:
     void initBoard();
