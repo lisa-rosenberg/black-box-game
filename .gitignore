@@ -9,3 +9,6 @@ cmake-build-debug
 *.qml.autosave
 *.cpp.autosave
 *.txt.user
+
+### Qt ###
+*.qmlc

@@ -53,13 +53,13 @@ void BlackBoxBackend::initBoard() {
             if ((row == 0 && col == 0) || (row == 0 && col == boardSize - 1) ||
                 (row == boardSize - 1 && col == 0) || (row == boardSize - 1 && col == boardSize - 1)) {
                 cell.setCellType(Cell::CORNER);
-                cell.setColor(4, 6, 17);
+                cell.setColor("#09102b");
             } else if (row == 0 || row == boardSize - 1 || col == 0 || col == boardSize - 1) {
                 cell.setCellType(Cell::EDGE);
-                cell.setColor(26, 27, 32);
+                cell.setColor("#424551");
             } else {
                 cell.setCellType(Cell::FIELD);
-                cell.setColor(55, 16, 99);
+                cell.setColor("#8b28fc");
             }
 
             // Set ui cell color

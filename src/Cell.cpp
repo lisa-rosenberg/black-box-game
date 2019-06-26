@@ -1,9 +1,13 @@
+#include <utility>
+
+#include <utility>
+
 #include "Cell.h"
 
 Cell::Cell() {
     this->x = 0;
     this->y = 0;
-    this->color = QColor(0, 0, 0);
+    this->color = QColor("#000000");
     this->type = FIELD;
 }
 
@@ -15,8 +19,8 @@ void Cell::setY(int yValue) {
     this->y = yValue;
 }
 
-void Cell::setColor(int r, int g, int b) {
-    this->color = QColor(r, g, b);
+void Cell::setColor(QColor colorValue) {
+    this->color = std::move(colorValue);
 }
 
 void Cell::setCellType(Cell::Type cellType) {

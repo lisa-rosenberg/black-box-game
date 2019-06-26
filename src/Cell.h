@@ -17,7 +17,7 @@ public:
 
     void setX(int xValue);
     void setY(int yValue);
-    void setColor(int r, int g, int b);
+    void setColor(QColor color);
     void setCellType(Type cellType);
 
     int getX();

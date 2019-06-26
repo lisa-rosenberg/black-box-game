@@ -17,6 +17,12 @@ public:
     QObject object;
     Cell board[10][10];
 
+private:
+    void initBoard();
+    void setAtoms();
+
+    Cell getCellCoordinates(QObject *obj);
+
 public slots:
     Q_INVOKABLE void newGame();
     Q_INVOKABLE void emitRay(QObject *obj);
@@ -24,14 +30,8 @@ public slots:
     Q_INVOKABLE void enterGuess();
 
 signals:
-    void setObjectText(const QVariant &objectId, const QVariant &text);
-    void setObjectColor(const QVariant &objectId, const QVariant &color);
-
-private:
-    void initBoard();
-    void setAtoms();
-
-    Cell getCellCoordinates(QObject *obj);
+    void setObjectText(const QString &objectId, const QString &text);
+    void setObjectColor(const QString &objectId, const QColor &color);
 };
 
 #endif //SOSE19_PADI02_BLACKBOXBACKEND_H
