@@ -43,11 +43,22 @@ private:
         SIGNAL_GREEN
     };
 
+    enum Direction {
+        SOUTH,
+        WEST,
+        NORTH,
+        EAST
+    };
+
     void initBoard();
-    void setAtoms();
+    void nextRayStep(Cell cell, const QColor& color, BlackBoxBackend::Direction direction);
 
     Cell getCellCoordinates(QObject *obj);
     QColor getEnumColor(BlackBoxBackend::Color color);
+
+    void setAtoms();
+    void setObjectColor(const int &x, const int &y, const QColor &color);
+    void setObjectText(const std::string &objectId, const std::string &text);
 
 public slots:
     Q_INVOKABLE void newGame();

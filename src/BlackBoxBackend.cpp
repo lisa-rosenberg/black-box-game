@@ -17,6 +17,8 @@ BlackBoxBackend::BlackBoxBackend() {
 }
 
 Q_INVOKABLE void BlackBoxBackend::newGame() {
+    gameFinished = false;
+
     initBoard();
     setAtoms();
 }
@@ -28,9 +30,9 @@ Q_INVOKABLE void BlackBoxBackend::enterGuess() {
     for (int x = 1; x <= 8; ++x) {
         for (int y = 1; y <= 8; ++y) {
             if (board[x][y].getAtomGuess() && board[x][y].getCellType() == Cell::ATOM) {
-                emit setObjectColor(QString::fromStdString("c" + std::to_string(y) + std::to_string(x)), getEnumColor(SIGNAL_GREEN));
+                setObjectColor(x, y, getEnumColor(SIGNAL_GREEN));
             } else if (board[x][y].getAtomGuess() && board[x][y].getCellType() != Cell::ATOM) {
-                emit setObjectColor(QString::fromStdString("c" + std::to_string(y) + std::to_string(x)), getEnumColor(SIGNAL_RED));
+                setObjectColor(x, y, getEnumColor(SIGNAL_RED));
             }
         }
     }
@@ -43,6 +45,16 @@ Q_INVOKABLE void BlackBoxBackend::emitRay(QObject *obj) {
     // Emit ray
     std::cout << qPrintable(obj->property("objectName").toString()) << std::endl;
     std::cout << cell.getX() << cell.getY() << std::endl;
+
+    if (cell.getX() == 0) {
+
+    } else if (cell.getX() == 9) {
+
+    } else if (cell.getY() == 9) {
+
+    } else if (cell.getY() == 0) {
+
+    }
 }
 
 Q_INVOKABLE void BlackBoxBackend::setAtomGuess(QObject *obj) {
@@ -63,13 +75,13 @@ Q_INVOKABLE void BlackBoxBackend::setAtomGuess(QObject *obj) {
         board[cell.getX()][cell.getY()].setAtomGuess(false);
 
         // Set ui cell color
-        emit setObjectColor(QString::fromStdString("c" + std::to_string(cell.getY()) + std::to_string(cell.getX())), getEnumColor(BRIGHT_VIOLET));
+        setObjectColor(cell.getX(), cell.getY(), getEnumColor(BRIGHT_VIOLET));
     } else if (currentAtoms < atomAmount) {
         // Save atom guess in board
         board[cell.getX()][cell.getY()].setAtomGuess(true);
 
         // Set ui cell color
-        emit setObjectColor(QString::fromStdString("c" + std::to_string(cell.getY()) + std::to_string(cell.getX())), getEnumColor(MIDNIGHT_VIOLET));
+        setObjectColor(cell.getX(), cell.getY(), getEnumColor(MIDNIGHT_VIOLET));
     }
 }
 
@@ -104,10 +116,33 @@ void BlackBoxBackend::initBoard() {
             board[row][col] = cell;
 
             // Set ui cell color
-            emit setObjectColor(QString::fromStdString("c" + std::to_string(row) + std::to_string(col)), cell.getColor());
+            setObjectColor(col, row, cell.getColor());
         }
     }
+}
 
+void BlackBoxBackend::nextRayStep(Cell cell, const QColor &color, BlackBoxBackend::Direction direction) {
+    int y = cell.getY();
+    int x = cell.getX();
+
+    switch (direction) {
+        case SOUTH:
+            if (board[x + 0][y + 1].getCellType() == Cell::EDGE) {
+                setObjectColor(x + 0, y + 1, color);
+            }
+        case WEST:
+            if (board[x - 1][y + 0].getCellType() == Cell::EDGE) {
+                setObjectColor(x - 1, y + 0, color);
+            }
+        case NORTH:
+            if (board[x + 0][y - 1].getCellType() == Cell::EDGE) {
+                setObjectColor(x + 0, y - 1, color);
+            }
+        case EAST:
+            if (board[x + 1][y + 0].getCellType() == Cell::EDGE) {
+                setObjectColor(x + 1, y + 0, color);
+            }
+    }
 }
 
 void BlackBoxBackend::setAtoms() {
@@ -119,7 +154,7 @@ void BlackBoxBackend::setAtoms() {
     int remainingAtoms = atomAmount;
 
     // Set ui atom amount label
-    emit setObjectText(QString::fromStdString("atomAmount"), QString::fromStdString(std::to_string(atomAmount)));
+    setObjectText("atomAmount", std::to_string(atomAmount));
 
     // Set atoms on board
     dist = std::uniform_int_distribution<> (1, 8);
@@ -133,7 +168,7 @@ void BlackBoxBackend::setAtoms() {
             remainingAtoms--;
 
             // For testing purpose
-            emit setObjectColor(QString::fromStdString("c" + std::to_string(y) + std::to_string(x)), getEnumColor(SIGNAL_RED));
+            setObjectColor(x, y, getEnumColor(SIGNAL_RED));
         }
     }
 }
@@ -175,6 +210,14 @@ QColor BlackBoxBackend::getEnumColor(BlackBoxBackend::Color color) {
         case SIGNAL_RED:        return QColor("#ff0d31");
         case SIGNAL_GREEN:      return QColor("#00ff10");
     }
+}
+
+void BlackBoxBackend::setObjectColor(const int &x, const int &y, const QColor &color) {
+    emit setObjectColor(QString::fromStdString("c" + std::to_string(y) + std::to_string(x)), color);
+}
+
+void BlackBoxBackend::setObjectText(const std::string &objectId, const std::string &text) {
+    emit setObjectText(QString::fromStdString(objectId), QString::fromStdString(text));
 }
 
 
