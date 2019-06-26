@@ -22,7 +22,18 @@ Q_INVOKABLE void BlackBoxBackend::newGame() {
 }
 
 Q_INVOKABLE void BlackBoxBackend::enterGuess() {
+    gameFinished = true;
 
+    // Check for correct and wrong guessed atoms and set ui cell color
+    for (int x = 1; x <= 8; ++x) {
+        for (int y = 1; y <= 8; ++y) {
+            if (board[x][y].getAtomGuess() && board[x][y].getCellType() == Cell::ATOM) {
+                emit setObjectColor(QString::fromStdString("c" + std::to_string(y) + std::to_string(x)), getEnumColor(SIGNAL_GREEN));
+            } else if (board[x][y].getAtomGuess() && board[x][y].getCellType() != Cell::ATOM) {
+                emit setObjectColor(QString::fromStdString("c" + std::to_string(y) + std::to_string(x)), getEnumColor(SIGNAL_RED));
+            }
+        }
+    }
 }
 
 Q_INVOKABLE void BlackBoxBackend::emitRay(QObject *obj) {
@@ -46,9 +57,6 @@ Q_INVOKABLE void BlackBoxBackend::setAtomGuess(QObject *obj) {
             }
         }
     }
-
-    std::cout << currentAtoms << std::endl;
-    std::cout << atomAmount << std::endl;
 
     if (board[cell.getX()][cell.getY()].getAtomGuess()) {
         // Remove atom guess in board
@@ -75,6 +83,9 @@ void BlackBoxBackend::initBoard() {
             // Set cell coordinates
             cell.setX(col);
             cell.setY(row);
+
+            // Set atom guess state
+            cell.setAtomGuess(false);
 
             // Set cell type and color
             if ((row == 0 && col == 0) || (row == 0 && col == boardSize - 1) ||
@@ -130,9 +141,11 @@ void BlackBoxBackend::setAtoms() {
 Cell BlackBoxBackend::getCellCoordinates(QObject *obj) {
     QString objName = obj->property("objectName").toString();
 
+    // Get x and y values from cell's objectName attribute
     QStringRef xValue(&objName, 1, 1);
     QStringRef yValue(&objName, 0, 1);
 
+    // Return cell object with coordinates
     Cell cell;
     cell.setX(xValue.toInt());
     cell.setY(yValue.toInt());
@@ -142,24 +155,25 @@ Cell BlackBoxBackend::getCellCoordinates(QObject *obj) {
 
 QColor BlackBoxBackend::getEnumColor(BlackBoxBackend::Color color) {
     switch(color) {
-        case MIDNIGHT_BLUE:   return QColor("#09102b");
-        case MARENGO_GRAY:    return QColor("#424551");
-        case BRIGHT_VIOLET:   return QColor("#8b28fc");
-        case BRIGHT_GREEN:    return QColor("#99fc28");
-        case BRIGHT_MAGENTA:  return QColor("#f528fc");
-        case LIME_GREEN:      return QColor("#2ffc28");
-        case BRIGHT_YELLOW:   return QColor("#fcf528");
-        case LIME_CYAN:       return QColor("#28fc8b");
-        case BRIGHT_ORANGE:   return QColor("#fc8b28");
-        case BRIGHT_BLUE:     return QColor("#2899fc");
-        case BRIGHT_PINK:     return QColor("#fc2899");
-        case BRIGHT_CYAN:     return QColor("#28fcf5");
-        case VIVID_RED:       return QColor("#ff1d55");
-        case VIVID_YELLOW:    return QColor("#e1ff28");
-        case ABYSS_BLACK:     return QColor("#000000");
-        case WHITE_VIOLET:    return QColor("#f7f0ff");
-        case MIDNIGHT_VIOLET: return QColor("#1a0b32");
-        case SIGNAL_RED:      return QColor("#ff0d31");
+        case MIDNIGHT_BLUE:     return QColor("#09102b");
+        case MARENGO_GRAY:      return QColor("#424551");
+        case BRIGHT_VIOLET:     return QColor("#8b28fc");
+        case BRIGHT_GREEN:      return QColor("#99fc28");
+        case BRIGHT_MAGENTA:    return QColor("#f528fc");
+        case LIME_GREEN:        return QColor("#2ffc28");
+        case BRIGHT_YELLOW:     return QColor("#fcf528");
+        case LIME_CYAN:         return QColor("#28fc8b");
+        case BRIGHT_ORANGE:     return QColor("#fc8b28");
+        case BRIGHT_BLUE:       return QColor("#2899fc");
+        case BRIGHT_PINK:       return QColor("#fc2899");
+        case BRIGHT_CYAN:       return QColor("#28fcf5");
+        case VIVID_RED:         return QColor("#ff1d55");
+        case VIVID_YELLOW:      return QColor("#e1ff28");
+        case ABYSS_BLACK:       return QColor("#000000");
+        case WHITE_VIOLET:      return QColor("#f7f0ff");
+        case MIDNIGHT_VIOLET:   return QColor("#1a0b32");
+        case SIGNAL_RED:        return QColor("#ff0d31");
+        case SIGNAL_GREEN:      return QColor("#00ff10");
     }
 }
 

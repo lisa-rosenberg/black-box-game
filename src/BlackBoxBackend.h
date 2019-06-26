@@ -19,6 +19,7 @@ public:
     int atomAmount;
 
 private:
+    bool gameFinished = false;
 
     enum Color {
         MIDNIGHT_BLUE,
@@ -38,7 +39,8 @@ private:
         ABYSS_BLACK,
         WHITE_VIOLET,
         MIDNIGHT_VIOLET,
-        SIGNAL_RED
+        SIGNAL_RED,
+        SIGNAL_GREEN
     };
 
     void initBoard();
