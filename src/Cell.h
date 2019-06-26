@@ -17,19 +17,20 @@ public:
 
     void setX(int xValue);
     void setY(int yValue);
-    void setColor(QColor color);
-    void setCellType(Type cellType);
+    void setColor(QColor colorValue);
+    void setCellType(Type typeValue);
+    void setAtomGuess(bool atomGuessValue);
 
     int getX();
     int getY();
-
+    bool getAtomGuess();
     QColor getColor();
     Cell::Type getCellType();
 
 private:
     int x = 0;
     int y = 0;
-
+    bool atomGuess = false;
     QColor color;
     Type type;
 };

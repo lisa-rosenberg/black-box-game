@@ -35,7 +35,34 @@ Q_INVOKABLE void BlackBoxBackend::emitRay(QObject *obj) {
 }
 
 Q_INVOKABLE void BlackBoxBackend::setAtomGuess(QObject *obj) {
+    Cell cell = getCellCoordinates(obj);
 
+    // Get current atom amount
+    int currentAtoms = 0;
+    for (int x = 1; x <= 8; ++x) {
+        for (int y = 1; y <= 8; ++y) {
+            if (board[x][y].getAtomGuess()) {
+                currentAtoms++;
+            }
+        }
+    }
+
+    std::cout << currentAtoms << std::endl;
+    std::cout << atomAmount << std::endl;
+
+    if (board[cell.getX()][cell.getY()].getAtomGuess()) {
+        // Remove atom guess in board
+        board[cell.getX()][cell.getY()].setAtomGuess(false);
+
+        // Set ui cell color
+        emit setObjectColor(QString::fromStdString("c" + std::to_string(cell.getY()) + std::to_string(cell.getX())), getEnumColor(BRIGHT_VIOLET));
+    } else if (currentAtoms < atomAmount) {
+        // Save atom guess in board
+        board[cell.getX()][cell.getY()].setAtomGuess(true);
+
+        // Set ui cell color
+        emit setObjectColor(QString::fromStdString("c" + std::to_string(cell.getY()) + std::to_string(cell.getX())), getEnumColor(MIDNIGHT_VIOLET));
+    }
 }
 
 void BlackBoxBackend::initBoard() {
@@ -53,14 +80,17 @@ void BlackBoxBackend::initBoard() {
             if ((row == 0 && col == 0) || (row == 0 && col == boardSize - 1) ||
                 (row == boardSize - 1 && col == 0) || (row == boardSize - 1 && col == boardSize - 1)) {
                 cell.setCellType(Cell::CORNER);
-                cell.setColor("#09102b");
+                cell.setColor(getEnumColor(MIDNIGHT_BLUE));
             } else if (row == 0 || row == boardSize - 1 || col == 0 || col == boardSize - 1) {
                 cell.setCellType(Cell::EDGE);
-                cell.setColor("#424551");
+                cell.setColor(getEnumColor(MARENGO_GRAY));
             } else {
                 cell.setCellType(Cell::FIELD);
-                cell.setColor("#8b28fc");
+                cell.setColor(getEnumColor(BRIGHT_VIOLET));
             }
+
+            // Save cell in board
+            board[row][col] = cell;
 
             // Set ui cell color
             emit setObjectColor(QString::fromStdString("c" + std::to_string(row) + std::to_string(col)), cell.getColor());
@@ -74,24 +104,25 @@ void BlackBoxBackend::setAtoms() {
     std::random_device rd;
     std::mt19937 rand(rd());
     std::uniform_int_distribution<> dist(3, 5);
-    int atomAmount = dist(rand);
+    atomAmount = dist(rand);
+    int remainingAtoms = atomAmount;
 
     // Set ui atom amount label
     emit setObjectText(QString::fromStdString("atomAmount"), QString::fromStdString(std::to_string(atomAmount)));
 
     // Set atoms on board
-    dist = std::uniform_int_distribution<> (1, 9);
-    while (atomAmount > 0) {
+    dist = std::uniform_int_distribution<> (1, 8);
+    while (remainingAtoms > 0) {
         // Get random number between inside board
         int x = dist(rand);
         int y = dist(rand);
 
         if (board[x][y].getCellType() != Cell::ATOM) {
             board[x][y].setCellType(Cell::ATOM);
-            atomAmount--;
+            remainingAtoms--;
 
             // For testing purpose
-            emit setObjectColor(QString::fromStdString("c" + std::to_string(y) + std::to_string(x)), QColor(20, 20, 20));
+            emit setObjectColor(QString::fromStdString("c" + std::to_string(y) + std::to_string(x)), getEnumColor(SIGNAL_RED));
         }
     }
 }
@@ -99,14 +130,37 @@ void BlackBoxBackend::setAtoms() {
 Cell BlackBoxBackend::getCellCoordinates(QObject *obj) {
     QString objName = obj->property("objectName").toString();
 
-    QStringRef xValue(&objName, 0, 1);
-    QStringRef yValue(&objName, 1, 1);
+    QStringRef xValue(&objName, 1, 1);
+    QStringRef yValue(&objName, 0, 1);
 
     Cell cell;
     cell.setX(xValue.toInt());
     cell.setY(yValue.toInt());
 
     return cell;
+}
+
+QColor BlackBoxBackend::getEnumColor(BlackBoxBackend::Color color) {
+    switch(color) {
+        case MIDNIGHT_BLUE:   return QColor("#09102b");
+        case MARENGO_GRAY:    return QColor("#424551");
+        case BRIGHT_VIOLET:   return QColor("#8b28fc");
+        case BRIGHT_GREEN:    return QColor("#99fc28");
+        case BRIGHT_MAGENTA:  return QColor("#f528fc");
+        case LIME_GREEN:      return QColor("#2ffc28");
+        case BRIGHT_YELLOW:   return QColor("#fcf528");
+        case LIME_CYAN:       return QColor("#28fc8b");
+        case BRIGHT_ORANGE:   return QColor("#fc8b28");
+        case BRIGHT_BLUE:     return QColor("#2899fc");
+        case BRIGHT_PINK:     return QColor("#fc2899");
+        case BRIGHT_CYAN:     return QColor("#28fcf5");
+        case VIVID_RED:       return QColor("#ff1d55");
+        case VIVID_YELLOW:    return QColor("#e1ff28");
+        case ABYSS_BLACK:     return QColor("#000000");
+        case WHITE_VIOLET:    return QColor("#f7f0ff");
+        case MIDNIGHT_VIOLET: return QColor("#1a0b32");
+        case SIGNAL_RED:      return QColor("#ff0d31");
+    }
 }
 
 
