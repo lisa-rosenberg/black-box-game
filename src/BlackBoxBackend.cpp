@@ -57,7 +57,6 @@ Q_INVOKABLE void BlackBoxBackend::emitRay(QObject *obj) {
         // Emit new ray
         Ray ray = Ray(cell);
         rays.emplace_back(ray);
-        setObjectColor(cell.getX(), cell.getY(), ray.getRayColor());
 
         cout << "Ray path: " << ray.getRayCells().front().getX() << "|" << ray.getRayCells().front().getY() << endl;
 
@@ -110,23 +109,23 @@ Q_INVOKABLE void BlackBoxBackend::setAtomGuess(QObject *obj) {
 void BlackBoxBackend::initBoard() {
     int boardSize = sizeof(board) / sizeof(board[0]);
 
-    for (int row = 0; row < boardSize; ++row) {
-        for (int col = 0; col < boardSize; ++col) {
+    for (int y = 0; y < boardSize; ++y) {
+        for (int x = 0; x < boardSize; ++x) {
             Cell cell;
 
             // Set cell coordinates
-            cell.setX(col);
-            cell.setY(row);
+            cell.setX(x);
+            cell.setY(y);
 
             // Set atom guess state
             cell.setAtomGuess(false);
 
             // Set cell type and color
-            if ((row == 0 && col == 0) || (row == 0 && col == boardSize - 1) ||
-                (row == boardSize - 1 && col == 0) || (row == boardSize - 1 && col == boardSize - 1)) {
+            if ((x == 0 && y == 0) || (x == 0 && y == boardSize - 1) ||
+                (x == boardSize - 1 && y == 0) || (x == boardSize - 1 && y == boardSize - 1)) {
                 cell.setCellType(Cell::CORNER);
                 cell.setColor(getEnumColor(MIDNIGHT_BLUE));
-            } else if (row == 0 || row == boardSize - 1 || col == 0 || col == boardSize - 1) {
+            } else if (x == 0 || x == boardSize - 1 || y == 0 || y == boardSize - 1) {
                 cell.setCellType(Cell::EDGE);
                 cell.setColor(getEnumColor(MARENGO_GRAY));
             } else {
@@ -135,10 +134,10 @@ void BlackBoxBackend::initBoard() {
             }
 
             // Save cell in board
-            board[row][col] = cell;
+            board[x][y] = cell;
 
             // Set ui cell color
-            setObjectColor(col, row, cell.getColor());
+            setObjectColor(x, y, cell.getColor());
         }
     }
 }
@@ -154,7 +153,6 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
     switch (direction) {
         case SOUTH:
             ray.addRayCell(board[x + 0][y + 1]);
-            setObjectColor(x + 0, y + 1, ray.getRayColor());
 
             cout << "CASE SOUTH" << endl;
             cout << "Ray path (board): " << board[x + 0][y + 1].getX() << "|" << board[x + 0][y + 1].getY() << endl;
@@ -164,10 +162,12 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 // Ray reaches an edge
                 cout << "END" << endl;
                 checkForRayReflection(ray);
+                colorRay(ray);
             } else if (board[x + 0][y + 2].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 cout << "HIT" << endl;
                 rayHitsAtom(ray);
+                colorRay(ray);
             } else if (board[x + 1][y + 2].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 cout << "DEFLECTION WEST" << endl;
@@ -181,12 +181,10 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 cout << "NEXT SOUTH" << endl;
                 nextRayStep(ray, SOUTH);
             }
-
             break;
 
         case WEST:
             ray.addRayCell(board[x - 1][y + 0]);
-            setObjectColor(x - 1, y + 0, ray.getRayColor());
 
             cout << "CASE WEST" << endl;
             cout << "Ray path (board): " << board[x - 1][y + 0].getX() << "|" << board[x - 1][y + 0].getY() << endl;
@@ -196,10 +194,12 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 // Ray reaches an edge
                 cout << "END" << endl;
                 checkForRayReflection(ray);
+                colorRay(ray);
             } else if (board[x - 2][y + 0].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 cout << "HIT" << endl;
                 rayHitsAtom(ray);
+                colorRay(ray);
             } else if (board[x - 2][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 cout << "DEFLECTION NORTH" << endl;
@@ -213,12 +213,10 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 cout << "NEXT WEST" << endl;
                 nextRayStep(ray, WEST);
             }
-
             break;
 
         case NORTH:
             ray.addRayCell(board[x + 0][y - 1]);
-            setObjectColor(x + 0, y - 1, ray.getRayColor());
 
             cout << "CASE NORTH" << endl;
             cout << "Ray path (board): " << board[x + 0][y - 1].getX() << "|" << board[x + 0][y - 1].getY() << endl;
@@ -228,10 +226,12 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 // Ray reaches an edge
                 cout << "END" << endl;
                 checkForRayReflection(ray);
+                colorRay(ray);
             } else if (board[x + 0][y - 2].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 cout << "HIT" << endl;
                 rayHitsAtom(ray);
+                colorRay(ray);
             } else if (board[x + 1][y - 2].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 cout << "DEFLECTION WEST" << endl;
@@ -245,12 +245,10 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 cout << "NEXT NORTH" << endl;
                 nextRayStep(ray, NORTH);
             }
-
             break;
 
         case EAST:
             ray.addRayCell(board[x + 1][y + 0]);
-            setObjectColor(x + 1, y + 0, ray.getRayColor());
 
             cout << "CASE EAST" << endl;
             cout << "Ray path (board): " << board[x + 1][y + 0].getX() << "|" << board[x + 1][y + 0].getY() << endl;
@@ -260,15 +258,17 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 // Ray reaches an edge
                 cout << "END" << endl;
                 checkForRayReflection(ray);
+                colorRay(ray);
             } else if (board[x + 2][y + 0].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 cout << "HIT" << endl;
                 rayHitsAtom(ray);
+                colorRay(ray);
             } else if (board[x + 2][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 cout << "DEFLECTION NORTH" << endl;
                 nextRayStep(ray, NORTH);
-            } else if (board[x + 2][y + 1].getCellType() == Cell::ATOM) {
+            } else if (board[x + 2][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 cout << "DEFLECTION SOUTH" << endl;
                 nextRayStep(ray, SOUTH);
@@ -277,23 +277,42 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 cout << "DEFLECTION EAST" << endl;
                 nextRayStep(ray, EAST);
             }
-
             break;
     }
 }
 
-void BlackBoxBackend::rayHitsAtom(Ray &ray) const {
+void BlackBoxBackend::rayHitsAtom(Ray &ray) {
     ray.setRayType(Ray::HIT);
     ray.setRayColor(MIDNIGHT_VIOLET);
 }
 
-void BlackBoxBackend::checkForRayReflection(Ray &ray) const {
-    Cell firstCell = ray.getRayCells().front();
-    Cell lastCell = ray.getRayCells().back();
+void BlackBoxBackend::checkForRayReflection(Ray &ray) {
+    Cell frontCell = ray.getRayCells().front();
+    Cell backCell = ray.getRayCells().back();
 
-    if ((firstCell.getX() == lastCell.getY()) && (firstCell.getX() == lastCell.getY())) {
+    if ((frontCell.getX() == backCell.getX()) && (frontCell.getY() == backCell.getY())) {
         ray.setRayType(Ray::REFLECTION);
         ray.setRayColor(WHITE_VIOLET);
+    }
+}
+
+void BlackBoxBackend::colorRay(Ray &ray) {
+    cout << "Ray type: " << ray.getRayType() << endl;
+
+    if (gameFinished) {
+        Cell frontCell = ray.getRayCells().front();
+        Cell backCell = ray.getRayCells().back();
+
+        setObjectColor(frontCell.getX(), frontCell.getY(), ray.getRayColor());
+
+        if (ray.getRayType() != Ray::HIT) {
+            setObjectColor(backCell.getX(), backCell.getY(), ray.getRayColor());
+        }
+    } else {
+        for (int i = 0; i < ray.getRayCells().size(); ++i) {
+            Cell cell = ray.getRayCells().at(i);
+            setObjectColor(cell.getX(), cell.getY(), ray.getRayColor());
+        }
     }
 }
 
@@ -344,7 +363,7 @@ Cell BlackBoxBackend::getCellCoordinates(QObject *obj) {
 QColor BlackBoxBackend::getEnumColor(BlackBoxBackend::Color color) {
     switch(color) {
         case MIDNIGHT_BLUE:     return QColor("#09102b");
-        case MARENGO_GRAY:      return QColor("#424551");
+        case MARENGO_GRAY:      return QColor("#282b39");
         case DARK_VIOLET:       return QColor("#5002a7");
         case BRIGHT_GREEN:      return QColor("#99fc28");
         case BRIGHT_MAGENTA:    return QColor("#f528fc");

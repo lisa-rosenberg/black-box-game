@@ -2,6 +2,7 @@
 
 #include <utility>
 #include <random>
+#include <iostream>
 
 #include "Ray.h"
 #include "BlackBoxBackend.h"
@@ -55,7 +56,7 @@ QColor Ray::getNewColor() {
     // Get random index number of rayDeflectionColors
     random_device rd;
     mt19937 rand(rd());
-    uniform_int_distribution<> dist(0, BlackBoxBackend::rayDeflectionColors.size());
+    uniform_int_distribution<> dist(0, BlackBoxBackend::rayDeflectionColors.size() - 1);
 
     // Check if color is already used by another ray
     QColor newColor = nullptr;
@@ -75,6 +76,8 @@ QColor Ray::getNewColor() {
             newColor = randomColor;
         }
     }
+
+    cout << "Init ray color: " << qPrintable(newColor.name()) << endl;
 
     return newColor;
 }
