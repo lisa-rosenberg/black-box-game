@@ -388,7 +388,7 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
         // Reset displayed ray on board
         for (int x = 1; x <= 8; ++x) {
             for (int y = 1; y <= 8; ++y) {
-                if (board[x][y].getCellType() != Cell::ATOM) {
+                if (!board[x][y].getAtomGuess()) {
                     setObjectColor(x, y, getEnumColor(DARK_VIOLET));
                 }
             }
@@ -398,8 +398,10 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
         for (unsigned i = 0; i < currentRay.getRayCells().size(); ++i) {
             Cell currentCell = currentRay.getRayCells().at(i);
 
-            board[currentCell.getX()][currentCell.getY()].setColor(currentRay.getRayColor());
-            setObjectColor(currentCell.getX(), currentCell.getY(), currentRay.getRayColor());
+            if (!board[currentCell.getX()][currentCell.getY()].getAtomGuess()) {
+                board[currentCell.getX()][currentCell.getY()].setColor(currentRay.getRayColor());
+                setObjectColor(currentCell.getX(), currentCell.getY(), currentRay.getRayColor());
+            }
         }
     }
 }
