@@ -71,9 +71,10 @@ private:
 
     void initBoard();
     void nextRayStep(Ray ray, BlackBoxBackend::Direction direction);
-    static void checkForRayReflection(Ray &ray);
-    static void rayHitsAtom(Ray &ray);
-    void colorRay(Ray &ray);
+    static void checkForRayReflection(Ray &currentRay);
+    static void rayHitsAtom(Ray &currentRay);
+    static void updateRay(Ray &currentRay);
+    void colorRay(Ray &currentRay);
 
 public slots:
     Q_INVOKABLE void newGame();

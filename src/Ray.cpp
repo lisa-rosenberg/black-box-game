@@ -77,7 +77,5 @@ QColor Ray::getNewColor() {
         }
     }
 
-    cout << "Init ray color: " << qPrintable(newColor.name()) << endl;
-
     return newColor;
 }
