@@ -79,6 +79,10 @@ public slots:
 signals:
     void setObjectText(const QString &objectId, const QString &text);
     void setObjectColor(const QString &objectId, const QColor &color);
+
+    void checkForRayReflection(Ray &ray) const;
+
+    void rayHitsAtom(Ray &ray) const;
 };
 
 #endif //SOSE19_PADI02_BLACKBOXBACKEND_H

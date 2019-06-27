@@ -136,33 +136,103 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
 
     switch (direction) {
         case SOUTH:
+            ray.addRayCell(board[x + 0][y + 1]);
+            setObjectColor(x + 0, y + 1, ray.getRayColor());
+
             if (board[x + 0][y + 1].getCellType() == Cell::EDGE) {
-                ray.addRayCell(board[x + 0][y + 1]);
-                setObjectColor(x + 0, y + 1, ray.getRayColor());
+                // Ray reaches an edge
+                checkForRayReflection(ray);
             } else if (board[x + 0][y + 2].getCellType() == Cell::ATOM) {
-                setObjectColor(x + 0, y + 1, ray.getRayColor());
+                // Ray hits an atom
+                rayHitsAtom(ray);
             } else if (board[x + 1][y + 2].getCellType() == Cell::ATOM) {
-
+                // Ray is deflected by an atom
+                nextRayStep(ray, WEST);
             } else if (board[x - 1][y + 2].getCellType() == Cell::ATOM) {
-
+                // Ray is deflected by an atom
+                nextRayStep(ray, EAST);
             } else {
-                setObjectColor(x + 0, y + 1, ray.getRayColor());
+                // Ray is not deflected by an atom
+                nextRayStep(ray, SOUTH);
             }
+
         case WEST:
+            ray.addRayCell(board[x - 1][y + 0]);
+            setObjectColor(x - 1, y + 0, ray.getRayColor());
+
             if (board[x - 1][y + 0].getCellType() == Cell::EDGE) {
-                ray.addRayCell(board[x - 1][y + 0]);
-                setObjectColor(x - 1, y + 0, ray.getRayColor());
+                // Ray reaches an edge
+                checkForRayReflection(ray);
+            } else if (board[x - 2][y + 0].getCellType() == Cell::ATOM) {
+                // Ray hits an atom
+                rayHitsAtom(ray);
+            } else if (board[x - 2][y + 1].getCellType() == Cell::ATOM) {
+                // Ray is deflected by an atom
+                nextRayStep(ray, NORTH);
+            } else if (board[x - 2][y - 1].getCellType() == Cell::ATOM) {
+                // Ray is deflected by an atom
+                nextRayStep(ray, SOUTH);
+            } else {
+                // Ray is not deflected by an atom
+                nextRayStep(ray, WEST);
             }
+
         case NORTH:
+            ray.addRayCell(board[x + 0][y - 1]);
+            setObjectColor(x + 0, y - 1, ray.getRayColor());
+
             if (board[x + 0][y - 1].getCellType() == Cell::EDGE) {
-                ray.addRayCell(board[x + 0][y - 1]);
-                setObjectColor(x + 0, y - 1, ray.getRayColor());
+                // Ray reaches an edge
+                checkForRayReflection(ray);
+            } else if (board[x + 0][y - 2].getCellType() == Cell::ATOM) {
+                // Ray hits an atom
+                rayHitsAtom(ray);
+            } else if (board[x + 1][y - 2].getCellType() == Cell::ATOM) {
+                // Ray is deflected by an atom
+                nextRayStep(ray, WEST);
+            } else if (board[x - 1][y - 2].getCellType() == Cell::ATOM) {
+                // Ray is deflected by an atom
+                nextRayStep(ray, EAST);
+            } else {
+                // Ray is not deflected by an atom
+                nextRayStep(ray, NORTH);
             }
+
         case EAST:
+            ray.addRayCell(board[x + 1][y + 0]);
+            setObjectColor(x + 1, y + 0, ray.getRayColor());
+
             if (board[x + 1][y + 0].getCellType() == Cell::EDGE) {
-                ray.addRayCell(board[x + 1][y + 0]);
-                setObjectColor(x + 1, y + 0, ray.getRayColor());
+                // Ray reaches an edge
+                checkForRayReflection(ray);
+            } else if (board[x + 2][y + 0].getCellType() == Cell::ATOM) {
+                // Ray hits an atom
+                rayHitsAtom(ray);
+            } else if (board[x + 2][y + 1].getCellType() == Cell::ATOM) {
+                // Ray is deflected by an atom
+                nextRayStep(ray, NORTH);
+            } else if (board[x + 2][y + 1].getCellType() == Cell::ATOM) {
+                // Ray is deflected by an atom
+                nextRayStep(ray, SOUTH);
+            } else {
+                // Ray is not deflected by an atom
+                nextRayStep(ray, EAST);
             }
+    }
+}
+
+void BlackBoxBackend::rayHitsAtom(Ray &ray) const {
+    ray.setRayType(Ray::HIT);
+    ray.setRayColor(MIDNIGHT_VIOLET);
+}
+
+void BlackBoxBackend::checkForRayReflection(Ray &ray) const {
+    Cell firstCell = reinterpret_cast<Cell &&>(ray.getRayCells().at(0));
+    Cell lastCell = reinterpret_cast<Cell &&>(ray.getRayCells().at(ray.getRayCells().size()));
+
+    if ((firstCell.getX() == lastCell.getY()) && (firstCell.getX() == lastCell.getY())) {
+        ray.setRayType(Ray::REFLECTION);
+        ray.setRayColor(WHITE_VIOLET);
     }
 }
 
