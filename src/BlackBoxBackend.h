@@ -7,6 +7,7 @@
 #include <QQmlApplicationEngine>
 
 #include "Cell.h"
+#include "Ray.h"
 
 class BlackBoxBackend : public QObject {
     Q_OBJECT
@@ -16,15 +17,14 @@ public:
 
     QObject object;
     Cell board[10][10];
+    static std::vector<std::vector<Ray>> rays;
+    static std::vector<std::vector<QColor>> rayDeflectionColors;
     int atomAmount;
-
-private:
-    bool gameFinished = false;
 
     enum Color {
         MIDNIGHT_BLUE,
         MARENGO_GRAY,
-        BRIGHT_VIOLET,
+        DARK_VIOLET,
         BRIGHT_GREEN,
         BRIGHT_MAGENTA,
         LIME_GREEN,
@@ -35,13 +35,23 @@ private:
         BRIGHT_PINK,
         BRIGHT_CYAN,
         VIVID_RED,
-        VIVID_YELLOW,
-        ABYSS_BLACK,
+        LIME_YELLOW,
+        ABYSSAL_BLACK,
         WHITE_VIOLET,
         MIDNIGHT_VIOLET,
         SIGNAL_RED,
-        SIGNAL_GREEN
+        SIGNAL_GREEN,
+        VIVID_ORANGE,
+        VIVID_BLUE,
+        BRIGHT_VIOLET,
+        VIVID_VIOLET,
+        VIVID_YELLOW
     };
+
+    void setRayDeflectionColors();
+
+private:
+    bool gameFinished = false;
 
     enum Direction {
         SOUTH,
@@ -51,10 +61,10 @@ private:
     };
 
     void initBoard();
-    void nextRayStep(Cell cell, const QColor& color, BlackBoxBackend::Direction direction);
+    void nextRayStep(Ray ray, BlackBoxBackend::Direction direction);
 
     Cell getCellCoordinates(QObject *obj);
-    QColor getEnumColor(BlackBoxBackend::Color color);
+    QColor getEnumColor(Color color);
 
     void setAtoms();
     void setObjectColor(const int &x, const int &y, const QColor &color);

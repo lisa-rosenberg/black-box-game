@@ -5,8 +5,6 @@
 
 #include "BlackBoxBackend.h"
 
-void testMeth(const QObject *rootObject);
-
 int main(int argc, char** argv) {
     BlackBoxBackend blackBoxBackend;
 
@@ -20,6 +18,7 @@ int main(int argc, char** argv) {
         return -1;
     }
 
+    blackBoxBackend.setRayDeflectionColors();
     blackBoxBackend.newGame();
 
     return QApplication::exec();
