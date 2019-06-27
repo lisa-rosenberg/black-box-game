@@ -65,7 +65,7 @@ private:
     static Cell getCellCoordinates(QObject *obj);
     static QColor getEnumColor(Color color);
 
-    void setAtoms();
+    void setRandomAtoms();
     void setObjectColor(const int &x, const int &y, const QColor &color);
     void setObjectText(const std::string &objectId, const std::string &text);
 

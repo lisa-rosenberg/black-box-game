@@ -27,7 +27,7 @@ Q_INVOKABLE void BlackBoxBackend::newGame() {
     gameFinished = false;
 
     initBoard();
-    setAtoms();
+    setRandomAtoms();
 }
 
 Q_INVOKABLE void BlackBoxBackend::enterGuess() {
@@ -141,57 +141,47 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
     int x = currentCell.getX();
     int y = currentCell.getY();
 
-    cout << "" << endl;
-    cout << "Ray path: " << ray.getRayCells().back().getX() << "|" << ray.getRayCells().back().getY() << endl;
 
     switch (direction) {
         case SOUTH:
             if (board[x + 0][y + 1].getCellType() == Cell::EDGE) {
                 // Ray reaches an edge
                 ray.addRayCell(board[x + 0][y + 1]);
-                cout << "END" << endl;
                 checkForRayReflection(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x + 0][y + 1].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
-                cout << "HIT" << endl;
                 rayHitsAtom(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x + 1][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
-                cout << "REFLECTION" << endl;
                 checkForRayReflection(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x - 1][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
-                cout << "REFLECTION" << endl;
                 checkForRayReflection(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x + 0][y + 2].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 ray.addRayCell(board[x + 0][y + 1]);
-                cout << "HIT" << endl;
                 rayHitsAtom(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x + 1][y + 2].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 ray.addRayCell(board[x + 0][y + 1]);
-                cout << "DEFLECTION WEST" << endl;
                 nextRayStep(ray, WEST);
             } else if (board[x - 1][y + 2].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 ray.addRayCell(board[x + 0][y + 1]);
-                cout << "DEFLECTION EAST" << endl;
                 nextRayStep(ray, EAST);
             } else {
                 // Ray is not deflected by an atom
                 ray.addRayCell(board[x + 0][y + 1]);
-                cout << "NEXT SOUTH" << endl;
                 nextRayStep(ray, SOUTH);
             }
             break;
@@ -200,49 +190,41 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
             if (board[x - 1][y + 0].getCellType() == Cell::EDGE) {
                 // Ray reaches an edge
                 ray.addRayCell(board[x - 1][y + 0]);
-                cout << "END" << endl;
                 checkForRayReflection(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x - 1][y + 0].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
-                cout << "HIT" << endl;
                 rayHitsAtom(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x - 1][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
-                cout << "REFLECTION" << endl;
                 checkForRayReflection(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x - 1][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
-                cout << "REFLECTION" << endl;
                 checkForRayReflection(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x - 2][y + 0].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 ray.addRayCell(board[x - 1][y + 0]);
-                cout << "HIT" << endl;
                 rayHitsAtom(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x - 2][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 ray.addRayCell(board[x - 1][y + 0]);
-                cout << "DEFLECTION NORTH" << endl;
                 nextRayStep(ray, NORTH);
             } else if (board[x - 2][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 ray.addRayCell(board[x - 1][y + 0]);
-                cout << "DEFLECTION SOUTH" << endl;
                 nextRayStep(ray, SOUTH);
             } else {
                 // Ray is not deflected by an atom
                 ray.addRayCell(board[x - 1][y + 0]);
-                cout << "NEXT WEST" << endl;
                 nextRayStep(ray, WEST);
             }
             break;
@@ -251,49 +233,41 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
             if (board[x + 0][y - 1].getCellType() == Cell::EDGE) {
                 // Ray reaches an edge
                 ray.addRayCell(board[x + 0][y - 1]);
-                cout << "END" << endl;
                 checkForRayReflection(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x + 0][y - 1].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
-                cout << "HIT" << endl;
                 rayHitsAtom(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x + 1][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
-                cout << "REFLECTION" << endl;
                 checkForRayReflection(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x - 1][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
-                cout << "REFLECTION" << endl;
                 checkForRayReflection(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x + 0][y - 2].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 ray.addRayCell(board[x + 0][y - 1]);
-                cout << "HIT" << endl;
                 rayHitsAtom(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x + 1][y - 2].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 ray.addRayCell(board[x + 0][y - 1]);
-                cout << "DEFLECTION WEST" << endl;
                 nextRayStep(ray, WEST);
             } else if (board[x - 1][y - 2].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 ray.addRayCell(board[x + 0][y - 1]);
-                cout << "DEFLECTION EAST" << endl;
                 nextRayStep(ray, EAST);
             } else {
                 // Ray is not deflected by an atom
                 ray.addRayCell(board[x + 0][y - 1]);
-                cout << "NEXT NORTH" << endl;
                 nextRayStep(ray, NORTH);
             }
             break;
@@ -302,49 +276,41 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
             if (board[x + 1][y + 0].getCellType() == Cell::EDGE) {
                 // Ray reaches an edge
                 ray.addRayCell(board[x + 1][y + 0]);
-                cout << "END" << endl;
                 checkForRayReflection(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x + 1][y + 0].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
-                cout << "HIT" << endl;
                 rayHitsAtom(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x + 1][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
-                cout << "REFLECTION" << endl;
                 checkForRayReflection(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x + 1][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
-                cout << "REFLECTION" << endl;
                 checkForRayReflection(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x + 2][y + 0].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 ray.addRayCell(board[x + 1][y + 0]);
-                cout << "HIT" << endl;
                 rayHitsAtom(ray);
                 updateRay(ray);
                 colorRay(ray);
             } else if (board[x + 2][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 ray.addRayCell(board[x + 1][y + 0]);
-                cout << "DEFLECTION NORTH" << endl;
                 nextRayStep(ray, NORTH);
             } else if (board[x + 2][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 ray.addRayCell(board[x + 1][y + 0]);
-                cout << "DEFLECTION SOUTH" << endl;
                 nextRayStep(ray, SOUTH);
             } else {
                 // Ray is not deflected by an atom
                 ray.addRayCell(board[x + 1][y + 0]);
-                cout << "DEFLECTION EAST" << endl;
                 nextRayStep(ray, EAST);
             }
             break;
@@ -395,7 +361,7 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
     }
 }
 
-void BlackBoxBackend::setAtoms() {
+void BlackBoxBackend::setRandomAtoms() {
     // Get random number between 3 to 5
     random_device rd;
     mt19937 rand(rd());
@@ -418,7 +384,7 @@ void BlackBoxBackend::setAtoms() {
             board[x][y].setCellType(Cell::ATOM);
             remainingAtoms--;
 
-            // For testing purpose
+            // For testing purposes
             setObjectColor(x, y, getEnumColor(SIGNAL_RED));
         }
     }
