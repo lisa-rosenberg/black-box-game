@@ -84,30 +84,32 @@ Q_INVOKABLE void BlackBoxBackend::emitRay(QObject *obj) {
 }
 
 Q_INVOKABLE void BlackBoxBackend::setAtomGuess(QObject *obj) {
-    Cell cell = getCellCoordinates(obj);
-    int currentAtoms = 0;
+    if (!gameFinished) {
+        Cell cell = getCellCoordinates(obj);
+        int currentAtoms = 0;
 
-    // Get current atom amount
-    for (int x = 1; x <= 8; ++x) {
-        for (int y = 1; y <= 8; ++y) {
-            if (board[x][y].getAtomGuess()) {
-                currentAtoms++;
+        // Get current atom amount
+        for (int x = 1; x <= 8; ++x) {
+            for (int y = 1; y <= 8; ++y) {
+                if (board[x][y].getAtomGuess()) {
+                    currentAtoms++;
+                }
             }
         }
-    }
 
-    if (board[cell.getX()][cell.getY()].getAtomGuess()) {
-        // Remove atom guess in board
-        board[cell.getX()][cell.getY()].setAtomGuess(false);
+        if (board[cell.getX()][cell.getY()].getAtomGuess()) {
+            // Remove atom guess in board
+            board[cell.getX()][cell.getY()].setAtomGuess(false);
 
-        // Set ui cell color
-        setObjectColor(cell.getX(), cell.getY(), getEnumColor(DARK_VIOLET));
-    } else if (currentAtoms < atomAmount) {
-        // Save atom guess in board
-        board[cell.getX()][cell.getY()].setAtomGuess(true);
+            // Set ui cell color
+            setObjectColor(cell.getX(), cell.getY(), getEnumColor(DARK_VIOLET));
+        } else if (currentAtoms < atomAmount) {
+            // Save atom guess in board
+            board[cell.getX()][cell.getY()].setAtomGuess(true);
 
-        // Set ui cell color
-        setObjectColor(cell.getX(), cell.getY(), getEnumColor(MIDNIGHT_VIOLET));
+            // Set ui cell color
+            setObjectColor(cell.getX(), cell.getY(), getEnumColor(MIDNIGHT_VIOLET));
+        }
     }
 }
 
