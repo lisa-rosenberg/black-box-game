@@ -4,6 +4,8 @@
 
 #include "Cell.h"
 
+using namespace std;
+
 Cell::Cell() {
     this->x = 0;
     this->y = 0;
@@ -22,7 +24,7 @@ void Cell::setY(int yValue) {
 }
 
 void Cell::setColor(QColor colorValue) {
-    this->color = std::move(colorValue);
+    this->color = move(colorValue);
 }
 
 void Cell::setCellType(Cell::Type typeValue) {

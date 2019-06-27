@@ -1,17 +1,19 @@
 #include <QtCore/QStringRef>
-#include <iostream>
 #include <QtCore/QVariant>
 #include <QtQml/QQmlProperty>
 #include <QtQml/QQmlApplicationEngine>
 #include <QtQml/QQmlComponent>
-#include <random>
 #include <QQuickItem>
 #include <QQuickView>
 #include <QApplication>
-#include <QtGui/qopengles2ext.h>
+
+#include <iostream>
+#include <random>
 
 #include "BlackBoxBackend.h"
 #include "Cell.h"
+
+using namespace std;
 
 BlackBoxBackend::BlackBoxBackend() {
 
@@ -46,7 +48,7 @@ Q_INVOKABLE void BlackBoxBackend::emitRay(QObject *obj) {
     if (board[cell.getX()][cell.getY()].getColor() == QColor(MARENGO_GRAY)) {
         // Emit new ray
         Ray ray = Ray(cell);
-        rays.emplace_back(ray);
+        BlackBoxBackend::rays.emplace_back(ray);
 
         if (cell.getX() == 0) {
 
@@ -130,7 +132,7 @@ void BlackBoxBackend::initBoard() {
 }
 
 void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction) {
-    Cell currentCell = reinterpret_cast<Cell &&>(ray.getRayCells().at(ray.getRayCells().size()));
+    Cell currentCell = ray.getRayCells().at(ray.getRayCells().size());
     int x = currentCell.getX();
     int y = currentCell.getY();
 
@@ -227,8 +229,8 @@ void BlackBoxBackend::rayHitsAtom(Ray &ray) const {
 }
 
 void BlackBoxBackend::checkForRayReflection(Ray &ray) const {
-    Cell firstCell = reinterpret_cast<Cell &&>(ray.getRayCells().at(0));
-    Cell lastCell = reinterpret_cast<Cell &&>(ray.getRayCells().at(ray.getRayCells().size()));
+    Cell firstCell = ray.getRayCells().at(0);
+    Cell lastCell = ray.getRayCells().at(ray.getRayCells().size());
 
     if ((firstCell.getX() == lastCell.getY()) && (firstCell.getX() == lastCell.getY())) {
         ray.setRayType(Ray::REFLECTION);
@@ -238,17 +240,18 @@ void BlackBoxBackend::checkForRayReflection(Ray &ray) const {
 
 void BlackBoxBackend::setAtoms() {
     // Get random number between 3 to 5
-    std::random_device rd;
-    std::mt19937 rand(rd());
-    std::uniform_int_distribution<> dist(3, 5);
+    random_device rd;
+    mt19937 rand(rd());
+    uniform_int_distribution<> dist(3, 5);
+
     atomAmount = dist(rand);
     int remainingAtoms = atomAmount;
 
     // Set ui atom amount label
-    setObjectText("atomAmount", std::to_string(atomAmount));
+    setObjectText("atomAmount", to_string(atomAmount));
 
     // Set atoms on board
-    dist = std::uniform_int_distribution<> (1, 8);
+    dist = uniform_int_distribution<> (1, 8);
     while (remainingAtoms > 0) {
         // Get random number between inside board
         int x = dist(rand);
@@ -305,14 +308,15 @@ QColor BlackBoxBackend::getEnumColor(BlackBoxBackend::Color color) {
         case BRIGHT_VIOLET:     return QColor("#b900ff");
         case VIVID_VIOLET:      return QColor("#8b28fc");
         case VIVID_YELLOW:      return QColor("#ffcb00");
+        default:                return QColor("#000000");
     }
 }
 
 void BlackBoxBackend::setObjectColor(const int &x, const int &y, const QColor &color) {
-    emit setObjectColor(QString::fromStdString("c" + std::to_string(y) + std::to_string(x)), color);
+    emit setObjectColor(QString::fromStdString("c" + to_string(y) + to_string(x)), color);
 }
 
-void BlackBoxBackend::setObjectText(const std::string &objectId, const std::string &text) {
+void BlackBoxBackend::setObjectText(const string &objectId, const string &text) {
     emit setObjectText(QString::fromStdString(objectId), QString::fromStdString(text));
 }
 

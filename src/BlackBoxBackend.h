@@ -9,6 +9,8 @@
 #include "Cell.h"
 #include "Ray.h"
 
+using namespace std;
+
 class BlackBoxBackend : public QObject {
     Q_OBJECT
 
@@ -17,8 +19,8 @@ public:
 
     QObject object;
     Cell board[10][10];
-    static std::vector<std::vector<Ray>> rays;
-    static std::vector<std::vector<QColor>> rayDeflectionColors;
+    static vector<Ray> rays;
+    static vector<QColor> rayDeflectionColors;
     int atomAmount;
 
     enum Color {
@@ -60,15 +62,17 @@ private:
         EAST
     };
 
-    void initBoard();
-    void nextRayStep(Ray ray, BlackBoxBackend::Direction direction);
-
-    Cell getCellCoordinates(QObject *obj);
-    QColor getEnumColor(Color color);
+    static Cell getCellCoordinates(QObject *obj);
+    static QColor getEnumColor(Color color);
 
     void setAtoms();
     void setObjectColor(const int &x, const int &y, const QColor &color);
     void setObjectText(const std::string &objectId, const std::string &text);
+
+    void initBoard();
+    void nextRayStep(Ray ray, BlackBoxBackend::Direction direction);
+    void checkForRayReflection(Ray &ray) const;
+    void rayHitsAtom(Ray &ray) const;
 
 public slots:
     Q_INVOKABLE void newGame();
@@ -79,10 +83,6 @@ public slots:
 signals:
     void setObjectText(const QString &objectId, const QString &text);
     void setObjectColor(const QString &objectId, const QColor &color);
-
-    void checkForRayReflection(Ray &ray) const;
-
-    void rayHitsAtom(Ray &ray) const;
 };
 
 #endif //SOSE19_PADI02_BLACKBOXBACKEND_H

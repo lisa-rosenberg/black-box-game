@@ -1,9 +1,10 @@
 #ifndef SOSE19_PADI02_RAY_H
 #define SOSE19_PADI02_RAY_H
 
-
 #include "Cell.h"
 #include <vector>
+
+using namespace std;
 
 class Ray {
 
@@ -20,15 +21,14 @@ public:
     void setRayColor(QColor colorValue);
     void setRayType(Type rayType);
     void setRayVisibility(bool visibleValue);
-    void setValidRayColors();
 
-    std::vector<std::vector<Cell>> getRayCells();
+    vector<Cell> getRayCells();
     QColor getRayColor();
     Type getRayType();
     bool getRayVisibility();
 
 private:
-    std::vector<std::vector<Cell>> rayCells;
+    vector<Cell> rayCells;
     QColor color;
     Type type;
     bool visible;

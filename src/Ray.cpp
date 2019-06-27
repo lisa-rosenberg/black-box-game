@@ -6,6 +6,8 @@
 #include "Ray.h"
 #include "BlackBoxBackend.h"
 
+using namespace std;
+
 Ray::Ray(Cell cell) {
     this->rayCells.emplace_back(cell);
     this->color = getNewColor();
@@ -20,7 +22,7 @@ void Ray::addRayCell(Cell cell) {
 }
 
 void Ray::setRayColor(QColor colorValue) {
-    this->color = std::move(colorValue);
+    this->color = move(colorValue);
 }
 
 void Ray::setRayType(Ray::Type rayType) {
@@ -33,7 +35,7 @@ void Ray::setRayVisibility(bool visibleValue) {
 
 // ### GETTER ### //
 
-std::vector<std::vector<Cell>> Ray::getRayCells() {
+vector<Cell> Ray::getRayCells() {
     return this->rayCells;
 }
 
@@ -51,21 +53,20 @@ bool Ray::getRayVisibility() {
 
 QColor Ray::getNewColor() {
     // Get random index number of rayDeflectionColors
-    std::random_device rd;
-    std::mt19937 rand(rd());
-    std::uniform_int_distribution<> dist(0, BlackBoxBackend::rayDeflectionColors.size());
+    random_device rd;
+    mt19937 rand(rd());
+    uniform_int_distribution<> dist(0, BlackBoxBackend::rayDeflectionColors.size());
 
     // Check if color is already used by another ray
     QColor newColor = nullptr;
 
     while (newColor == nullptr) {
         int randomIndex = dist(rand);
-        QColor randomColor = reinterpret_cast<QColor &&>(BlackBoxBackend::rayDeflectionColors.at(randomIndex));
+        QColor randomColor = BlackBoxBackend::rayDeflectionColors.at(randomIndex);
         bool colorAlreadyUsed = false;
 
-        for (int i = 0; i < BlackBoxBackend::rays.size(); ++i) {
-            Cell currentCell = reinterpret_cast<Cell &&>(BlackBoxBackend::rays.at(i));
-            if (randomColor == currentCell.getColor()) {
+        for (auto currentRay : BlackBoxBackend::rays) {
+            if (randomColor == currentRay.getRayColor()) {
                 colorAlreadyUsed = true;
             }
         }
@@ -74,4 +75,6 @@ QColor Ray::getNewColor() {
             newColor = randomColor;
         }
     }
+
+    return newColor;
 }
