@@ -363,15 +363,19 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
         Cell frontCell = currentRay.getRayCells().front();
         Cell backCell = currentRay.getRayCells().back();
 
+        board[frontCell.getX()][frontCell.getY()].setColor(currentRay.getRayColor());
         setObjectColor(frontCell.getX(), frontCell.getY(), currentRay.getRayColor());
 
         if (currentRay.getRayType() != Ray::HIT) {
+            board[backCell.getX()][backCell.getY()].setColor(currentRay.getRayColor());
             setObjectColor(backCell.getX(), backCell.getY(), currentRay.getRayColor());
         }
     } else {
         for (int i = 0; i < currentRay.getRayCells().size(); ++i) {
-            Cell cell = currentRay.getRayCells().at(i);
-            setObjectColor(cell.getX(), cell.getY(), currentRay.getRayColor());
+            Cell currentCell = currentRay.getRayCells().at(i);
+
+            board[currentCell.getX()][currentCell.getY()].setColor(currentRay.getRayColor());
+            setObjectColor(currentCell.getX(), currentCell.getY(), currentRay.getRayColor());
         }
     }
 }
