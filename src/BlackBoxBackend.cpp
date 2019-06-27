@@ -428,9 +428,6 @@ void BlackBoxBackend::setRandomAtoms() {
         if (board[x][y].getCellType() != Cell::ATOM) {
             board[x][y].setCellType(Cell::ATOM);
             remainingAtoms--;
-
-            // For testing purposes
-            setObjectColor(x, y, getEnumColor(SIGNAL_RED));
         }
     }
 }
