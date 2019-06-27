@@ -47,20 +47,20 @@ Q_INVOKABLE void BlackBoxBackend::enterGuess() {
 
 Q_INVOKABLE void BlackBoxBackend::emitRay(QObject *obj) {
     // Get x and y indices of clicked cell
-    Cell cell = getCellCoordinates(obj);
+    Cell clickedCell = getCellCoordinates(obj);
 
-    if (board[cell.getX()][cell.getY()].getColor() == QColor(getEnumColor(MARENGO_GRAY))) {
+    if (board[clickedCell.getX()][clickedCell.getY()].getColor() == QColor(getEnumColor(MARENGO_GRAY))) {
         // Emit new ray
-        Ray ray = Ray(cell);
+        Ray ray = Ray(clickedCell);
         rays.emplace_back(ray);
 
-        if (cell.getX() == 0) {
+        if (clickedCell.getX() == 0) {
             nextRayStep(ray, EAST);
-        } else if (cell.getX() == 9) {
+        } else if (clickedCell.getX() == 9) {
             nextRayStep(ray, WEST);
-        } else if (cell.getY() == 9) {
+        } else if (clickedCell.getY() == 9) {
             nextRayStep(ray, NORTH);
-        } else if (cell.getY() == 0) {
+        } else if (clickedCell.getY() == 0) {
             nextRayStep(ray, SOUTH);
         }
 
@@ -141,7 +141,6 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
     int x = currentCell.getX();
     int y = currentCell.getY();
 
-
     switch (direction) {
         case SOUTH:
             if (board[x + 0][y + 1].getCellType() == Cell::EDGE) {
@@ -171,6 +170,10 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 rayHitsAtom(ray);
                 updateRay(ray);
                 colorRay(ray);
+            } else if (board[x + 1][y + 2].getCellType() == Cell::ATOM && board[x - 1][y + 2].getCellType() == Cell::ATOM) {
+                // Ray is reflected by an atom
+                ray.addRayCell(board[x + 0][y + 1]);
+                nextRayStep(ray, NORTH);
             } else if (board[x + 1][y + 2].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 ray.addRayCell(board[x + 0][y + 1]);
@@ -214,6 +217,10 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 rayHitsAtom(ray);
                 updateRay(ray);
                 colorRay(ray);
+            } else if (board[x - 2][y + 1].getCellType() == Cell::ATOM && board[x - 2][y - 1].getCellType() == Cell::ATOM) {
+                // Ray is reflected by an atom
+                ray.addRayCell(board[x - 1][y + 0]);
+                nextRayStep(ray, EAST);
             } else if (board[x - 2][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 ray.addRayCell(board[x - 1][y + 0]);
@@ -257,6 +264,10 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 rayHitsAtom(ray);
                 updateRay(ray);
                 colorRay(ray);
+            } else if (board[x + 1][y - 2].getCellType() == Cell::ATOM && board[x - 1][y - 2].getCellType() == Cell::ATOM) {
+                // Ray is reflected by an atom
+                ray.addRayCell(board[x + 0][y - 1]);
+                nextRayStep(ray, SOUTH);
             } else if (board[x + 1][y - 2].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 ray.addRayCell(board[x + 0][y - 1]);
@@ -300,6 +311,10 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 rayHitsAtom(ray);
                 updateRay(ray);
                 colorRay(ray);
+            } else if (board[x + 2][y + 1].getCellType() == Cell::ATOM && board[x + 2][y - 1].getCellType() == Cell::ATOM) {
+                // Ray is reflected by an atom
+                ray.addRayCell(board[x + 1][y + 0]);
+                nextRayStep(ray, WEST);
             } else if (board[x + 2][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is deflected by an atom
                 ray.addRayCell(board[x + 1][y + 0]);
