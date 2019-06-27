@@ -66,8 +66,19 @@ Q_INVOKABLE void BlackBoxBackend::emitRay(QObject *obj) {
 
     } else {
         // Ray already emitted
+
+        // Display whole ray if game finished
         if (gameFinished) {
-            // TODO Show ray
+            for (auto & ray : rays) {
+                Cell frontCell = ray.getRayCells().front();
+                Cell backCell = ray.getRayCells().back();
+
+                // Get ray of clicked cell
+                if (((frontCell.getX() == clickedCell.getX()) && (frontCell.getY() == clickedCell.getY())) ||
+                    ((backCell.getX() == clickedCell.getX()) && (backCell.getY() == clickedCell.getY()))) {
+                    colorRay(ray);
+                }
+            }
         }
     }
 }
@@ -360,6 +371,7 @@ void BlackBoxBackend::updateRay(Ray &currentRay) {
 
 void BlackBoxBackend::colorRay(Ray &currentRay) {
     if (!gameFinished) {
+        // Display front and back cells of ray on board
         Cell frontCell = currentRay.getRayCells().front();
         Cell backCell = currentRay.getRayCells().back();
 
@@ -371,7 +383,17 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
             setObjectColor(backCell.getX(), backCell.getY(), currentRay.getRayColor());
         }
     } else {
-        for (int i = 0; i < currentRay.getRayCells().size(); ++i) {
+        // Reset displayed ray on board
+        for (int x = 1; x <= 8; ++x) {
+            for (int y = 1; y <= 8; ++y) {
+                if (board[x][y].getCellType() != Cell::ATOM) {
+                    setObjectColor(x, y, getEnumColor(DARK_VIOLET));
+                }
+            }
+        }
+
+        // Display whole ray on board
+        for (unsigned i = 0; i < currentRay.getRayCells().size(); ++i) {
             Cell currentCell = currentRay.getRayCells().at(i);
 
             board[currentCell.getX()][currentCell.getY()].setColor(currentRay.getRayColor());

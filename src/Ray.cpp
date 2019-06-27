@@ -53,6 +53,8 @@ bool Ray::getRayVisibility() {
 }
 
 QColor Ray::getNewColor() {
+    // TODO Get totally random color 0-255 * 3 // summe mindestens 128 // rgb to hex
+
     // Get random index number of rayDeflectionColors
     random_device rd;
     mt19937 rand(rd());
