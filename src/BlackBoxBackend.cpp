@@ -15,6 +15,9 @@
 
 using namespace std;
 
+vector<Ray> BlackBoxBackend::rays;
+vector<QColor> BlackBoxBackend::rayDeflectionColors;
+
 BlackBoxBackend::BlackBoxBackend() {
 
 }
@@ -132,7 +135,7 @@ void BlackBoxBackend::initBoard() {
 }
 
 void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction) {
-    Cell currentCell = ray.getRayCells().at(ray.getRayCells().size());
+    Cell currentCell = ray.getRayCells().back();
     int x = currentCell.getX();
     int y = currentCell.getY();
 
@@ -229,8 +232,8 @@ void BlackBoxBackend::rayHitsAtom(Ray &ray) const {
 }
 
 void BlackBoxBackend::checkForRayReflection(Ray &ray) const {
-    Cell firstCell = ray.getRayCells().at(0);
-    Cell lastCell = ray.getRayCells().at(ray.getRayCells().size());
+    Cell firstCell = ray.getRayCells().front();
+    Cell lastCell = ray.getRayCells().back();
 
     if ((firstCell.getX() == lastCell.getY()) && (firstCell.getX() == lastCell.getY())) {
         ray.setRayType(Ray::REFLECTION);
