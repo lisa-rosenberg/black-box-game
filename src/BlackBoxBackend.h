@@ -77,7 +77,7 @@ private:
 
     void initBoard();
     void resetScore();
-    void decreaseScore(Ray ray);
+    void decreaseScore(Ray::Type rayType);
     void nextRayStep(Ray ray, BlackBoxBackend::Direction direction);
     static void checkForRayReflection(Ray &currentRay);
     static void rayHitsAtom(Ray &currentRay);

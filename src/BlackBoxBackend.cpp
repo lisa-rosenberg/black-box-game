@@ -168,27 +168,32 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 ray.addRayCell(board[x + 0][y + 1]);
                 checkForRayReflection(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x + 0][y + 1].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 rayHitsAtom(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x + 1][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
                 checkForRayReflection(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x - 1][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
                 checkForRayReflection(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x + 0][y + 2].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 ray.addRayCell(board[x + 0][y + 1]);
                 rayHitsAtom(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x + 1][y + 2].getCellType() == Cell::ATOM && board[x - 1][y + 2].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
@@ -215,27 +220,32 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 ray.addRayCell(board[x - 1][y + 0]);
                 checkForRayReflection(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x - 1][y + 0].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 rayHitsAtom(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x - 1][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
                 checkForRayReflection(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x - 1][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
                 checkForRayReflection(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x - 2][y + 0].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 ray.addRayCell(board[x - 1][y + 0]);
                 rayHitsAtom(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x - 2][y + 1].getCellType() == Cell::ATOM && board[x - 2][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
@@ -262,27 +272,32 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 ray.addRayCell(board[x + 0][y - 1]);
                 checkForRayReflection(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x + 0][y - 1].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 rayHitsAtom(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x + 1][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
                 checkForRayReflection(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x - 1][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
                 checkForRayReflection(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x + 0][y - 2].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 ray.addRayCell(board[x + 0][y - 1]);
                 rayHitsAtom(ray);
                 updateRay(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x + 1][y - 2].getCellType() == Cell::ATOM && board[x - 1][y - 2].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
@@ -309,32 +324,32 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 ray.addRayCell(board[x + 1][y + 0]);
                 checkForRayReflection(ray);
                 updateRay(ray);
-                decreaseScore(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x + 1][y + 0].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 rayHitsAtom(ray);
                 updateRay(ray);
-                decreaseScore(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x + 1][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
                 checkForRayReflection(ray);
                 updateRay(ray);
-                decreaseScore(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x + 1][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
                 checkForRayReflection(ray);
                 updateRay(ray);
-                decreaseScore(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x + 2][y + 0].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 ray.addRayCell(board[x + 1][y + 0]);
                 rayHitsAtom(ray);
                 updateRay(ray);
-                decreaseScore(ray);
+                decreaseScore(ray.getRayType());
                 colorRay(ray);
             } else if (board[x + 2][y + 1].getCellType() == Cell::ATOM && board[x + 2][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
@@ -444,11 +459,11 @@ void BlackBoxBackend::setRandomAtoms() {
     }
 }
 
-void BlackBoxBackend::decreaseScore(Ray ray) {
+void BlackBoxBackend::decreaseScore(Ray::Type rayType) {
 
-    if (ray.getRayType() == Ray::DEFLECTION) {
+    if (!gameFinished && rayType == Ray::DEFLECTION) {
         this->score -= 2;
-    } else {
+    } else if (!gameFinished && (rayType == Ray::HIT || rayType == Ray::REFLECTION)) {
         this->score -= 1;
     }
 
