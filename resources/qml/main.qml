@@ -4,10 +4,12 @@ import QtQuick.Controls 1.1
 ApplicationWindow {
     id: root
     visible: true
-    width: 800
-    height: 800
-    minimumWidth: 800
-    minimumHeight: 800
+    width: 1000
+    height: 1000
+    minimumWidth: 1000
+    minimumHeight: 1000
+    maximumWidth: 1000
+    maximumHeight: 1000
     color: "#09102B"
     title: qsTr("BLACK BOX")
 
@@ -47,8 +49,8 @@ ApplicationWindow {
         id: board
         objectName: "board"
         visible: true
-        height: 800
-        width: 800
+        height: 1000
+        width: 1000
         anchors.fill: parent
         spacing: 0
         rows: 10
@@ -57,8 +59,8 @@ ApplicationWindow {
         Rectangle {
             id: c00
             objectName: "00"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#09102b"
             radius: 0
             border.width: 4
@@ -92,8 +94,8 @@ ApplicationWindow {
         Rectangle {
             id: c01
             objectName: "01"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -108,8 +110,8 @@ ApplicationWindow {
         Rectangle {
             id: c02
             objectName: "02"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -124,8 +126,8 @@ ApplicationWindow {
         Rectangle {
             id: c03
             objectName: "03"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -140,8 +142,8 @@ ApplicationWindow {
         Rectangle {
             id: c04
             objectName: "04"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -156,8 +158,8 @@ ApplicationWindow {
         Rectangle {
             id: c05
             objectName: "05"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -172,8 +174,8 @@ ApplicationWindow {
         Rectangle {
             id: c06
             objectName: "06"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -188,8 +190,8 @@ ApplicationWindow {
         Rectangle {
             id: c07
             objectName: "07"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -204,8 +206,8 @@ ApplicationWindow {
         Rectangle {
             id: c08
             objectName: "08"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -220,8 +222,8 @@ ApplicationWindow {
         Rectangle {
             id: c09
             objectName: "09"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#09102b"
             radius: 0
             border.width: 4
@@ -255,8 +257,8 @@ ApplicationWindow {
         Rectangle {
             id: c10
             objectName: "10"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -271,8 +273,8 @@ ApplicationWindow {
         Rectangle {
             id: c11
             objectName: "11"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -287,8 +289,8 @@ ApplicationWindow {
         Rectangle {
             id: c12
             objectName: "12"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -303,8 +305,8 @@ ApplicationWindow {
         Rectangle {
             id: c13
             objectName: "13"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -319,8 +321,8 @@ ApplicationWindow {
         Rectangle {
             id: c14
             objectName: "14"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -335,8 +337,8 @@ ApplicationWindow {
         Rectangle {
             id: c15
             objectName: "15"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -351,8 +353,8 @@ ApplicationWindow {
         Rectangle {
             id: c16
             objectName: "16"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -367,8 +369,8 @@ ApplicationWindow {
         Rectangle {
             id: c17
             objectName: "17"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -383,8 +385,8 @@ ApplicationWindow {
         Rectangle {
             id: c18
             objectName: "18"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -399,8 +401,8 @@ ApplicationWindow {
         Rectangle {
             id: c19
             objectName: "19"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -415,8 +417,8 @@ ApplicationWindow {
         Rectangle {
             id: c20
             objectName: "20"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -431,8 +433,8 @@ ApplicationWindow {
         Rectangle {
             id: c21
             objectName: "21"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -447,8 +449,8 @@ ApplicationWindow {
         Rectangle {
             id: c22
             objectName: "22"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -463,8 +465,8 @@ ApplicationWindow {
         Rectangle {
             id: c23
             objectName: "23"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -479,8 +481,8 @@ ApplicationWindow {
         Rectangle {
             id: c24
             objectName: "24"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -495,8 +497,8 @@ ApplicationWindow {
         Rectangle {
             id: c25
             objectName: "25"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -511,8 +513,8 @@ ApplicationWindow {
         Rectangle {
             id: c26
             objectName: "26"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -527,8 +529,8 @@ ApplicationWindow {
         Rectangle {
             id: c27
             objectName: "27"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -543,8 +545,8 @@ ApplicationWindow {
         Rectangle {
             id: c28
             objectName: "28"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -559,8 +561,8 @@ ApplicationWindow {
         Rectangle {
             id: c29
             objectName: "29"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -575,8 +577,8 @@ ApplicationWindow {
         Rectangle {
             id: c30
             objectName: "30"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -591,8 +593,8 @@ ApplicationWindow {
         Rectangle {
             id: c31
             objectName: "31"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -607,8 +609,8 @@ ApplicationWindow {
         Rectangle {
             id: c32
             objectName: "32"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -623,8 +625,8 @@ ApplicationWindow {
         Rectangle {
             id: c33
             objectName: "33"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -639,8 +641,8 @@ ApplicationWindow {
         Rectangle {
             id: c34
             objectName: "34"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -655,8 +657,8 @@ ApplicationWindow {
         Rectangle {
             id: c35
             objectName: "35"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -671,8 +673,8 @@ ApplicationWindow {
         Rectangle {
             id: c36
             objectName: "36"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -687,8 +689,8 @@ ApplicationWindow {
         Rectangle {
             id: c37
             objectName: "37"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -703,8 +705,8 @@ ApplicationWindow {
         Rectangle {
             id: c38
             objectName: "38"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -719,8 +721,8 @@ ApplicationWindow {
         Rectangle {
             id: c39
             objectName: "39"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -735,8 +737,8 @@ ApplicationWindow {
         Rectangle {
             id: c40
             objectName: "40"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -751,8 +753,8 @@ ApplicationWindow {
         Rectangle {
             id: c41
             objectName: "41"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -767,8 +769,8 @@ ApplicationWindow {
         Rectangle {
             id: c42
             objectName: "42"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -783,8 +785,8 @@ ApplicationWindow {
         Rectangle {
             id: c43
             objectName: "43"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -799,8 +801,8 @@ ApplicationWindow {
         Rectangle {
             id: c44
             objectName: "44"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -815,8 +817,8 @@ ApplicationWindow {
         Rectangle {
             id: c45
             objectName: "45"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -831,8 +833,8 @@ ApplicationWindow {
         Rectangle {
             id: c46
             objectName: "46"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -847,8 +849,8 @@ ApplicationWindow {
         Rectangle {
             id: c47
             objectName: "47"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -863,8 +865,8 @@ ApplicationWindow {
         Rectangle {
             id: c48
             objectName: "48"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -879,8 +881,8 @@ ApplicationWindow {
         Rectangle {
             id: c49
             objectName: "49"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -895,8 +897,8 @@ ApplicationWindow {
         Rectangle {
             id: c50
             objectName: "50"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -911,8 +913,8 @@ ApplicationWindow {
         Rectangle {
             id: c51
             objectName: "51"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -927,8 +929,8 @@ ApplicationWindow {
         Rectangle {
             id: c52
             objectName: "52"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -943,8 +945,8 @@ ApplicationWindow {
         Rectangle {
             id: c53
             objectName: "53"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -959,8 +961,8 @@ ApplicationWindow {
         Rectangle {
             id: c54
             objectName: "54"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -975,8 +977,8 @@ ApplicationWindow {
         Rectangle {
             id: c55
             objectName: "55"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -991,8 +993,8 @@ ApplicationWindow {
         Rectangle {
             id: c56
             objectName: "56"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1007,8 +1009,8 @@ ApplicationWindow {
         Rectangle {
             id: c57
             objectName: "57"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1023,8 +1025,8 @@ ApplicationWindow {
         Rectangle {
             id: c58
             objectName: "58"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1039,8 +1041,8 @@ ApplicationWindow {
         Rectangle {
             id: c59
             objectName: "59"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1055,8 +1057,8 @@ ApplicationWindow {
         Rectangle {
             id: c60
             objectName: "60"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1071,8 +1073,8 @@ ApplicationWindow {
         Rectangle {
             id: c61
             objectName: "61"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1087,8 +1089,8 @@ ApplicationWindow {
         Rectangle {
             id: c62
             objectName: "62"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1103,8 +1105,8 @@ ApplicationWindow {
         Rectangle {
             id: c63
             objectName: "63"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1119,8 +1121,8 @@ ApplicationWindow {
         Rectangle {
             id: c64
             objectName: "64"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1135,8 +1137,8 @@ ApplicationWindow {
         Rectangle {
             id: c65
             objectName: "65"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1151,8 +1153,8 @@ ApplicationWindow {
         Rectangle {
             id: c66
             objectName: "66"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1167,8 +1169,8 @@ ApplicationWindow {
         Rectangle {
             id: c67
             objectName: "67"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1183,8 +1185,8 @@ ApplicationWindow {
         Rectangle {
             id: c68
             objectName: "68"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1199,8 +1201,8 @@ ApplicationWindow {
         Rectangle {
             id: c69
             objectName: "69"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1215,8 +1217,8 @@ ApplicationWindow {
         Rectangle {
             id: c70
             objectName: "70"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1231,8 +1233,8 @@ ApplicationWindow {
         Rectangle {
             id: c71
             objectName: "71"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1247,8 +1249,8 @@ ApplicationWindow {
         Rectangle {
             id: c72
             objectName: "72"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1263,8 +1265,8 @@ ApplicationWindow {
         Rectangle {
             id: c73
             objectName: "73"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1279,8 +1281,8 @@ ApplicationWindow {
         Rectangle {
             id: c74
             objectName: "74"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1295,8 +1297,8 @@ ApplicationWindow {
         Rectangle {
             id: c75
             objectName: "75"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1311,8 +1313,8 @@ ApplicationWindow {
         Rectangle {
             id: c76
             objectName: "76"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1327,8 +1329,8 @@ ApplicationWindow {
         Rectangle {
             id: c77
             objectName: "77"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1343,8 +1345,8 @@ ApplicationWindow {
         Rectangle {
             id: c78
             objectName: "78"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1359,8 +1361,8 @@ ApplicationWindow {
         Rectangle {
             id: c79
             objectName: "79"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1375,8 +1377,8 @@ ApplicationWindow {
         Rectangle {
             id: c80
             objectName: "80"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1391,8 +1393,8 @@ ApplicationWindow {
         Rectangle {
             id: c81
             objectName: "81"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1407,8 +1409,8 @@ ApplicationWindow {
         Rectangle {
             id: c82
             objectName: "82"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1423,8 +1425,8 @@ ApplicationWindow {
         Rectangle {
             id: c83
             objectName: "83"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1439,8 +1441,8 @@ ApplicationWindow {
         Rectangle {
             id: c84
             objectName: "84"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1455,8 +1457,8 @@ ApplicationWindow {
         Rectangle {
             id: c85
             objectName: "85"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1471,8 +1473,8 @@ ApplicationWindow {
         Rectangle {
             id: c86
             objectName: "86"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1487,8 +1489,8 @@ ApplicationWindow {
         Rectangle {
             id: c87
             objectName: "87"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1503,8 +1505,8 @@ ApplicationWindow {
         Rectangle {
             id: c88
             objectName: "88"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#8b28fc"
             radius: 0
             border.width: 4
@@ -1519,8 +1521,8 @@ ApplicationWindow {
         Rectangle {
             id: c89
             objectName: "89"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1535,8 +1537,8 @@ ApplicationWindow {
         Rectangle {
             id: c90
             objectName: "90"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#09102b"
             radius: 0
             border.width: 4
@@ -1562,8 +1564,8 @@ ApplicationWindow {
         Rectangle {
             id: c91
             objectName: "91"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1578,8 +1580,8 @@ ApplicationWindow {
         Rectangle {
             id: c92
             objectName: "92"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1594,8 +1596,8 @@ ApplicationWindow {
         Rectangle {
             id: c93
             objectName: "93"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1610,8 +1612,8 @@ ApplicationWindow {
         Rectangle {
             id: c94
             objectName: "94"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1626,8 +1628,8 @@ ApplicationWindow {
         Rectangle {
             id: c95
             objectName: "95"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1642,8 +1644,8 @@ ApplicationWindow {
         Rectangle {
             id: c96
             objectName: "96"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1658,8 +1660,8 @@ ApplicationWindow {
         Rectangle {
             id: c97
             objectName: "97"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1674,8 +1676,8 @@ ApplicationWindow {
         Rectangle {
             id: c98
             objectName: "98"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#424551"
             radius: 0
             border.width: 4
@@ -1690,8 +1692,8 @@ ApplicationWindow {
         Rectangle {
             id: c99
             objectName: "99"
-            width: 80
-            height: 80
+            width: 100
+            height: 100
             color: "#09102b"
             radius: 0
             border.width: 4
