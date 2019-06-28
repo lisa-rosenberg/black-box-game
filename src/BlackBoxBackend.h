@@ -53,7 +53,13 @@ public:
     void setRayDeflectionColors();
 
 private:
+    const int MAX_SCORE = 32;
+    const string C = "c";
+    const string SCORE_AMOUNT = "scoreAmount";
+    const string ATOM_AMOUNT = "atomAmount";
+
     bool gameFinished = false;
+    int score;
 
     enum Direction {
         SOUTH,
@@ -71,6 +77,7 @@ private:
 
     void initBoard();
     void resetScore();
+    void decreaseScore(Ray ray);
     void nextRayStep(Ray ray, BlackBoxBackend::Direction direction);
     static void checkForRayReflection(Ray &currentRay);
     static void rayHitsAtom(Ray &currentRay);

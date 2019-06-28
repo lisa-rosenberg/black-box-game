@@ -21,6 +21,7 @@ vector<QColor> BlackBoxBackend::rayDeflectionColors;
 BlackBoxBackend::BlackBoxBackend() {
     this->atomAmount = 0;
     this->gameFinished = false;
+    this->score = MAX_SCORE;
 }
 
 Q_INVOKABLE void BlackBoxBackend::newGame() {
@@ -151,7 +152,8 @@ void BlackBoxBackend::initBoard() {
 }
 
 void BlackBoxBackend::resetScore() {
-    setObjectText("scoreAmount", 32);
+    score = MAX_SCORE;
+    setObjectText(SCORE_AMOUNT, MAX_SCORE);
 }
 
 void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction) {
@@ -307,27 +309,32 @@ void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction)
                 ray.addRayCell(board[x + 1][y + 0]);
                 checkForRayReflection(ray);
                 updateRay(ray);
+                decreaseScore(ray);
                 colorRay(ray);
             } else if (board[x + 1][y + 0].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 rayHitsAtom(ray);
                 updateRay(ray);
+                decreaseScore(ray);
                 colorRay(ray);
             } else if (board[x + 1][y + 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
                 checkForRayReflection(ray);
                 updateRay(ray);
+                decreaseScore(ray);
                 colorRay(ray);
             } else if (board[x + 1][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
                 checkForRayReflection(ray);
                 updateRay(ray);
+                decreaseScore(ray);
                 colorRay(ray);
             } else if (board[x + 2][y + 0].getCellType() == Cell::ATOM) {
                 // Ray hits an atom
                 ray.addRayCell(board[x + 1][y + 0]);
                 rayHitsAtom(ray);
                 updateRay(ray);
+                decreaseScore(ray);
                 colorRay(ray);
             } else if (board[x + 2][y + 1].getCellType() == Cell::ATOM && board[x + 2][y - 1].getCellType() == Cell::ATOM) {
                 // Ray is reflected by an atom
@@ -421,7 +428,7 @@ void BlackBoxBackend::setRandomAtoms() {
     int remainingAtoms = atomAmount;
 
     // Set ui atom amount label
-    setObjectText("atomAmount", atomAmount);
+    setObjectText(ATOM_AMOUNT, atomAmount);
 
     // Set atoms on board
     dist = uniform_int_distribution<> (1, 8);
@@ -435,6 +442,17 @@ void BlackBoxBackend::setRandomAtoms() {
             remainingAtoms--;
         }
     }
+}
+
+void BlackBoxBackend::decreaseScore(Ray ray) {
+
+    if (ray.getRayType() == Ray::DEFLECTION) {
+        this->score -= 2;
+    } else {
+        this->score -= 1;
+    }
+
+    setObjectText(SCORE_AMOUNT, score);
 }
 
 Cell BlackBoxBackend::getCellCoordinates(QObject *obj) {
@@ -508,5 +526,3 @@ void BlackBoxBackend::setRayDeflectionColors() {
     rayDeflectionColors.emplace_back(getEnumColor(VIVID_VIOLET));
     rayDeflectionColors.emplace_back(getEnumColor(VIVID_YELLOW));
 }
-
-
