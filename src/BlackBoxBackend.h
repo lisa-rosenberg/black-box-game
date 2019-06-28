@@ -54,6 +54,7 @@ public:
 private:
     const int MAX_SCORE = 32;
     const string C = "c";
+    const string A = "a";
     const string SCORE_AMOUNT = "scoreAmount";
     const string ATOM_AMOUNT = "atomAmount";
 
@@ -73,10 +74,12 @@ private:
     void setRandomAtoms();
     void setObjectColor(const int &x, const int &y, const QColor &color);
     void setObjectText(const std::string &objectId, const int &number);
+    void setObjectVisibility(const int &x, const int &y, const bool &visible);
 
     void initBoard();
-    void resetScore();
     static void resetModel();
+    void resetScore();
+
     void decreaseScore(Ray::Type rayType);
     void nextRayStep(Ray ray, BlackBoxBackend::Direction direction);
     static void checkForRayReflection(Ray &currentRay);
@@ -93,6 +96,7 @@ public slots:
 signals:
     void setObjectText(const QString &objectId, const QString &text);
     void setObjectColor(const QString &objectId, const QColor &color);
+    void setObjectVisibility(const QString &objectId, const bool &visible);
 };
 
 #endif //SOSE19_PADI02_BLACKBOXBACKEND_H

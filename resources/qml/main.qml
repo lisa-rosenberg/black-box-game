@@ -13,7 +13,7 @@ ApplicationWindow {
     color: "#09102B"
     title: qsTr("BLACK BOX")
 
-    property var idMap: ({ atomAmount:atomAmount, scoreAmount:scoreAmount,
+    property var idMap: ({atomAmount:atomAmount, scoreAmount:scoreAmount,
         c00:c00, c01:c01, c02:c02, c03:c03, c04:c04, c05:c05, c06:c06, c07:c07, c08:c08, c09:c09,
         c10:c10, c11:c11, c12:c12, c13:c13, c14:c14, c15:c15, c16:c16, c17:c17, c18:c18, c19:c19,
         c20:c20, c21:c21, c22:c22, c23:c23, c24:c24, c25:c25, c26:c26, c27:c27, c28:c28, c29:c29,
@@ -23,7 +23,15 @@ ApplicationWindow {
         c60:c60, c61:c61, c62:c62, c63:c63, c64:c64, c65:c65, c66:c66, c67:c67, c68:c68, c69:c69,
         c70:c70, c71:c71, c72:c72, c73:c73, c74:c74, c75:c75, c76:c76, c77:c77, c78:c78, c79:c79,
         c80:c80, c81:c81, c82:c82, c83:c83, c84:c84, c85:c85, c86:c86, c87:c87, c88:c88, c89:c89,
-        c90:c90, c91:c91, c92:c92, c93:c93, c94:c94, c95:c95, c96:c96, c97:c97, c98:c98, c99:c99})
+        c90:c90, c91:c91, c92:c92, c93:c93, c94:c94, c95:c95, c96:c96, c97:c97, c98:c98, c99:c99,
+        a11:a11, a12:a12, a13:a13, a14:a14, a15:a15, a16:a16, a17:a17, a18:a18,
+        a21:a21, a22:a22, a23:a23, a24:a24, a25:a25, a26:a26, a27:a27, a28:a28,
+        a31:a31, a32:a32, a33:a33, a34:a34, a35:a35, a36:a36, a37:a37, a38:a38,
+        a41:a41, a42:a42, a43:a43, a44:a44, a45:a45, a46:a46, a47:a47, a48:a48,
+        a51:a51, a52:a52, a53:a53, a54:a54, a55:a55, a56:a56, a57:a57, a58:a58,
+        a61:a61, a62:a62, a63:a63, a64:a64, a65:a65, a66:a66, a67:a67, a68:a68,
+        a71:a71, a72:a72, a73:a73, a74:a74, a75:a75, a76:a76, a77:a77, a78:a78,
+        a81:a81, a82:a82, a83:a83, a84:a84, a85:a85, a86:a86, a87:a87, a88:a88})
 
     function findObjectById(objectId) {
         return idMap[objectId]
@@ -42,6 +50,11 @@ ApplicationWindow {
         onSetObjectColor: {
             var object = findObjectById(objectId)
             object.color = color
+        }
+
+        onSetObjectVisibility: {
+            var object = findObjectById(objectId)
+            object.visible = visible
         }
     }
 
@@ -280,6 +293,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a11
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c11)
@@ -295,6 +318,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a12
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -312,6 +345,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a13
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c13)
@@ -327,6 +370,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a14
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -344,6 +397,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a15
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c15)
@@ -359,6 +422,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a16
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -376,6 +449,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a17
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c17)
@@ -391,6 +474,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a18
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -440,6 +533,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a21
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c21)
@@ -455,6 +558,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a22
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -472,6 +585,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a23
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c23)
@@ -487,6 +610,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a24
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -504,6 +637,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a25
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c25)
@@ -519,6 +662,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a26
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -536,6 +689,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a27
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c27)
@@ -551,6 +714,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a28
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -600,6 +773,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a31
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c31)
@@ -615,6 +798,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a32
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -632,6 +825,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a33
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c33)
@@ -647,6 +850,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a34
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -664,6 +877,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a35
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c35)
@@ -679,6 +902,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a36
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -696,6 +929,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a37
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c37)
@@ -711,6 +954,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a38
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -760,6 +1013,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a41
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c41)
@@ -775,6 +1038,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a42
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -792,6 +1065,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a43
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c43)
@@ -807,6 +1090,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a44
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -824,6 +1117,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a45
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c45)
@@ -839,6 +1142,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a46
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -856,6 +1169,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a47
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c47)
@@ -871,6 +1194,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a48
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -920,6 +1253,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a51
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c51)
@@ -935,6 +1278,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a52
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -952,6 +1305,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a53
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c53)
@@ -967,6 +1330,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a54
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -984,6 +1357,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a55
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c55)
@@ -999,6 +1382,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a56
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -1016,6 +1409,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a57
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c57)
@@ -1031,6 +1434,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a58
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -1080,6 +1493,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a61
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c61)
@@ -1095,6 +1518,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a62
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -1112,6 +1545,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a63
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c63)
@@ -1127,6 +1570,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a64
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -1144,6 +1597,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a65
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c65)
@@ -1159,6 +1622,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a66
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -1176,6 +1649,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a67
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c67)
@@ -1191,6 +1674,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a68
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -1240,6 +1733,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a71
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c71)
@@ -1255,6 +1758,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a72
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -1272,6 +1785,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a73
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c73)
@@ -1287,6 +1810,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a74
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -1304,6 +1837,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a75
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c75)
@@ -1319,6 +1862,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a76
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -1336,6 +1889,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a77
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c77)
@@ -1351,6 +1914,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a78
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -1400,6 +1973,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a81
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c81)
@@ -1415,6 +1998,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a82
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -1432,6 +2025,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a83
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c83)
@@ -1447,6 +2050,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a84
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -1464,6 +2077,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a85
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c85)
@@ -1479,6 +2102,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a86
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -1496,6 +2129,16 @@ ApplicationWindow {
             border.width: 4
             border.color: "#09102b"
 
+            Rectangle {
+                id: a87
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.setAtomGuess(c87)
@@ -1511,6 +2154,16 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            Rectangle {
+                id: a88
+                visible: false
+                anchors.centerIn: parent
+                width: parent.width / 1.25
+                height: parent.width / 1.25
+                radius: width * 0.5
+                color: "#1a0b32"
+            }
 
             MouseArea {
                 anchors.fill: parent

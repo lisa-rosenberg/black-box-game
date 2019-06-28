@@ -46,6 +46,7 @@ Q_INVOKABLE void BlackBoxBackend::enterGuess() {
                 setObjectColor(x, y, getEnumColor(SIGNAL_RED));
                 win = false;
             } else if (!board[x][y].getAtomGuess() && board[x][y].getCellType() == Cell::ATOM) {
+                setObjectColor(x, y, getEnumColor(SIGNAL_GREEN));
                 win = false;
             }
         }
@@ -110,17 +111,13 @@ Q_INVOKABLE void BlackBoxBackend::setAtomGuess(QObject *obj) {
         }
 
         if (board[cell.getX()][cell.getY()].getAtomGuess()) {
-            // Remove atom guess in board
+            // Remove atom guess
             board[cell.getX()][cell.getY()].setAtomGuess(false);
-
-            // Set ui cell color
-            setObjectColor(cell.getX(), cell.getY(), getEnumColor(DARK_VIOLET));
+            setObjectVisibility(cell.getX(), cell.getY(), false);
         } else if (currentAtoms < atomAmount) {
-            // Save atom guess in board
+            // Add atom guess
             board[cell.getX()][cell.getY()].setAtomGuess(true);
-
-            // Set ui cell color
-            setObjectColor(cell.getX(), cell.getY(), getEnumColor(MIDNIGHT_VIOLET));
+            setObjectVisibility(cell.getX(), cell.getY(), true);
         }
     }
 }
@@ -150,12 +147,13 @@ void BlackBoxBackend::initBoard() {
             } else {
                 cell.setCellType(Cell::FIELD);
                 cell.setColor(getEnumColor(DARK_VIOLET));
+
+                // Remove atoms
+                setObjectVisibility(x, y, false);
             }
 
-            // Save cell in board
+            // Save cell in board and set ui cell color
             board[x][y] = cell;
-
-            // Set ui cell color
             setObjectColor(x, y, cell.getColor());
         }
     }
@@ -429,7 +427,10 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
         // Reset displayed ray on board
         for (int x = 1; x <= 8; ++x) {
             for (int y = 1; y <= 8; ++y) {
-                if (!board[x][y].getAtomGuess()) {
+
+                if (board[x][y].getCellType() == Cell::ATOM || board[x][y].getAtomGuess()) {
+                    continue;
+                } else {
                     setObjectColor(x, y, getEnumColor(DARK_VIOLET));
                 }
             }
@@ -535,6 +536,10 @@ void BlackBoxBackend::setObjectColor(const int &x, const int &y, const QColor &c
 
 void BlackBoxBackend::setObjectText(const string &objectId, const int &number) {
     emit setObjectText(QString::fromStdString(objectId), QString::number(number));
+}
+
+void BlackBoxBackend::setObjectVisibility(const int &x, const int &y, const bool &visible) {
+    emit setObjectVisibility(QString::fromStdString(A + to_string(y) + to_string(x)), visible);
 }
 
 void BlackBoxBackend::setRayDeflectionColors() {
