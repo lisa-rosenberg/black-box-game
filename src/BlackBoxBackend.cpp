@@ -35,6 +35,7 @@ Q_INVOKABLE void BlackBoxBackend::newGame() {
 
 Q_INVOKABLE void BlackBoxBackend::enterGuess() {
     gameFinished = true;
+    bool win = true;
 
     // Check for correct and wrong guessed atoms and set ui cell color
     for (int x = 1; x <= 8; ++x) {
@@ -43,8 +44,16 @@ Q_INVOKABLE void BlackBoxBackend::enterGuess() {
                 setObjectColor(x, y, getEnumColor(SIGNAL_GREEN));
             } else if (board[x][y].getAtomGuess() && board[x][y].getCellType() != Cell::ATOM) {
                 setObjectColor(x, y, getEnumColor(SIGNAL_RED));
+                win = false;
+            } else if (!board[x][y].getAtomGuess() && board[x][y].getCellType() == Cell::ATOM) {
+                win = false;
             }
         }
+    }
+
+    if (!win) {
+        score = 0;
+        setObjectText(SCORE_AMOUNT, score);
     }
 }
 
