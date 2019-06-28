@@ -27,6 +27,7 @@ Q_INVOKABLE void BlackBoxBackend::newGame() {
     gameFinished = false;
 
     initBoard();
+    resetScore();
     setRandomAtoms();
 }
 
@@ -147,6 +148,10 @@ void BlackBoxBackend::initBoard() {
             setObjectColor(x, y, cell.getColor());
         }
     }
+}
+
+void BlackBoxBackend::resetScore() {
+    setObjectText("scoreAmount", 32);
 }
 
 void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction) {
@@ -416,7 +421,7 @@ void BlackBoxBackend::setRandomAtoms() {
     int remainingAtoms = atomAmount;
 
     // Set ui atom amount label
-    setObjectText("atomAmount", to_string(atomAmount));
+    setObjectText("atomAmount", atomAmount);
 
     // Set atoms on board
     dist = uniform_int_distribution<> (1, 8);
@@ -481,8 +486,8 @@ void BlackBoxBackend::setObjectColor(const int &x, const int &y, const QColor &c
     emit setObjectColor(QString::fromStdString("c" + to_string(y) + to_string(x)), color);
 }
 
-void BlackBoxBackend::setObjectText(const string &objectId, const string &text) {
-    emit setObjectText(QString::fromStdString(objectId), QString::fromStdString(text));
+void BlackBoxBackend::setObjectText(const string &objectId, const int &number) {
+    emit setObjectText(QString::fromStdString(objectId), QString::number(number));
 }
 
 void BlackBoxBackend::setRayDeflectionColors() {

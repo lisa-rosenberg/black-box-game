@@ -67,9 +67,10 @@ private:
 
     void setRandomAtoms();
     void setObjectColor(const int &x, const int &y, const QColor &color);
-    void setObjectText(const std::string &objectId, const std::string &text);
+    void setObjectText(const std::string &objectId, const int &number);
 
     void initBoard();
+    void resetScore();
     void nextRayStep(Ray ray, BlackBoxBackend::Direction direction);
     static void checkForRayReflection(Ray &currentRay);
     static void rayHitsAtom(Ray &currentRay);
