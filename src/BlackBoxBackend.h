@@ -17,7 +17,6 @@ class BlackBoxBackend : public QObject {
 public:
     BlackBoxBackend();
 
-    QObject object;
     Cell board[10][10];
     static vector<Ray> rays;
     static vector<QColor> rayDeflectionColors;
@@ -77,6 +76,7 @@ private:
 
     void initBoard();
     void resetScore();
+    static void resetModel();
     void decreaseScore(Ray::Type rayType);
     void nextRayStep(Ray ray, BlackBoxBackend::Direction direction);
     static void checkForRayReflection(Ray &currentRay);

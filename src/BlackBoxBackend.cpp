@@ -29,6 +29,7 @@ Q_INVOKABLE void BlackBoxBackend::newGame() {
 
     initBoard();
     resetScore();
+    resetModel();
     setRandomAtoms();
 }
 
@@ -154,6 +155,10 @@ void BlackBoxBackend::initBoard() {
 void BlackBoxBackend::resetScore() {
     score = MAX_SCORE;
     setObjectText(SCORE_AMOUNT, MAX_SCORE);
+}
+
+void BlackBoxBackend::resetModel() {
+    rays.clear();
 }
 
 void BlackBoxBackend::nextRayStep(Ray ray, BlackBoxBackend::Direction direction) {
@@ -516,7 +521,7 @@ QColor BlackBoxBackend::getEnumColor(BlackBoxBackend::Color color) {
 }
 
 void BlackBoxBackend::setObjectColor(const int &x, const int &y, const QColor &color) {
-    emit setObjectColor(QString::fromStdString("c" + to_string(y) + to_string(x)), color);
+    emit setObjectColor(QString::fromStdString(C + to_string(y) + to_string(x)), color);
 }
 
 void BlackBoxBackend::setObjectText(const string &objectId, const int &number) {
