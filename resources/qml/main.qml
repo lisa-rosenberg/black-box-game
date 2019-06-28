@@ -712,7 +712,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: blackBoxBackend.setAtomGuessGuess(c38)
+                onClicked: blackBoxBackend.setAtomGuess(c38)
             }
         }
 
