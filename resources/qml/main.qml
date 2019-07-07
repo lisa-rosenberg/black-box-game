@@ -9,8 +9,13 @@ ApplicationWindow {
     height: 1250
     minimumWidth: 1250
     minimumHeight: 1250
-    color: "#09102B"
+    //color: "#09102B"
     title: qsTr("BLACK BOX")
+
+    Image {
+        anchors.fill: parent
+        source: "../img/background.jpg"
+    }
 
     property var idMap: ({atomAmount:atomAmount, scoreAmount:scoreAmount,
         c00:c00, c01:c01, c02:c02, c03:c03, c04:c04, c05:c05, c06:c06, c07:c07, c08:c08, c09:c09,

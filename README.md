@@ -75,7 +75,7 @@ The score will be decreased by doing this.
     - ~~Basic GUI~~
     - ~~Colors~~
     - ~~Text~~
-    - Radial gradient
+    - ~~Radial gradient~~
     - Glowing borders
     - Background picture
     - ~~Resizing behaviour~~
@@ -87,7 +87,7 @@ The score will be decreased by doing this.
 - Implement rays
     - ~~Set color for ray type~~
     - ~~Don't store undiscovered rays after finishing game~~
-    - Duration for rays
+    - Animation for rays
     
 - Implement music
     - ~~Choose background music~~
