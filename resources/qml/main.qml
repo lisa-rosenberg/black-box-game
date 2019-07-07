@@ -74,6 +74,7 @@ ApplicationWindow {
         spacing: 0
         rows: 10
         columns: 10
+        opacity: 0.9
 
         Rectangle {
             id: c00

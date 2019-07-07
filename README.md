@@ -81,13 +81,14 @@ The score will be decreased by doing this.
     - ~~Resizing behaviour~~
     - ~~Show correct solution~~
     - ~~Round atoms~~
-    - Set transparency of grid
-    - Background picture stays at same place when resizing
+    - ~~Set transparency of grid~~
+    - ~~Background picture stays at same place when resizing~~
     
 - Implement rays
     - ~~Set color for ray type~~
     - ~~Don't store undiscovered rays after finishing game~~
     - Animation for rays
+    - Hide ray when clicked the second time after finishing game
     
 - Implement music
     - ~~Choose background music~~
