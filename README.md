@@ -77,7 +77,7 @@ The score will be decreased by doing this.
     - ~~Text~~
     - ~~Radial gradient~~
     - Glowing borders
-    - Background picture
+    - ~~Background picture~~
     - ~~Resizing behaviour~~
     - ~~Show correct solution~~
     - ~~Round atoms~~

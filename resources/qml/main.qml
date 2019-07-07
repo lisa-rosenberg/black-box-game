@@ -14,7 +14,8 @@ ApplicationWindow {
 
     Image {
         anchors.fill: parent
-        source: "background.jpg"
+        fillMode: Image.Tile
+        source: "../img/background.jpg"
     }
 
     property var idMap: ({atomAmount:atomAmount, scoreAmount:scoreAmount,
