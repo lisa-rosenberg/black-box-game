@@ -1,5 +1,6 @@
 import QtQuick 2.8
 import QtQuick.Controls 1.1
+import QtQuick.Shapes 1.13
 
 ApplicationWindow {
     id: root
@@ -77,6 +78,18 @@ ApplicationWindow {
             radius: 0
             border.width: 4
             border.color: "#09102b"
+
+            fillGradient: RadialGradient {
+                centerX: 50
+                centerY: 50
+                centerRadius: 100
+                focalX: centerX
+                focalY: centerY
+
+                GradientStop { position: 0.0; color: "#00000000" }
+                GradientStop { position: 0.4; color: "#00000000" }
+                GradientStop { position: 1.0; color: "#FF000000" }
+            }
 
             Text {
                 id: atomText
