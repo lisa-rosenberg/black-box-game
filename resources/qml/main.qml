@@ -61,8 +61,9 @@ ApplicationWindow {
         objectName: "board"
         visible: true
         height: 1000
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
         width: 1000
-        anchors.fill: parent
         spacing: 0
         rows: 10
         columns: 10
