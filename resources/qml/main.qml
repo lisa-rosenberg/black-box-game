@@ -84,11 +84,11 @@ ApplicationWindow {
                 objectName: "atomText"
                 color: "#ffffff"
                 text: qsTr("ATOMS")
-                topPadding: 15
+                topPadding: 20
                 anchors.fill: parent
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignTop
-                font.pixelSize: 12
+                font.pixelSize: 16
             }
 
             Text {
@@ -96,11 +96,11 @@ ApplicationWindow {
                 objectName: "atomAmount"
                 color: "#ffffff"
                 text: qsTr("0")
-                bottomPadding: 15
+                bottomPadding: 20
                 anchors.fill: parent
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignBottom
-                font.pixelSize: 12
+                font.pixelSize: 16
             }
         }
 
@@ -248,10 +248,10 @@ ApplicationWindow {
                 color: "#ffffff"
                 text: qsTr("SCORE")
                 anchors.fill: parent
-                topPadding: 15
+                topPadding: 20
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignTop
-                font.pixelSize: 12
+                font.pixelSize: 16
             }
 
             Text {
@@ -260,10 +260,10 @@ ApplicationWindow {
                 color: "#ffffff"
                 text: qsTr("0")
                 anchors.fill: parent
-                bottomPadding: 15
+                bottomPadding: 20
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignBottom
-                font.pixelSize: 12
+                font.pixelSize: 16
             }
         }
 
@@ -2205,7 +2205,7 @@ ApplicationWindow {
                 anchors.fill: parent
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
-                font.pixelSize: 12
+                font.pixelSize: 16
             }
 
             MouseArea {
@@ -2360,7 +2360,7 @@ ApplicationWindow {
                 anchors.fill: parent
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
-                font.pixelSize: 12
+                font.pixelSize: 16
             }
 
             MouseArea {

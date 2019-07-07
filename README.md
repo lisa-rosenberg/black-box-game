@@ -74,16 +74,16 @@ The score will be decreased by doing this.
 - Implement GUI
     - ~~Basic GUI~~
     - ~~Colors~~
-    - Text
+    - ~~Text~~
     - Radial gradient
     - Background picture
     - Resizing behaviour
     - ~~Show correct solution~~
-    - Round atoms
+    - ~~Round atoms~~
     - Set transparency of grid
     - Background picture stays at same place when resizing
     
-- Implement rays
+- ~~Implement rays~~
     - ~~Set color for ray type~~
     - ~~Don't store undiscovered rays after finishing game~~
     
