@@ -77,15 +77,18 @@ private:
     void setObjectVisibility(const int &x, const int &y, const bool &visible);
 
     void initBoard();
-    static void resetModel();
-    void resetScore();
+    static void resetBackendModel();
 
+    void resetScore();
     void decreaseScore(Ray::Type rayType);
+
     void nextRayStep(Ray ray, BlackBoxBackend::Direction direction);
-    static void checkForRayReflection(Ray &currentRay);
-    static void rayHitsAtom(Ray &currentRay);
     static void updateRay(Ray &currentRay);
     void colorRay(Ray &currentRay);
+    static bool currentCellCoordinatesBelongToSomeRay(int x, int y);
+    static bool currentCellCoordinatesBelongToSpecificRay(int x, int y, Ray ray);
+    static void checkForRayReflection(Ray &currentRay);
+    static void rayHitsAtom(Ray &currentRay);
 
 public slots:
     Q_INVOKABLE void newGame();

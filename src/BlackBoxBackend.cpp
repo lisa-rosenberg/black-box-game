@@ -29,7 +29,7 @@ Q_INVOKABLE void BlackBoxBackend::newGame() {
 
     initBoard();
     resetScore();
-    resetModel();
+    resetBackendModel();
     setRandomAtoms();
 }
 
@@ -61,10 +61,12 @@ Q_INVOKABLE void BlackBoxBackend::enterGuess() {
 Q_INVOKABLE void BlackBoxBackend::emitRay(QObject *obj) {
     // Get x and y indices of clicked cell
     Cell clickedCell = getCellCoordinates(obj);
+    int x = clickedCell.getX();
+    int y = clickedCell.getY();
 
-    if (board[clickedCell.getX()][clickedCell.getY()].getColor() == QColor(getEnumColor(MARENGO_GRAY))) {
+    if (!currentCellCoordinatesBelongToSomeRay(x, y)) {
         // Emit new ray
-        Ray ray = Ray(clickedCell);
+        Ray ray = Ray(clickedCell, gameFinished);
         rays.emplace_back(ray);
 
         if (clickedCell.getX() == 0) {
@@ -78,17 +80,15 @@ Q_INVOKABLE void BlackBoxBackend::emitRay(QObject *obj) {
         }
 
     } else {
-        // Ray already emitted
-
-        // Display whole ray if game finished
+        // Ray already emitted - display whole ray if game finished
         if (gameFinished) {
             for (auto & ray : rays) {
                 Cell frontCell = ray.getRayCells().front();
                 Cell backCell = ray.getRayCells().back();
 
                 // Get ray of clicked cell
-                if (((frontCell.getX() == clickedCell.getX()) && (frontCell.getY() == clickedCell.getY())) ||
-                    ((backCell.getX() == clickedCell.getX()) && (backCell.getY() == clickedCell.getY()))) {
+                if (((frontCell.getX() == x) && (frontCell.getY() == y)) ||
+                    ((backCell.getX() == x) && (backCell.getY() == y))) {
                     colorRay(ray);
                 }
             }
@@ -164,7 +164,7 @@ void BlackBoxBackend::resetScore() {
     setObjectText(SCORE_AMOUNT, MAX_SCORE);
 }
 
-void BlackBoxBackend::resetModel() {
+void BlackBoxBackend::resetBackendModel() {
     rays.clear();
 }
 
@@ -402,7 +402,7 @@ void BlackBoxBackend::checkForRayReflection(Ray &currentRay) {
 void BlackBoxBackend::updateRay(Ray &currentRay) {
     Cell frontCell = currentRay.getRayCells().front();
 
-    for (auto & ray : rays) {
+    for (auto &ray : rays) {
         Cell currentCell = ray.getRayCells().front();
         if ((currentCell.getX() == frontCell.getX()) && (currentCell.getY() == frontCell.getY())) {
             ray = currentRay;
@@ -425,13 +425,21 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
         }
     } else {
         // Reset displayed ray on board
-        for (int x = 1; x <= 8; ++x) {
-            for (int y = 1; y <= 8; ++y) {
-
+        for (int x = 0; x <= 9; ++x) {
+            for (int y = 0; y <= 9; ++y) {
                 if (board[x][y].getCellType() == Cell::ATOM || board[x][y].getAtomGuess()) {
+                    // Atoms and atom guesses will not be reset
                     continue;
-                } else {
+                } else if (board[x][y].getCellType() == Cell::FIELD) {
+                    // Every other field cells will be reset
                     setObjectColor(x, y, getEnumColor(DARK_VIOLET));
+                } else if (board[x][y].getCellType() == Cell::EDGE) {
+                    // Reset edge cells if ray was not emitted during game
+                    for (auto &ray : rays) {
+                        if (currentCellCoordinatesBelongToSpecificRay(x, y, ray) && !ray.getIngameRay()) {
+                            setObjectColor(x, y, getEnumColor(MARENGO_GRAY));
+                        }
+                    }
                 }
             }
         }
@@ -446,6 +454,26 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
             }
         }
     }
+}
+
+bool BlackBoxBackend::currentCellCoordinatesBelongToSomeRay(int x, int y) {
+    for (auto &ray : rays) {
+        Cell frontCell = ray.getRayCells().front();
+        Cell backCell = ray.getRayCells().back();
+
+        if ((x == frontCell.getX() && y == frontCell.getY()) || (x == backCell.getX() && y == backCell.getY())) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool BlackBoxBackend::currentCellCoordinatesBelongToSpecificRay(int x, int y, Ray ray) {
+    Cell frontCell = ray.getRayCells().front();
+    Cell backCell = ray.getRayCells().back();
+
+    return (x == frontCell.getX() && y == frontCell.getY()) || (x == backCell.getX() && y == backCell.getY());
 }
 
 void BlackBoxBackend::setRandomAtoms() {
@@ -475,7 +503,6 @@ void BlackBoxBackend::setRandomAtoms() {
 }
 
 void BlackBoxBackend::decreaseScore(Ray::Type rayType) {
-
     if (!gameFinished && rayType == Ray::DEFLECTION) {
         this->score -= 2;
     } else if (!gameFinished && (rayType == Ray::HIT || rayType == Ray::REFLECTION)) {

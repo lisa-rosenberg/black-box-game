@@ -85,7 +85,7 @@ The score will be decreased by doing this.
     
 - Implement rays
     - ~~Set color for ray type~~
-    - Don't store undiscovered rays after finishing game
+    - ~~Don't store undiscovered rays after finishing game~~
     
 - Implement music
     - ~~Choose background music~~

@@ -9,10 +9,11 @@
 
 using namespace std;
 
-Ray::Ray(Cell cell) {
+Ray::Ray(Cell cell, bool gameFinished) {
     this->rayCells.emplace_back(cell);
     this->color = getNewColor();
     this->type = DEFLECTION;
+    this->ingameRay = !gameFinished;
 }
 
 // ### SETTER ### //
@@ -41,6 +42,10 @@ QColor Ray::getRayColor() {
 
 Ray::Type Ray::getRayType() {
     return this->type;
+}
+
+bool Ray::getIngameRay() {
+    return this->ingameRay;
 }
 
 QColor Ray::getNewColor() {
