@@ -8,8 +8,6 @@ ApplicationWindow {
     height: 1000
     minimumWidth: 1000
     minimumHeight: 1000
-    maximumWidth: 1000
-    maximumHeight: 1000
     color: "#09102B"
     title: qsTr("BLACK BOX")
 
