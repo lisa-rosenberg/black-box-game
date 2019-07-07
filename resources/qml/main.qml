@@ -60,8 +60,8 @@ ApplicationWindow {
         id: board
         objectName: "board"
         visible: true
-        height: 1000
-        width: 1000
+        height: 750
+        width: 750
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
         spacing: 0
@@ -75,7 +75,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#09102b"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Text {
@@ -83,11 +83,11 @@ ApplicationWindow {
                 objectName: "atomText"
                 color: "#ffffff"
                 text: qsTr("ATOMS")
-                topPadding: 20
+                topPadding: 15
                 anchors.fill: parent
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignTop
-                font.pixelSize: 16
+                font.pixelSize: 12
             }
 
             Text {
@@ -95,11 +95,11 @@ ApplicationWindow {
                 objectName: "atomAmount"
                 color: "#ffffff"
                 text: qsTr("0")
-                bottomPadding: 20
+                bottomPadding: 15
                 anchors.fill: parent
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignBottom
-                font.pixelSize: 16
+                font.pixelSize: 15
             }
         }
 
@@ -110,7 +110,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -126,7 +126,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -142,7 +142,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -158,7 +158,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -174,7 +174,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -190,7 +190,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -206,7 +206,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -222,7 +222,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -238,7 +238,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#09102b"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Text {
@@ -247,10 +247,10 @@ ApplicationWindow {
                 color: "#ffffff"
                 text: qsTr("SCORE")
                 anchors.fill: parent
-                topPadding: 20
+                topPadding: 15
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignTop
-                font.pixelSize: 16
+                font.pixelSize: 12
             }
 
             Text {
@@ -259,10 +259,10 @@ ApplicationWindow {
                 color: "#ffffff"
                 text: qsTr("0")
                 anchors.fill: parent
-                bottomPadding: 20
+                bottomPadding: 15
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignBottom
-                font.pixelSize: 16
+                font.pixelSize: 15
             }
         }
 
@@ -273,7 +273,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -289,7 +289,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -315,7 +315,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -341,7 +341,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -367,7 +367,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -393,7 +393,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -419,7 +419,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -445,7 +445,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -471,7 +471,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -497,7 +497,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -513,7 +513,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -529,7 +529,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -555,7 +555,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -581,7 +581,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -607,7 +607,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -633,7 +633,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -659,7 +659,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -685,7 +685,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -711,7 +711,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -737,7 +737,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -753,7 +753,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -769,7 +769,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -795,7 +795,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -821,7 +821,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -847,7 +847,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -873,7 +873,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -899,7 +899,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -925,7 +925,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -951,7 +951,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -977,7 +977,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -993,7 +993,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -1009,7 +1009,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1035,7 +1035,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1061,7 +1061,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1087,7 +1087,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1113,7 +1113,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1139,7 +1139,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1165,7 +1165,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1191,7 +1191,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1217,7 +1217,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -1233,7 +1233,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -1249,7 +1249,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1275,7 +1275,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1301,7 +1301,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1327,7 +1327,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1353,7 +1353,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1379,7 +1379,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1405,7 +1405,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1431,7 +1431,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1457,7 +1457,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -1473,7 +1473,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -1489,7 +1489,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1515,7 +1515,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1541,7 +1541,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1567,7 +1567,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1593,7 +1593,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1619,7 +1619,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1645,7 +1645,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1671,7 +1671,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1697,7 +1697,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -1713,7 +1713,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -1729,7 +1729,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1755,7 +1755,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1781,7 +1781,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1807,7 +1807,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1833,7 +1833,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1859,7 +1859,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1885,7 +1885,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1911,7 +1911,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1937,7 +1937,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -1953,7 +1953,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -1969,7 +1969,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -1995,7 +1995,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -2021,7 +2021,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -2047,7 +2047,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -2073,7 +2073,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -2099,7 +2099,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -2125,7 +2125,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -2151,7 +2151,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#8b28fc"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Rectangle {
@@ -2177,7 +2177,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -2193,7 +2193,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#09102b"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Text {
@@ -2204,7 +2204,7 @@ ApplicationWindow {
                 anchors.fill: parent
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
-                font.pixelSize: 16
+                font.pixelSize: 12
             }
 
             MouseArea {
@@ -2220,7 +2220,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -2236,7 +2236,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -2252,7 +2252,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -2268,7 +2268,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -2284,7 +2284,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -2300,7 +2300,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -2316,7 +2316,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -2332,7 +2332,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#424551"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             MouseArea {
@@ -2348,7 +2348,7 @@ ApplicationWindow {
             height: parent.height / 10
             color: "#09102b"
             radius: 0
-            border.width: 4
+            border.width: width / 25
             border.color: "#09102b"
 
             Text {
@@ -2359,7 +2359,7 @@ ApplicationWindow {
                 anchors.fill: parent
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
-                font.pixelSize: 16
+                font.pixelSize: 12
             }
 
             MouseArea {
