@@ -423,6 +423,7 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
             board[backCell.getX()][backCell.getY()].setColor(currentRay.getRayColor());
             setObjectColor(backCell.getX(), backCell.getY(), currentRay.getRayColor());
         }
+
     } else {
         // Reset displayed ray on board
         for (int x = 0; x <= 9; ++x) {

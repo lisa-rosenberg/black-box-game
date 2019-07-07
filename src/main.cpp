@@ -12,12 +12,6 @@ int main(int argc, char** argv) {
     QApplication app(argc, argv);
     QQmlApplicationEngine engine;
 
-    //QQuickView view(&engine, 0);
-    //view.setSource(QUrl("qrc:/main.qml"));
-    //view.setResizeMode(QQuickView::SizeRootObjectToView);
-    //QQmlContext *context = view.rootContext();
-    //context->setContextProperty("blackBoxBackend", &blackBoxBackend);
-
     engine.rootContext()->setContextProperty("blackBoxBackend", &blackBoxBackend);
     engine.load(QUrl("qrc:/main.qml"));
 
