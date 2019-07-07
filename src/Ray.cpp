@@ -13,7 +13,6 @@ Ray::Ray(Cell cell) {
     this->rayCells.emplace_back(cell);
     this->color = getNewColor();
     this->type = DEFLECTION;
-    this->visible = false;
 }
 
 // ### SETTER ### //
@@ -30,10 +29,6 @@ void Ray::setRayType(Ray::Type rayType) {
     this->type = rayType;
 }
 
-void Ray::setRayVisibility(bool visibleValue) {
-    this->visible = visibleValue;
-}
-
 // ### GETTER ### //
 
 vector<Cell> Ray::getRayCells() {
@@ -46,10 +41,6 @@ QColor Ray::getRayColor() {
 
 Ray::Type Ray::getRayType() {
     return this->type;
-}
-
-bool Ray::getRayVisibility() {
-    return this->visible;
 }
 
 QColor Ray::getNewColor() {
