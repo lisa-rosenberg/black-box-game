@@ -94,7 +94,9 @@ The score will be decreased by doing this.
     - Set effect music
 
 ### Ideas
-- Alternate scoring
+- Alternative scoring
+- High scores (with database)
+- Options (change background music, ...)
 - Show remaining possible solutions
 - Hexagonal grid
 - Allow dragging click event
