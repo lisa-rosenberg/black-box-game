@@ -1,5 +1,6 @@
 import QtQuick 2.8
 import QtQuick.Controls 1.1
+import QtGraphicalEffects 1.0
 
 ApplicationWindow {
     id: root
@@ -78,6 +79,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Text {
                 id: atomText
                 objectName: "atomText"
@@ -113,6 +123,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c01);
@@ -128,6 +147,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -145,6 +173,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c03)
@@ -160,6 +197,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -177,6 +223,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c05)
@@ -192,6 +247,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -209,6 +273,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c07)
@@ -225,6 +298,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c08)
@@ -240,6 +322,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Text {
                 id: scoreText
@@ -276,6 +367,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c10)
@@ -292,6 +392,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a11
                 visible: false
@@ -300,6 +409,15 @@ ApplicationWindow {
                 height: parent.width / 1.25
                 radius: width * 0.5
                 color: "#1a0b32"
+            }
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
             }
 
             MouseArea {
@@ -317,6 +435,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a12
@@ -344,6 +471,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a13
                 visible: false
@@ -369,6 +505,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a14
@@ -396,6 +541,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a15
                 visible: false
@@ -421,6 +575,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a16
@@ -448,6 +611,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a17
                 visible: false
@@ -474,6 +646,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a18
                 visible: false
@@ -499,6 +680,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -532,6 +722,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a21
                 visible: false
@@ -557,6 +756,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a22
@@ -584,6 +792,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a23
                 visible: false
@@ -609,6 +826,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a24
@@ -636,6 +862,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a25
                 visible: false
@@ -661,6 +896,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a26
@@ -688,6 +932,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a27
                 visible: false
@@ -713,6 +966,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a28
@@ -740,6 +1002,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c29)
@@ -756,6 +1027,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c30)
@@ -771,6 +1051,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a31
@@ -798,6 +1087,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a32
                 visible: false
@@ -823,6 +1121,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a33
@@ -850,6 +1157,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a34
                 visible: false
@@ -875,6 +1191,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a35
@@ -902,6 +1227,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a36
                 visible: false
@@ -927,6 +1261,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a37
@@ -954,6 +1297,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a38
                 visible: false
@@ -980,6 +1332,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c39)
@@ -996,6 +1357,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c40)
@@ -1011,6 +1381,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a41
@@ -1038,6 +1417,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a42
                 visible: false
@@ -1063,6 +1451,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a43
@@ -1090,6 +1487,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a44
                 visible: false
@@ -1115,6 +1521,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a45
@@ -1142,6 +1557,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a46
                 visible: false
@@ -1167,6 +1591,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a47
@@ -1194,6 +1627,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a48
                 visible: false
@@ -1220,6 +1662,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c49)
@@ -1236,6 +1687,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c50)
@@ -1251,6 +1711,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a51
@@ -1278,6 +1747,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a52
                 visible: false
@@ -1303,6 +1781,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a53
@@ -1330,6 +1817,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a54
                 visible: false
@@ -1355,6 +1851,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a55
@@ -1382,6 +1887,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a56
                 visible: false
@@ -1407,6 +1921,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a57
@@ -1434,6 +1957,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a58
                 visible: false
@@ -1460,6 +1992,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c59)
@@ -1476,6 +2017,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c60)
@@ -1491,6 +2041,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a61
@@ -1518,6 +2077,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a62
                 visible: false
@@ -1543,6 +2111,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a63
@@ -1570,6 +2147,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a64
                 visible: false
@@ -1595,6 +2181,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a65
@@ -1622,6 +2217,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a66
                 visible: false
@@ -1647,6 +2251,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a67
@@ -1674,6 +2287,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a68
                 visible: false
@@ -1700,6 +2322,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c69)
@@ -1716,6 +2347,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c70)
@@ -1731,6 +2371,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a71
@@ -1758,6 +2407,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a72
                 visible: false
@@ -1783,6 +2441,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a73
@@ -1810,6 +2477,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a74
                 visible: false
@@ -1835,6 +2511,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a75
@@ -1862,6 +2547,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a76
                 visible: false
@@ -1887,6 +2581,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a77
@@ -1914,6 +2617,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a78
                 visible: false
@@ -1940,6 +2652,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c79)
@@ -1956,6 +2677,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c80)
@@ -1971,6 +2701,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a81
@@ -1998,6 +2737,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a82
                 visible: false
@@ -2023,6 +2771,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a83
@@ -2050,6 +2807,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a84
                 visible: false
@@ -2075,6 +2841,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a85
@@ -2102,6 +2877,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a86
                 visible: false
@@ -2127,6 +2911,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Rectangle {
                 id: a87
@@ -2154,6 +2947,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             Rectangle {
                 id: a88
                 visible: false
@@ -2180,6 +2982,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c89)
@@ -2195,6 +3006,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Text {
                 id: newButton
@@ -2223,6 +3043,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c91)
@@ -2238,6 +3067,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -2255,6 +3093,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c93)
@@ -2270,6 +3117,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -2287,6 +3143,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c95)
@@ -2302,6 +3167,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -2319,6 +3193,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c97)
@@ -2335,6 +3218,15 @@ ApplicationWindow {
             border.width: width / 25
             border.color: "#09102b"
 
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: blackBoxBackend.emitRay(c98)
@@ -2350,6 +3242,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.4; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#50000000"}
+                }
+            }
 
             Text {
                 id: enterButton
