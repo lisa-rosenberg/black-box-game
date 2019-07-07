@@ -21,6 +21,7 @@ This board game will be implemented by using C++ and presumably OpenCV.
 At first I will implement the basic game with the basic rule set.
 That is 3-5 atoms in a two-dimensional grid (8x8).
 
+
 ## Game
 
 ### Objective
@@ -38,7 +39,7 @@ The player has to place the known number of atoms into the grid.
 As soon as the player has done that, he/she can log in his/her solution in order to find out if the correct guess was made.
 
 The player can fire a ray by pressing on one of the i/o positions at the edges of the grid to obtain a clue.
-The score will be increased by doing this.
+The score will be decreased by doing this.
 
 #### Hit
 ![Hit](resources/img/hit-01.png "Hit")
@@ -57,4 +58,40 @@ The score will be increased by doing this.
 #### Miss
 ![Miss](resources/img/miss.png "Miss")
 
+
+## Progress
+
+### Todo
+- ~~Implement rules~~
+    - ~~Hit~~
+    - ~~Deflection~~
+    - ~~Reflection~~
+    
+- ~~Implement score~~
+    - ~~Decrease score~~
+    - ~~Refresh score to maximum~~
+
+- Implement GUI
+    - ~~Basic GUI~~
+    - ~~Colors~~
+    - Text
+    - Gradient
+    - Background picture
+    - Resizing behaviour
+
+- Implement rays
+    - ~~Set color for ray type~~
+    - Don't store undiscovered rays after finishing game
+    
+- Implement music
+    - ~~Choose background music~~
+    - Set background music
+    - Choose effect music
+    - Set effect music
+
+### Ideas
+- Alternate scoring
+- Show remaining possible solutions
+- Hexagonal grid
+- Allow dragging click event
 
