@@ -90,8 +90,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -134,8 +134,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -159,8 +159,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -184,8 +184,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -209,8 +209,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -234,8 +234,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -259,8 +259,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -284,8 +284,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -309,8 +309,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -334,8 +334,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -378,8 +378,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -403,8 +403,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -416,15 +416,6 @@ ApplicationWindow {
                 height: parent.width / 1.25
                 radius: width * 0.5
                 color: "#1a0b32"
-            }
-
-            RadialGradient {
-                anchors.fill: parent
-                gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
-                }
             }
 
             MouseArea {
@@ -447,8 +438,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -482,8 +473,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -517,8 +508,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -552,8 +543,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -587,8 +578,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -622,8 +613,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -657,8 +648,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -692,8 +683,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -712,6 +703,15 @@ ApplicationWindow {
             radius: 0
             border.width: width / 25
             border.color: "#09102b"
+
+            RadialGradient {
+                anchors.fill: parent
+                gradient: Gradient {
+                    GradientStop {position: 0.0; color: "#00000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
+                }
+            }
 
             MouseArea {
                 anchors.fill: parent
@@ -733,8 +733,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -768,8 +768,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -803,8 +803,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -838,8 +838,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -873,8 +873,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -908,8 +908,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -943,8 +943,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -978,8 +978,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1013,8 +1013,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1038,8 +1038,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1063,8 +1063,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1098,8 +1098,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1133,8 +1133,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1168,8 +1168,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1203,8 +1203,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1238,8 +1238,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1273,8 +1273,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1308,8 +1308,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1343,8 +1343,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1368,8 +1368,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1393,8 +1393,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1428,8 +1428,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1463,8 +1463,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1498,8 +1498,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1533,8 +1533,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1568,8 +1568,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1603,8 +1603,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1638,8 +1638,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1673,8 +1673,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1698,8 +1698,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1723,8 +1723,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1758,8 +1758,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1793,8 +1793,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1828,8 +1828,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1863,8 +1863,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1898,8 +1898,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1933,8 +1933,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -1968,8 +1968,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2003,8 +2003,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2028,8 +2028,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2053,8 +2053,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2088,8 +2088,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2123,8 +2123,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2158,8 +2158,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2193,8 +2193,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2228,8 +2228,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2263,8 +2263,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2298,8 +2298,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2333,8 +2333,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2358,8 +2358,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2383,8 +2383,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2418,8 +2418,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2453,8 +2453,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2488,8 +2488,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2523,8 +2523,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2558,8 +2558,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2593,8 +2593,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2628,8 +2628,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2663,8 +2663,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2688,8 +2688,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2713,8 +2713,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2748,8 +2748,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2783,8 +2783,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2818,8 +2818,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2853,8 +2853,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2888,8 +2888,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2923,8 +2923,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2958,8 +2958,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -2993,8 +2993,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -3018,8 +3018,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -3054,8 +3054,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -3079,8 +3079,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -3104,8 +3104,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -3129,8 +3129,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -3154,8 +3154,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -3179,8 +3179,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -3204,8 +3204,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -3229,8 +3229,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
@@ -3254,8 +3254,8 @@ ApplicationWindow {
                 anchors.fill: parent
                 gradient: Gradient {
                     GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.4; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#50000000"}
+                    GradientStop {position: 0.3; color: "#00000000"}
+                    GradientStop {position: 1.0; color: "#A0000000"}
                 }
             }
 
