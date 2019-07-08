@@ -5,19 +5,19 @@ import QtGraphicalEffects 1.0
 ApplicationWindow {
     id: root
     visible: true
-    width: 1250
-    height: 1250
-    minimumWidth: 1250
-    minimumHeight: 1250
+    width: 1100
+    height: 1100
+    minimumWidth: 1100
+    minimumHeight: 1100
     title: qsTr("BLACK BOX")
 
     property var textColor: "#ffffff"
     property var cornerColor: "#09102b"
     property var edgeColor: "#181d30"
     property var fieldColor: "#5002a7"
-    property var atomColor: "#000000"
+    property var atomColor: "#09102b"
     
-    property var borderColor: "#09102b"
+    property var borderColor: "#f009102b"
     property var borderWidth: 2
     
     property var gradientCenterColor: "#00000000"
