@@ -424,6 +424,27 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
             setObjectColor(backCell.getX(), backCell.getY(), currentRay.getRayColor());
         }
 
+    } else if (currentRay.getVisibility()) {
+        // Same ray is clicked the second time, hide it
+        currentRay.setVisibility(false);
+
+        for (unsigned i = 0; i < currentRay.getRayCells().size(); ++i) {
+            Cell currentCell = currentRay.getRayCells().at(i);
+
+            // Only hide front and back cell of ray if it was emitted after the finished game
+            if (currentRay.getIngameRay() && (i == 0 || i == currentRay.getRayCells().size() - 1)) {
+                continue;
+            }
+
+            if (i == 0 || i == currentRay.getRayCells().size() - 1) {
+                board[currentCell.getX()][currentCell.getY()].setColor(MARENGO_GRAY);
+                setObjectColor(currentCell.getX(), currentCell.getY(), MARENGO_GRAY);
+            } else if (!board[currentCell.getX()][currentCell.getY()].getAtomGuess()) {
+                board[currentCell.getX()][currentCell.getY()].setColor(DARK_VIOLET);
+                setObjectColor(currentCell.getX(), currentCell.getY(), DARK_VIOLET);
+            }
+        }
+
     } else {
         // Reset displayed ray on board
         for (int x = 0; x <= 9; ++x) {
@@ -435,8 +456,12 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
                     // Every other field cells will be reset
                     setObjectColor(x, y, getEnumColor(DARK_VIOLET));
                 } else if (board[x][y].getCellType() == Cell::EDGE) {
-                    // Reset edge cells if ray was not emitted during game
+                    // Reset edge cells
                     for (auto &ray : rays) {
+                        // Reset visibility
+                        ray.setVisibility(false);
+
+                        // Reset edge cells if ray was not emitted during game
                         if (currentCellCoordinatesBelongToSpecificRay(x, y, ray) && !ray.getIngameRay()) {
                             setObjectColor(x, y, getEnumColor(MARENGO_GRAY));
                         }
@@ -444,6 +469,9 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
                 }
             }
         }
+
+        // Ray is visible
+        currentRay.setVisibility(true);
 
         // Display whole ray on board
         for (unsigned i = 0; i < currentRay.getRayCells().size(); ++i) {

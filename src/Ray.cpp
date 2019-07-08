@@ -14,6 +14,7 @@ Ray::Ray(Cell cell, bool gameFinished) {
     this->color = getNewColor();
     this->type = DEFLECTION;
     this->ingameRay = !gameFinished;
+    this->visible = false;
 }
 
 // ### SETTER ### //
@@ -28,6 +29,10 @@ void Ray::setRayColor(QColor colorValue) {
 
 void Ray::setRayType(Ray::Type rayType) {
     this->type = rayType;
+}
+
+void Ray::setVisibility(bool visibleValue) {
+    this->visible = visibleValue;
 }
 
 // ### GETTER ### //
@@ -46,6 +51,10 @@ Ray::Type Ray::getRayType() {
 
 bool Ray::getIngameRay() {
     return this->ingameRay;
+}
+
+bool Ray::getVisibility() {
+    return this->visible;
 }
 
 QColor Ray::getNewColor() {
