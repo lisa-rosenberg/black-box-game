@@ -423,28 +423,6 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
             board[backCell.getX()][backCell.getY()].setColor(currentRay.getRayColor());
             setObjectColor(backCell.getX(), backCell.getY(), currentRay.getRayColor());
         }
-
-    } else if (currentRay.getVisibility()) {
-        // Same ray is clicked the second time, hide it
-        currentRay.setVisibility(false);
-
-        for (unsigned i = 0; i < currentRay.getRayCells().size(); ++i) {
-            Cell currentCell = currentRay.getRayCells().at(i);
-
-            // Only hide front and back cell of ray if it was emitted after the finished game
-            if (currentRay.getIngameRay() && (i == 0 || i == currentRay.getRayCells().size() - 1)) {
-                continue;
-            }
-
-            if (i == 0 || i == currentRay.getRayCells().size() - 1) {
-                board[currentCell.getX()][currentCell.getY()].setColor(MARENGO_GRAY);
-                setObjectColor(currentCell.getX(), currentCell.getY(), MARENGO_GRAY);
-            } else if (!board[currentCell.getX()][currentCell.getY()].getAtomGuess()) {
-                board[currentCell.getX()][currentCell.getY()].setColor(DARK_VIOLET);
-                setObjectColor(currentCell.getX(), currentCell.getY(), DARK_VIOLET);
-            }
-        }
-
     } else {
         // Reset displayed ray on board
         for (int x = 0; x <= 9; ++x) {
@@ -458,9 +436,6 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
                 } else if (board[x][y].getCellType() == Cell::EDGE) {
                     // Reset edge cells
                     for (auto &ray : rays) {
-                        // Reset visibility
-                        ray.setVisibility(false);
-
                         // Reset edge cells if ray was not emitted during game
                         if (currentCellCoordinatesBelongToSpecificRay(x, y, ray) && !ray.getIngameRay()) {
                             setObjectColor(x, y, getEnumColor(MARENGO_GRAY));
@@ -469,9 +444,6 @@ void BlackBoxBackend::colorRay(Ray &currentRay) {
                 }
             }
         }
-
-        // Ray is visible
-        currentRay.setVisibility(true);
 
         // Display whole ray on board
         for (unsigned i = 0; i < currentRay.getRayCells().size(); ++i) {
@@ -561,7 +533,7 @@ QColor BlackBoxBackend::getEnumColor(BlackBoxBackend::Color color) {
         case MIDNIGHT_BLUE:     return QColor("#09102b");
         case MARENGO_GRAY:      return QColor("#181d30");
         case DARK_VIOLET:       return QColor("#5002a7");
-        case BRIGHT_GREEN:      return QColor("#99fc28");
+        case VIVID_CYAN:        return QColor("#6af6d7");
         case BRIGHT_MAGENTA:    return QColor("#f528fc");
         case LIME_GREEN:        return QColor("#2ffc28");
         case BRIGHT_YELLOW:     return QColor("#fcf528");
@@ -599,7 +571,7 @@ void BlackBoxBackend::setObjectVisibility(const int &x, const int &y, const bool
 }
 
 void BlackBoxBackend::setRayDeflectionColors() {
-    rayDeflectionColors.emplace_back(getEnumColor(BRIGHT_GREEN));
+    rayDeflectionColors.emplace_back(getEnumColor(VIVID_CYAN));
     rayDeflectionColors.emplace_back(getEnumColor(BRIGHT_MAGENTA));
     rayDeflectionColors.emplace_back(getEnumColor(LIME_GREEN));
     rayDeflectionColors.emplace_back(getEnumColor(BRIGHT_YELLOW));

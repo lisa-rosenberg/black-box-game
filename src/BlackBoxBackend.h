@@ -26,7 +26,7 @@ public:
         MIDNIGHT_BLUE,
         MARENGO_GRAY,
         DARK_VIOLET,
-        BRIGHT_GREEN,
+        VIVID_CYAN,
         BRIGHT_MAGENTA,
         LIME_GREEN,
         BRIGHT_YELLOW,
