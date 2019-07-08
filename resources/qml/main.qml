@@ -12,11 +12,20 @@ ApplicationWindow {
     title: qsTr("BLACK BOX")
 
     property var textColor: "#ffffff"
-    property var midnightBlue: "#09102b"
-    property var marengoGray: "#181d30"
-    property var darkViolet: "#5002a7"
-    property var gradientTransparent: "#00000000"
-    property var gradientBlack: "#A0000000"
+    property var cornerColor: "#09102b"
+    property var edgeColor: "#181d30"
+    property var fieldColor: "#5002a7"
+    property var atomColor: "#000000"
+    
+    property var borderColor: "#09102b"
+    property var borderWidth: 2
+    
+    property var gradientCenterColor: "#00000000"
+    property var gradientEdgeColor: "#A0000000"
+    
+    property var glowOpacityAmount: 0.6
+    property var glowSpreadAmount: 0.2
+    property var glowRadiusAmount: 15
 
     Image {
         anchors.fill: parent
@@ -87,28 +96,28 @@ ApplicationWindow {
             objectName: "00"
             width: parent.width / 10
             height: parent.height / 10
-            color: midnightBlue
+            color: cornerColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == midnightBlue ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == cornerColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != midnightBlue
-                opacity: 0.6
+                visible: parent.color != cornerColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -142,28 +151,28 @@ ApplicationWindow {
             objectName: "01"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -178,28 +187,28 @@ ApplicationWindow {
             objectName: "02"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -214,28 +223,28 @@ ApplicationWindow {
             objectName: "03"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -250,28 +259,28 @@ ApplicationWindow {
             objectName: "04"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -286,28 +295,28 @@ ApplicationWindow {
             objectName: "05"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -322,28 +331,28 @@ ApplicationWindow {
             objectName: "06"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -358,28 +367,28 @@ ApplicationWindow {
             objectName: "07"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -394,28 +403,28 @@ ApplicationWindow {
             objectName: "08"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -430,28 +439,28 @@ ApplicationWindow {
             objectName: "09"
             width: parent.width / 10
             height: parent.height / 10
-            color: midnightBlue
+            color: cornerColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == midnightBlue ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == cornerColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != midnightBlue
-                opacity: 0.6
+                visible: parent.color != cornerColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -485,28 +494,28 @@ ApplicationWindow {
             objectName: "10"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -521,28 +530,28 @@ ApplicationWindow {
             objectName: "11"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -553,7 +562,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -567,28 +576,28 @@ ApplicationWindow {
             objectName: "12"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -599,7 +608,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -613,28 +622,28 @@ ApplicationWindow {
             objectName: "13"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -645,7 +654,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -659,28 +668,28 @@ ApplicationWindow {
             objectName: "14"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -691,7 +700,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -705,28 +714,28 @@ ApplicationWindow {
             objectName: "15"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -737,7 +746,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -751,28 +760,28 @@ ApplicationWindow {
             objectName: "16"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -783,7 +792,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -797,28 +806,28 @@ ApplicationWindow {
             objectName: "17"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -829,7 +838,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -843,28 +852,28 @@ ApplicationWindow {
             objectName: "18"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -875,7 +884,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -889,28 +898,28 @@ ApplicationWindow {
             objectName: "19"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -925,28 +934,28 @@ ApplicationWindow {
             objectName: "20"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -961,28 +970,28 @@ ApplicationWindow {
             objectName: "21"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -993,7 +1002,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1007,28 +1016,28 @@ ApplicationWindow {
             objectName: "22"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1039,7 +1048,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1053,28 +1062,28 @@ ApplicationWindow {
             objectName: "23"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1085,7 +1094,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1099,28 +1108,28 @@ ApplicationWindow {
             objectName: "24"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1131,7 +1140,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1145,28 +1154,28 @@ ApplicationWindow {
             objectName: "25"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1177,7 +1186,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1191,28 +1200,28 @@ ApplicationWindow {
             objectName: "26"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1223,7 +1232,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1237,28 +1246,28 @@ ApplicationWindow {
             objectName: "27"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1269,7 +1278,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1283,28 +1292,28 @@ ApplicationWindow {
             objectName: "28"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1315,7 +1324,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1329,28 +1338,28 @@ ApplicationWindow {
             objectName: "29"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1365,28 +1374,28 @@ ApplicationWindow {
             objectName: "30"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1401,28 +1410,28 @@ ApplicationWindow {
             objectName: "31"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1433,7 +1442,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1447,28 +1456,28 @@ ApplicationWindow {
             objectName: "32"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1479,7 +1488,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1493,28 +1502,28 @@ ApplicationWindow {
             objectName: "33"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1525,7 +1534,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1539,28 +1548,28 @@ ApplicationWindow {
             objectName: "34"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1571,7 +1580,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1585,28 +1594,28 @@ ApplicationWindow {
             objectName: "35"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1617,7 +1626,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1631,28 +1640,28 @@ ApplicationWindow {
             objectName: "36"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1663,7 +1672,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1677,28 +1686,28 @@ ApplicationWindow {
             objectName: "37"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1709,7 +1718,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1723,28 +1732,28 @@ ApplicationWindow {
             objectName: "38"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1755,7 +1764,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1769,28 +1778,28 @@ ApplicationWindow {
             objectName: "39"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1805,28 +1814,28 @@ ApplicationWindow {
             objectName: "40"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1841,28 +1850,28 @@ ApplicationWindow {
             objectName: "41"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1873,7 +1882,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1887,28 +1896,28 @@ ApplicationWindow {
             objectName: "42"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1919,7 +1928,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1933,28 +1942,28 @@ ApplicationWindow {
             objectName: "43"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -1965,7 +1974,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -1979,28 +1988,28 @@ ApplicationWindow {
             objectName: "44"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2011,7 +2020,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2025,28 +2034,28 @@ ApplicationWindow {
             objectName: "45"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2057,7 +2066,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2071,28 +2080,28 @@ ApplicationWindow {
             objectName: "46"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2103,7 +2112,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2117,28 +2126,28 @@ ApplicationWindow {
             objectName: "47"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2149,7 +2158,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2163,28 +2172,28 @@ ApplicationWindow {
             objectName: "48"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2195,7 +2204,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2209,28 +2218,28 @@ ApplicationWindow {
             objectName: "49"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2245,28 +2254,28 @@ ApplicationWindow {
             objectName: "50"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2281,28 +2290,28 @@ ApplicationWindow {
             objectName: "51"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2313,7 +2322,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2327,28 +2336,28 @@ ApplicationWindow {
             objectName: "52"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2359,7 +2368,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2373,28 +2382,28 @@ ApplicationWindow {
             objectName: "53"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2405,7 +2414,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2419,28 +2428,28 @@ ApplicationWindow {
             objectName: "54"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2451,7 +2460,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2465,28 +2474,28 @@ ApplicationWindow {
             objectName: "55"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2497,7 +2506,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2511,28 +2520,28 @@ ApplicationWindow {
             objectName: "56"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2543,7 +2552,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2557,28 +2566,28 @@ ApplicationWindow {
             objectName: "57"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2589,7 +2598,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2603,28 +2612,28 @@ ApplicationWindow {
             objectName: "58"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2635,7 +2644,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2649,28 +2658,28 @@ ApplicationWindow {
             objectName: "59"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2685,28 +2694,28 @@ ApplicationWindow {
             objectName: "60"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2721,28 +2730,28 @@ ApplicationWindow {
             objectName: "61"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2753,7 +2762,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2767,28 +2776,28 @@ ApplicationWindow {
             objectName: "62"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2799,7 +2808,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2813,28 +2822,28 @@ ApplicationWindow {
             objectName: "63"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2845,7 +2854,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2859,28 +2868,28 @@ ApplicationWindow {
             objectName: "64"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2891,7 +2900,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2905,28 +2914,28 @@ ApplicationWindow {
             objectName: "65"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2937,7 +2946,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2951,28 +2960,28 @@ ApplicationWindow {
             objectName: "66"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -2983,7 +2992,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -2997,28 +3006,28 @@ ApplicationWindow {
             objectName: "67"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3029,7 +3038,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3043,28 +3052,28 @@ ApplicationWindow {
             objectName: "68"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3075,7 +3084,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3089,28 +3098,28 @@ ApplicationWindow {
             objectName: "69"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3125,28 +3134,28 @@ ApplicationWindow {
             objectName: "70"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3161,28 +3170,28 @@ ApplicationWindow {
             objectName: "71"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3193,7 +3202,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3207,28 +3216,28 @@ ApplicationWindow {
             objectName: "72"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3239,7 +3248,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3253,28 +3262,28 @@ ApplicationWindow {
             objectName: "73"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3285,7 +3294,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3299,28 +3308,28 @@ ApplicationWindow {
             objectName: "74"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3331,7 +3340,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3345,28 +3354,28 @@ ApplicationWindow {
             objectName: "75"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3377,7 +3386,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3391,28 +3400,28 @@ ApplicationWindow {
             objectName: "76"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3423,7 +3432,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3437,28 +3446,28 @@ ApplicationWindow {
             objectName: "77"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3469,7 +3478,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3483,28 +3492,28 @@ ApplicationWindow {
             objectName: "78"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3515,7 +3524,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3529,28 +3538,28 @@ ApplicationWindow {
             objectName: "79"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3565,28 +3574,28 @@ ApplicationWindow {
             objectName: "80"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3601,28 +3610,28 @@ ApplicationWindow {
             objectName: "81"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3633,7 +3642,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3647,28 +3656,28 @@ ApplicationWindow {
             objectName: "82"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3679,7 +3688,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3693,28 +3702,28 @@ ApplicationWindow {
             objectName: "83"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3725,7 +3734,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3739,28 +3748,28 @@ ApplicationWindow {
             objectName: "84"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3771,7 +3780,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3785,28 +3794,28 @@ ApplicationWindow {
             objectName: "85"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3817,7 +3826,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3831,28 +3840,28 @@ ApplicationWindow {
             objectName: "86"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3863,7 +3872,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3877,28 +3886,28 @@ ApplicationWindow {
             objectName: "87"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3909,7 +3918,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3923,28 +3932,28 @@ ApplicationWindow {
             objectName: "88"
             width: parent.width / 10
             height: parent.height / 10
-            color: darkViolet
+            color: fieldColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == darkViolet ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == fieldColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != darkViolet
-                opacity: 0.6
+                visible: parent.color != fieldColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -3955,7 +3964,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: midnightBlue
+                color: atomColor
             }
 
             MouseArea {
@@ -3969,28 +3978,28 @@ ApplicationWindow {
             objectName: "89"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -4005,28 +4014,28 @@ ApplicationWindow {
             objectName: "90"
             width: parent.width / 10
             height: parent.height / 10
-            color: midnightBlue
+            color: cornerColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == midnightBlue ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == cornerColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != midnightBlue
-                opacity: 0.6
+                visible: parent.color != cornerColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -4052,28 +4061,28 @@ ApplicationWindow {
             objectName: "91"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -4088,28 +4097,28 @@ ApplicationWindow {
             objectName: "92"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -4124,28 +4133,28 @@ ApplicationWindow {
             objectName: "93"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -4160,28 +4169,28 @@ ApplicationWindow {
             objectName: "94"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -4196,28 +4205,28 @@ ApplicationWindow {
             objectName: "95"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -4232,28 +4241,28 @@ ApplicationWindow {
             objectName: "96"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -4268,28 +4277,28 @@ ApplicationWindow {
             objectName: "97"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -4304,28 +4313,28 @@ ApplicationWindow {
             objectName: "98"
             width: parent.width / 10
             height: parent.height / 10
-            color: marengoGray
+            color: edgeColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == marengoGray ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == edgeColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != marengoGray
-                opacity: 0.6
+                visible: parent.color != edgeColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
@@ -4340,28 +4349,28 @@ ApplicationWindow {
             objectName: "99"
             width: parent.width / 10
             height: parent.height / 10
-            color: midnightBlue
+            color: cornerColor
             radius: 0
-            border.width: width / 25
-            border.color: midnightBlue
-            z: color == midnightBlue ? 0 : 100
+            border.width: borderWidth
+            border.color: borderColor
+            z: color == cornerColor ? 0 : 100
 
             RectangularGlow {
                 anchors.fill: parent
-                glowRadius: 10
-                spread: 0.2
+                glowRadius: glowRadiusAmount
+                spread: glowSpreadAmount
                 color: parent.color
                 cornerRadius: parent.radius + glowRadius
-                visible: parent.color != midnightBlue
-                opacity: 0.6
+                visible: parent.color != cornerColor
+                opacity: glowOpacityAmount
             }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: gradientTransparent}
-                    GradientStop {position: 0.3; color: gradientTransparent}
-                    GradientStop {position: 1.0; color: gradientBlack}
+                    GradientStop {position: 0.0; color: gradientCenterColor}
+                    GradientStop {position: 0.3; color: gradientCenterColor}
+                    GradientStop {position: 1.0; color: gradientEdgeColor}
                 }
             }
 
