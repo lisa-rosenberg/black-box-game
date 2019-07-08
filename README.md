@@ -76,7 +76,7 @@ The score will be decreased by doing this.
     - ~~Colors~~
     - ~~Text~~
     - ~~Radial gradient~~
-    - Glowing borders
+    - ~~Glowing borders~~
     - ~~Background picture~~
     - ~~Resizing behaviour~~
     - ~~Show correct solution~~
@@ -88,7 +88,6 @@ The score will be decreased by doing this.
     - ~~Set color for ray type~~
     - ~~Don't store undiscovered rays after finishing game~~
     - Animation for rays
-    - Hide ray when clicked the second time after finishing game
     
 - Implement music
     - ~~Choose background music~~
@@ -103,4 +102,5 @@ The score will be decreased by doing this.
 - Show remaining possible solutions
 - Hexagonal grid
 - Allow dragging click event
+- Hide ray when clicked the second time after finishing game (sadly it's very laggy)
 

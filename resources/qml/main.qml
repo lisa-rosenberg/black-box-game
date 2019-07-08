@@ -9,8 +9,14 @@ ApplicationWindow {
     height: 1250
     minimumWidth: 1250
     minimumHeight: 1250
-    //color: "#09102B"
     title: qsTr("BLACK BOX")
+
+    property var textColor: "#ffffff"
+    property var midnightBlue: "#09102b"
+    property var marengoGray: "#181d30"
+    property var darkViolet: "#5002a7"
+    property var gradientTransparent: "#00000000"
+    property var gradientBlack: "#A0000000"
 
     Image {
         anchors.fill: parent
@@ -81,24 +87,35 @@ ApplicationWindow {
             objectName: "00"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#09102b"
+            color: midnightBlue
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == midnightBlue ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != midnightBlue
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
             Text {
                 id: atomText
                 objectName: "atomText"
-                color: "#ffffff"
+                color: textColor
                 text: qsTr("ATOMS")
                 topPadding: 15
                 anchors.fill: parent
@@ -110,7 +127,7 @@ ApplicationWindow {
             Text {
                 id: atomAmount
                 objectName: "atomAmount"
-                color: "#ffffff"
+                color: textColor
                 text: qsTr("0")
                 bottomPadding: 15
                 anchors.fill: parent
@@ -125,17 +142,28 @@ ApplicationWindow {
             objectName: "01"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -150,17 +178,28 @@ ApplicationWindow {
             objectName: "02"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -175,17 +214,28 @@ ApplicationWindow {
             objectName: "03"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -200,17 +250,28 @@ ApplicationWindow {
             objectName: "04"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -225,17 +286,28 @@ ApplicationWindow {
             objectName: "05"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -250,17 +322,28 @@ ApplicationWindow {
             objectName: "06"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -275,17 +358,28 @@ ApplicationWindow {
             objectName: "07"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -300,17 +394,28 @@ ApplicationWindow {
             objectName: "08"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -325,24 +430,35 @@ ApplicationWindow {
             objectName: "09"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#09102b"
+            color: midnightBlue
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == midnightBlue ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != midnightBlue
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
             Text {
                 id: scoreText
                 objectName: "scoreText"
-                color: "#ffffff"
+                color: textColor
                 text: qsTr("SCORE")
                 anchors.fill: parent
                 topPadding: 15
@@ -354,7 +470,7 @@ ApplicationWindow {
             Text {
                 id: scoreAmount
                 objectName: "scoreAmount"
-                color: "#ffffff"
+                color: textColor
                 text: qsTr("0")
                 anchors.fill: parent
                 bottomPadding: 15
@@ -369,17 +485,28 @@ ApplicationWindow {
             objectName: "10"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -394,17 +521,28 @@ ApplicationWindow {
             objectName: "11"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -429,17 +567,28 @@ ApplicationWindow {
             objectName: "12"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -464,17 +613,28 @@ ApplicationWindow {
             objectName: "13"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -499,17 +659,28 @@ ApplicationWindow {
             objectName: "14"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -534,17 +705,28 @@ ApplicationWindow {
             objectName: "15"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -569,17 +751,28 @@ ApplicationWindow {
             objectName: "16"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -604,17 +797,28 @@ ApplicationWindow {
             objectName: "17"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -639,17 +843,28 @@ ApplicationWindow {
             objectName: "18"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -674,17 +889,28 @@ ApplicationWindow {
             objectName: "19"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -699,17 +925,28 @@ ApplicationWindow {
             objectName: "20"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -724,17 +961,28 @@ ApplicationWindow {
             objectName: "21"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -759,17 +1007,28 @@ ApplicationWindow {
             objectName: "22"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -794,17 +1053,28 @@ ApplicationWindow {
             objectName: "23"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -829,17 +1099,28 @@ ApplicationWindow {
             objectName: "24"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -864,17 +1145,28 @@ ApplicationWindow {
             objectName: "25"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -899,17 +1191,28 @@ ApplicationWindow {
             objectName: "26"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -934,17 +1237,28 @@ ApplicationWindow {
             objectName: "27"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -969,17 +1283,28 @@ ApplicationWindow {
             objectName: "28"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1004,17 +1329,28 @@ ApplicationWindow {
             objectName: "29"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1029,17 +1365,28 @@ ApplicationWindow {
             objectName: "30"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1054,17 +1401,28 @@ ApplicationWindow {
             objectName: "31"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1089,17 +1447,28 @@ ApplicationWindow {
             objectName: "32"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1124,17 +1493,28 @@ ApplicationWindow {
             objectName: "33"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1159,17 +1539,28 @@ ApplicationWindow {
             objectName: "34"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1194,17 +1585,28 @@ ApplicationWindow {
             objectName: "35"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1229,17 +1631,28 @@ ApplicationWindow {
             objectName: "36"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1264,17 +1677,28 @@ ApplicationWindow {
             objectName: "37"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1299,17 +1723,28 @@ ApplicationWindow {
             objectName: "38"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1334,17 +1769,28 @@ ApplicationWindow {
             objectName: "39"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1359,17 +1805,28 @@ ApplicationWindow {
             objectName: "40"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1384,17 +1841,28 @@ ApplicationWindow {
             objectName: "41"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1419,17 +1887,28 @@ ApplicationWindow {
             objectName: "42"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1454,17 +1933,28 @@ ApplicationWindow {
             objectName: "43"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1489,17 +1979,28 @@ ApplicationWindow {
             objectName: "44"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1524,17 +2025,28 @@ ApplicationWindow {
             objectName: "45"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1559,17 +2071,28 @@ ApplicationWindow {
             objectName: "46"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1594,17 +2117,28 @@ ApplicationWindow {
             objectName: "47"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1629,17 +2163,28 @@ ApplicationWindow {
             objectName: "48"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1664,17 +2209,28 @@ ApplicationWindow {
             objectName: "49"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1689,17 +2245,28 @@ ApplicationWindow {
             objectName: "50"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1714,17 +2281,28 @@ ApplicationWindow {
             objectName: "51"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1749,17 +2327,28 @@ ApplicationWindow {
             objectName: "52"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1784,17 +2373,28 @@ ApplicationWindow {
             objectName: "53"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1819,17 +2419,28 @@ ApplicationWindow {
             objectName: "54"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1854,17 +2465,28 @@ ApplicationWindow {
             objectName: "55"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1889,17 +2511,28 @@ ApplicationWindow {
             objectName: "56"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1924,17 +2557,28 @@ ApplicationWindow {
             objectName: "57"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1959,17 +2603,28 @@ ApplicationWindow {
             objectName: "58"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -1994,17 +2649,28 @@ ApplicationWindow {
             objectName: "59"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2019,17 +2685,28 @@ ApplicationWindow {
             objectName: "60"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2044,17 +2721,28 @@ ApplicationWindow {
             objectName: "61"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2079,17 +2767,28 @@ ApplicationWindow {
             objectName: "62"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2114,17 +2813,28 @@ ApplicationWindow {
             objectName: "63"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2149,17 +2859,28 @@ ApplicationWindow {
             objectName: "64"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2184,17 +2905,28 @@ ApplicationWindow {
             objectName: "65"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2219,17 +2951,28 @@ ApplicationWindow {
             objectName: "66"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2254,17 +2997,28 @@ ApplicationWindow {
             objectName: "67"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2289,17 +3043,28 @@ ApplicationWindow {
             objectName: "68"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2324,17 +3089,28 @@ ApplicationWindow {
             objectName: "69"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2349,17 +3125,28 @@ ApplicationWindow {
             objectName: "70"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2374,17 +3161,28 @@ ApplicationWindow {
             objectName: "71"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2409,17 +3207,28 @@ ApplicationWindow {
             objectName: "72"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2444,17 +3253,28 @@ ApplicationWindow {
             objectName: "73"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2479,17 +3299,28 @@ ApplicationWindow {
             objectName: "74"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2514,17 +3345,28 @@ ApplicationWindow {
             objectName: "75"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2549,17 +3391,28 @@ ApplicationWindow {
             objectName: "76"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2584,17 +3437,28 @@ ApplicationWindow {
             objectName: "77"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2619,17 +3483,28 @@ ApplicationWindow {
             objectName: "78"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2654,17 +3529,28 @@ ApplicationWindow {
             objectName: "79"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2679,17 +3565,28 @@ ApplicationWindow {
             objectName: "80"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2704,17 +3601,28 @@ ApplicationWindow {
             objectName: "81"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2739,17 +3647,28 @@ ApplicationWindow {
             objectName: "82"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2774,17 +3693,28 @@ ApplicationWindow {
             objectName: "83"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2809,17 +3739,28 @@ ApplicationWindow {
             objectName: "84"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2844,17 +3785,28 @@ ApplicationWindow {
             objectName: "85"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2879,17 +3831,28 @@ ApplicationWindow {
             objectName: "86"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2914,17 +3877,28 @@ ApplicationWindow {
             objectName: "87"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2949,17 +3923,28 @@ ApplicationWindow {
             objectName: "88"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#8b28fc"
+            color: darkViolet
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == darkViolet ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != darkViolet
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -2984,17 +3969,28 @@ ApplicationWindow {
             objectName: "89"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -3009,24 +4005,35 @@ ApplicationWindow {
             objectName: "90"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#09102b"
+            color: midnightBlue
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == midnightBlue ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != midnightBlue
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
             Text {
                 id: newButton
                 objectName: "newButton"
-                color: "#ffffff"
+                color: textColor
                 text: qsTr("NEW")
                 anchors.fill: parent
                 horizontalAlignment: Text.AlignHCenter
@@ -3045,17 +4052,28 @@ ApplicationWindow {
             objectName: "91"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -3070,17 +4088,28 @@ ApplicationWindow {
             objectName: "92"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -3095,17 +4124,28 @@ ApplicationWindow {
             objectName: "93"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -3120,17 +4160,28 @@ ApplicationWindow {
             objectName: "94"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -3145,17 +4196,28 @@ ApplicationWindow {
             objectName: "95"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -3170,17 +4232,28 @@ ApplicationWindow {
             objectName: "96"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -3195,17 +4268,28 @@ ApplicationWindow {
             objectName: "97"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -3220,17 +4304,28 @@ ApplicationWindow {
             objectName: "98"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#424551"
+            color: marengoGray
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == marengoGray ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != marengoGray
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
@@ -3245,24 +4340,35 @@ ApplicationWindow {
             objectName: "99"
             width: parent.width / 10
             height: parent.height / 10
-            color: "#09102b"
+            color: midnightBlue
             radius: 0
             border.width: width / 25
-            border.color: "#09102b"
+            border.color: midnightBlue
+            z: color == midnightBlue ? 0 : 100
+
+            RectangularGlow {
+                anchors.fill: parent
+                glowRadius: 10
+                spread: 0.2
+                color: parent.color
+                cornerRadius: parent.radius + glowRadius
+                visible: parent.color != midnightBlue
+                opacity: 0.6
+            }
 
             RadialGradient {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop {position: 0.0; color: "#00000000"}
-                    GradientStop {position: 0.3; color: "#00000000"}
-                    GradientStop {position: 1.0; color: "#A0000000"}
+                    GradientStop {position: 0.0; color: gradientTransparent}
+                    GradientStop {position: 0.3; color: gradientTransparent}
+                    GradientStop {position: 1.0; color: gradientBlack}
                 }
             }
 
             Text {
                 id: enterButton
                 objectName: "enterButton"
-                color: "#ffffff"
+                color: textColor
                 text: qsTr("ENTER")
                 anchors.fill: parent
                 horizontalAlignment: Text.AlignHCenter
