@@ -553,7 +553,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -599,7 +599,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -645,7 +645,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -691,7 +691,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -737,7 +737,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -783,7 +783,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -829,7 +829,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -875,7 +875,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -993,7 +993,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1039,7 +1039,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1085,7 +1085,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1131,7 +1131,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1177,7 +1177,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1223,7 +1223,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1269,7 +1269,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1315,7 +1315,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1433,7 +1433,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1479,7 +1479,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1525,7 +1525,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1571,7 +1571,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1617,7 +1617,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1663,7 +1663,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1709,7 +1709,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1755,7 +1755,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1873,7 +1873,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1919,7 +1919,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -1965,7 +1965,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2011,7 +2011,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2057,7 +2057,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2103,7 +2103,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2149,7 +2149,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2195,7 +2195,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2313,7 +2313,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2359,7 +2359,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2405,7 +2405,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2451,7 +2451,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2497,7 +2497,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2543,7 +2543,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2589,7 +2589,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2635,7 +2635,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2753,7 +2753,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2799,7 +2799,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2845,7 +2845,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2891,7 +2891,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2937,7 +2937,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -2983,7 +2983,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3029,7 +3029,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3075,7 +3075,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3193,7 +3193,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3239,7 +3239,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3285,7 +3285,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3331,7 +3331,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3377,7 +3377,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3423,7 +3423,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3469,7 +3469,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3515,7 +3515,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3633,7 +3633,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3679,7 +3679,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3725,7 +3725,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3771,7 +3771,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3817,7 +3817,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3863,7 +3863,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3909,7 +3909,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
@@ -3955,7 +3955,7 @@ ApplicationWindow {
                 width: parent.width / 1.25
                 height: parent.width / 1.25
                 radius: width * 0.5
-                color: "#1a0b32"
+                color: midnightBlue
             }
 
             MouseArea {
