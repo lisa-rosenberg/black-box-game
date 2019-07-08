@@ -15,11 +15,15 @@ One of the available games was Black Box.
 
 An overview can be found [here](https://en.wikipedia.org/wiki/Black_Box_\(game\)).
 
-### Implementation Ideas
-This board game will be implemented by using C++ and presumably OpenCV.
+### Implementation
+This board game is implemented by using C++ and Qt.
 
-At first I will implement the basic game with the basic rule set.
+![Animated Black Box](resources/img/blackbox.gif "Black Box")
+
+The basic rule set is implemented.
 That is 3-5 atoms in a two-dimensional grid (8x8).
+
+Some additional effects like glowing rays are implemented, too.
 
 
 ## Game
@@ -71,7 +75,7 @@ The score will be decreased by doing this.
     - ~~Decrease score~~
     - ~~Refresh score to maximum~~
 
-- Implement GUI
+- ~~Implement GUI~~
     - ~~Basic GUI~~
     - ~~Colors~~
     - ~~Text~~
@@ -84,16 +88,9 @@ The score will be decreased by doing this.
     - ~~Set transparency of grid~~
     - ~~Background picture stays at same place when resizing~~
     
-- Implement rays
+- ~~Implement rays~~
     - ~~Set color for ray type~~
     - ~~Don't store undiscovered rays after finishing game~~
-    - Animation for rays
-    
-- Implement music
-    - ~~Choose background music~~
-    - Set background music
-    - Choose effect music
-    - Set effect music
 
 ### Ideas
 - Alternative scoring
@@ -103,4 +100,8 @@ The score will be decreased by doing this.
 - Hexagonal grid
 - Allow dragging click event
 - Hide ray when clicked the second time after finishing game (sadly it's very laggy)
+- Get totally random ray color (0-255 * 3 summe mindestens 128 // rgb to hex)
+- Animation for rays
+- Add some background music
+- Add effect sounds
 
