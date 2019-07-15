@@ -2,6 +2,8 @@
 
 ## Proposal
 
+Note: 1.0
+
 ### Motivation
 This repository will contain an implementation of the logic board game "Black Box" in C++.
 It's an abstract game which was designed by the mathematician Eric Solomon in the year 1976.
