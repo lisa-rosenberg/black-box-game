@@ -1,5 +1,4 @@
 # SoSe19_Padi02: BLACK BOX
-
 ## Proposal
 
 Note: 1.0
@@ -27,15 +26,22 @@ That is 3-5 atoms in a two-dimensional grid (8x8).
 
 Some additional effects like glowing rays are implemented, too.
 
+### Installation and Usage
+#### C++
+You will need OpenCV 4.1.0 and QT5 on Ubuntu 18.04 in order to get the game working.
+
+#### X-Server
+Because of the usage of Qt you need to add the environment variable DISPLAY=127.0.0.1:0.0
+
+X11 server (e.g. X410) has to be running and set up (https://token2shell.com/x410/)
+
 
 ## Game
-
 ### Objective
 Black Box is played on a two-dimensional grid.
 The objective is to find the correct positions of the atoms by the use of the minimum number of rays.
 
 ### Rules
-
 #### General
 The most common configuration is 3-5 atoms in a 8x8 grid.
 There are in total 32 input/output positions for the rays.
@@ -66,7 +72,6 @@ The score will be decreased by doing this.
 
 
 ## Progress
-
 ### Todo
 - ~~Implement rules~~
     - ~~Hit~~
